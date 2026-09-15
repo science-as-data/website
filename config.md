@@ -1,7 +1,7 @@
 +++
 author = "Science as Data"
 website_title = "Science as Data"
-website_descr = "Open datasets, research workflows, and outcomes from the Science as Data projects."
+website_descr = "Methods, software, schemas, and limitations for research using scholarly metadata."
 prepath = get(ENV, "FRANKLIN_PREPATH", "")
 generate_sitemap = false
 generate_robots = false

@@ -1,25 +1,18 @@
-<section class="hero wrap">
-  <div class="hero-copy">
-    <p class="eyebrow"><span class="signal-dot"></span> Science as Data</p>
-    <h1>Study science.<br><em>Start with the data.</em></h1>
-    <p class="hero-description">We build open tools to turn scholarly records into research-ready data. Explore the datasets, workflows, and outputs of our projects.</p>
-    <div class="hero-actions"><a class="button" href="#projects">Explore the projects <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/science-as-data">Our organization ↗</a></div>
-    <p class="hero-caption">Open source <span>·</span> Reproducible workflows <span>·</span> Science of science</p>
-  </div>
-  <aside class="toolkit-card" aria-labelledby="outcomes-title">
-    <p class="eyebrow">From repositories to research</p>
-    <h2 id="outcomes-title">Explore what the projects produce.</h2>
-    <p>Relational datasets that preserve connections between papers, people, and institutions. Documented workflows that make the data usable. Examples that help you ask your own questions.</p>
-    <a class="text-link" href="/preview/">Browse the OpenAlex data preview →</a>
-  </aside>
+<section class="overview-intro wrap" aria-labelledby="overview-title">
+  <h1 id="overview-title">Science as Data</h1>
+  <p>A wealth of data on publications, researchers, institutions, and their relationships offers opportunities to study how science works. Alongside this expanding record, interest in the science of science is growing: how knowledge develops, how researchers collaborate, and how research is organized.</p>
+  <p>Access to these data does not necessarily make them straightforward to analyze. Open projects such as OpenAlex and CORE provide large data dumps, but working with huge collections of nested JSON records requires substantial preparation before analysis can begin. Different sources also offer complementary information that remains disconnected until records are matched across them.</p>
+  <p>Science as Data is a collection of repositories addressing these preparation and matching needs. The overarching goal is to make science of science data more accessible to researchers who can analyze data but are not specialists in data architecture or engineering. The repositories bring together loading workflows, relational data models, matching methods, and documentation, with the scope and development status of each area described below.</p>
+  <div class="hero-actions"><a class="text-link" href="#projects">Repositories and available materials</a><a class="text-link" href="https://github.com/science-as-data">Source repositories</a></div>
 </section>
 <section class="section wrap" id="projects" aria-labelledby="projects-title">
-  <div class="section-heading"><div><p class="eyebrow">Our projects</p><h2 id="projects-title">Explore the scholarly record.</h2></div><p class="section-aside">Explore each project’s outputs<br>and the code behind them.</p></div>
+  <div class="section-heading"><h2 id="projects-title">Repositories and available materials</h2></div>
   <div class="toolkit-grid project-grid">
-    <article class="toolkit-card"><span class="toolkit-path">01 / OpenAlex</span><h3>A connected research catalog</h3><p>A snapshot-to-PostgreSQL pipeline with a relational schema, a downloadable static data sample, and research queries. Additional tools cover API exploration and journal matching.</p><a class="text-link" href="/openalex/">Explore OpenAlex →</a></article>
-    <article class="toolkit-card"><span class="toolkit-path">02 / arXiv</span><h3>Preprint metadata with provenance</h3><p>A versioned metadata workflow that preserves papers, author order, categories, revisions, and source provenance in PostgreSQL.</p><a class="text-link" href="/arxiv/">Explore arXiv →</a></article>
-    <article class="toolkit-card"><span class="toolkit-path">03 / CORE</span><h3>CORE</h3><p>Part of our current project coverage. Project outcomes and workflow documentation will be added here as they become available.</p><a class="text-link" href="/core/">View project status →</a></article>
+    <article class="toolkit-card"><h3><a href="/openalex/">OpenAlex</a></h3><p>A snapshot-to-PostgreSQL workflow, relational schema, and SQL examples. Additional repository tools support API exploration and journal matching.</p><p><strong>Available on this site:</strong> loading protocol, schema documentation, and a static sample of 80 works with linked metadata. The sample is not representative.</p><a class="text-link" href="/openalex/">OpenAlex documentation</a></article>
+    <article class="toolkit-card"><h3><a href="/arxiv/">arXiv</a></h3><p>A metadata snapshot workflow covering papers, ordered author occurrences, categories, revisions, and source provenance in PostgreSQL.</p><p><strong>Current scope:</strong> metadata loading is documented in the repository. OAI-PMH harvesting and bulk PDF and source archive workflows are planned.</p><a class="text-link" href="/arxiv/">arXiv documentation</a></article>
+    <article class="toolkit-card"><h3><a href="/core/">CORE</a></h3><p>Project documentation is pending. No workflow or dataset is presented on this site.</p><a class="text-link" href="/core/">CORE status</a></article>
+    <article class="toolkit-card"><h3><a href="/pre-registrations/">Pre-registrations</a></h3><p>A planned area of work. Documentation, datasets, and analyses are not yet presented on this site.</p><a class="text-link" href="/pre-registrations/">Pre-registration status</a></article>
+    <article class="toolkit-card"><h3><a href="/data-matching/">Data matching</a></h3><p>Methods for linking records across data sources. Current documentation covers an OpenAlex–Scopus journal crosswalk using ISSNs, normalized titles, and scored candidate pairs.</p><p><strong>Status:</strong> the journal matching workflow is under development.</p><a class="text-link" href="/data-matching/">Data matching documentation</a></article>
   </div>
 </section>
-<section class="section wrap" aria-labelledby="queue-title"><p class="eyebrow">Next in the queue</p><h2 id="queue-title">Preregistrations</h2><p>Preregistrations are the next area planned for the organization’s project showcase.</p></section>
-<section class="start-section wrap"><div><p class="eyebrow">Follow the work</p><h2>Code, methods, and evolving outputs.</h2><p>Find project documentation and contribute through the organization’s repositories.</p></div><a class="button" href="https://github.com/science-as-data">View repositories ↗</a></section>
+<section class="section wrap" aria-labelledby="materials-title"><h2 id="materials-title">Using the materials</h2><p>For OpenAlex, the <a href="/protocol/">loading protocol</a> describes the reference snapshot and environment, the <a href="/schema/">schema</a> documents table relationships, and the <a href="/queries/">SQL examples</a> discuss analytical choices. The <a href="/preview/">static data sample</a> illustrates the representation of records; it does not support population estimates.</p><p>The <a href="/queries/#practice">analysis and reproducibility notes</a> discuss coverage, missing metadata, units of analysis, and the information needed to reproduce results.</p></section>

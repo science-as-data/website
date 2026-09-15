@@ -1,6 +1,6 @@
 # Science as Data website
 
-The organization website for [Science as Data](https://github.com/science-as-data), built with [Franklin.jl](https://franklinjl.org/). It showcases repository outcomes, covering arXiv, OpenAlex, and CORE, with preregistrations next in the queue. This is a standalone repository, moved from `openalex/website/`.
+The organization website for [Science as Data](https://github.com/science-as-data), built with [Franklin.jl](https://franklinjl.org/). It documents OpenAlex, arXiv, CORE, Pre-registrations, and Data matching, with explicit status notes for planned work. This is a standalone repository, moved from `openalex/website/`.
 
 The homepage introduces the projects; `/openalex/` retains the original OpenAlex overview, and `/arxiv/` describes the metadata workflow and its current scope. `/core/` reserves space for CORE outcomes, pending project details. Existing `/protocol/`, `/schema/`, `/queries/`, and `/preview/` routes remain OpenAlex resources. Builds use saved assets and require no database access.
 
@@ -37,14 +37,16 @@ Upload the contents of `__site/` to your static host. A production build with a 
 - `openalex.md` and `_layout/landing.html`: OpenAlex overview and conceptual data illustration.
 - `arxiv.md`: arXiv outcomes, workflow, and current scope.
 - `core.md`: CORE project status; add verified outcomes when available.
-- Keep preregistrations in the homepage queue until project material is ready.
+- `pre-registrations.md`: planned research area and documentation status.
+- `data-matching.md`: journal matching methods, limitations, and repository links.
+- The Overview tab links to the organization homepage; each research area has its own navigation entry.
 - `protocol.md`, `schema.md`, `queries.md`, `preview.md`: Markdown documentation and dataset preview pages.
 - `_layout/query-examples.html`: query tabs and SQL examples.
 - `_layout/head.html`, `_layout/foot.html`: shared navigation and footer.
 - `_css/site.css`, `_libs/site.js`: responsive styles and progressive enhancements (published as `css/` and `libs/`).
 - `config.md`: site metadata, output container, ignored build inputs, and deployment prefix.
 
-Assets and system fonts are served locally. Copy buttons report clipboard failures and select the code for manual copying. Query tabs support arrow keys, Home, End, and URL fragments. Without JavaScript, all examples and navigation links remain visible.
+Assets and the JuliaMono heading font are served locally; body text uses system fonts. JuliaMono is distributed under the SIL Open Font License in `assets/fonts/JuliaMono-LICENSE.txt`. Copy buttons report clipboard failures and select the code for manual copying. Query tabs support arrow keys, Home, End, and URL fragments. Without JavaScript, all examples and navigation links remain visible.
 
 Check desktop and mobile layouts, keyboard navigation, copy controls, and internal links after changes. Review SQL against `datadump/scripts/sql/01_create_schema.sql` in the OpenAlex repository; do not add automatically executed research queries to the build. Preserve the reference release label when updating snapshot figures. The main database smoke test is unnecessary for website-only edits.
 

@@ -1,13 +1,13 @@
 <section class="hero wrap">
   <div class="hero-copy">
-    <p class="eyebrow"><span class="signal-dot"></span> A protocol for science of science</p>
-    <h1>The world’s research.<br>Ready for <em>your<br class="desktop-break"> questions.</em></h1>
-    <p class="hero-description">Turn the OpenAlex snapshot into a relational PostgreSQL database. Go from compressed records to connected data—and get on with the research.</p>
-    <div class="hero-actions"><a class="button" href="/protocol/">Follow the protocol <span aria-hidden="true">↗</span></a><a class="text-link" href="/preview/">Preview the dataset <span aria-hidden="true">→</span></a></div>
-    <p class="hero-caption">Open source <span>·</span> Query locally <span>·</span> Keep the relationships</p>
+    <p class="eyebrow"><span class="signal-dot"></span> OpenAlex / Data preparation</p>
+    <h1>OpenAlex snapshot to PostgreSQL</h1>
+    <p class="hero-description">A documented workflow for converting the standard-format OpenAlex snapshot into relational tables. This overview describes the loading stages, reference release, and materials available for analysis.</p>
+    <div class="hero-actions"><a class="button" href="/protocol/">Loading protocol <span aria-hidden="true">↗</span></a><a class="text-link" href="/preview/">Static data sample <span aria-hidden="true">→</span></a></div>
+    <p class="hero-caption">Reference snapshot: 2026-03-30 · SQL runs against a local database</p>
   </div>
   <div class="transformation" role="img" aria-label="Compressed OpenAlex JSON records are flattened and loaded into linked PostgreSQL tables: works, authors, and institutions.">
-    <div class="figure-topline"><span>01 / THE TRANSFORMATION</span><span class="figure-cross">+</span></div>
+    <div class="figure-topline"><span>FIGURE 1 / DATA REPRESENTATION</span><span class="figure-cross">+</span></div>
     <div class="raw-stack">
       <div class="raw-heading"><span class="file-symbol">{ }</span> openalex / snapshot <span class="file-type">.jsonl.gz</span></div>
       <pre><span class="dim">{</span>
@@ -25,36 +25,37 @@
       <div class="db-table authors-table"><div class="table-heading"><span>▤</span> authors</div><p><span class="key">PK</span> id <span class="table-muted">· name</span></p></div>
       <div class="db-table institutions-table"><div class="table-heading"><span>▤</span> institutions</div><p><span class="key">PK</span> id <span class="table-muted">· country</span></p></div>
     </div>
-    <div class="figure-bottomline"><span class="signal-dot"></span> PostgreSQL <span class="figure-bottom-right">RELATIONSHIPS, PRESERVED.</span></div>
+    <div class="figure-bottomline"><span class="signal-dot"></span> PostgreSQL <span class="figure-bottom-right">SIMPLIFIED JOIN STRUCTURE</span></div>
     <p class="figure-note">Conceptual view · IDs shortened · joins use linking tables</p>
   </div>
 </section>
 
 <section class="snapshot-band" aria-label="Reference snapshot scale">
-  <div class="wrap snapshot-inner"><div class="snapshot-label"><span class="eyebrow">A snapshot of science</span><span>Reference release · 30 Mar 2026</span></div><div class="stat"><strong>492.4<span>M</span></strong><span>scholarly works</span></div><div class="stat"><strong>113.6<span>M</span></strong><span>author records</span></div><div class="stat"><strong>~712<span>GB</span></strong><span>compressed snapshot</span></div><div class="stat"><strong>1.5–2<span>TB</span></strong><span>estimated tables + indexes</span></div></div>
+  <div class="wrap snapshot-inner"><div class="snapshot-label"><span class="eyebrow">Reference snapshot</span><span>Reference release · 30 Mar 2026</span></div><div class="stat"><strong>492.4<span>M</span></strong><span>scholarly works</span></div><div class="stat"><strong>113.6<span>M</span></strong><span>author records</span></div><div class="stat"><strong>~712<span>GB</span></strong><span>compressed snapshot</span></div><div class="stat"><strong>1.5–2<span>TB</span></strong><span>estimated tables + indexes</span></div></div>
+<p class="wrap snapshot-source">Figures reproduced from the project’s reference-release documentation; storage for tables and indexes is an estimate. These are not live counts. <a href="/protocol/#prepare">Release and environment details</a>.</p>
 </section>
 
 <section class="section wrap" aria-labelledby="workflow-title">
-  <div class="section-heading"><div><p class="eyebrow">From files to findings</p><h2 id="workflow-title">One dataset. A clear path through it.</h2></div><a class="text-link" href="/protocol/">Read the full protocol <span aria-hidden="true">→</span></a></div>
+  <div class="section-heading"><div><p class="eyebrow">Data preparation</p><h2 id="workflow-title">Workflow stages</h2></div><a class="text-link" href="/protocol/">Read the full protocol <span aria-hidden="true">→</span></a></div>
   <div class="workflow-grid">
     <a class="workflow-step" href="/protocol/#download"><span class="step-index">01 <span>↗</span></span><h3>Download</h3><p>Sync the public S3 snapshot. Keep the compressed source files for repeatable loads.</p><code>download.sh</code></a>
     <a class="workflow-step" href="/protocol/#flatten"><span class="step-index">02 <span>↗</span></span><h3>Flatten</h3><p>Unpack nested records into CSV shards, with one schema defining every column.</p><code>flatten.py</code></a>
     <a class="workflow-step" href="/protocol/#load"><span class="step-index">03 <span>↗</span></span><h3>Load &amp; index</h3><p>Bulk-copy into PostgreSQL. Build indexes after loading, then update planner statistics.</p><code>load.sh</code></a>
-    <a class="workflow-step" href="/queries/"><span class="step-index">04 <span>↗</span></span><h3>Ask questions</h3><p>Join works, people, places, and ideas. Define your own research sample with SQL.</p><code>SELECT … FROM …</code></a>
+    <a class="workflow-step" href="/queries/"><span class="step-index">04 <span>↗</span></span><h3>Query</h3><p>Join works, people, places, and ideas. Define your own research sample with SQL.</p><code>SELECT … FROM …</code></a>
   </div>
 </section>
 
 <section class="research-section">
-  <div class="wrap research-grid"><div class="research-copy"><p class="eyebrow">Built for research</p><h2>Less data plumbing.<br>More discovery.</h2><p>A local database gives you room to ask questions across the scholarly record. Trace a field, study collaboration, or build a citation network.</p><a class="text-link" href="/queries/">Find a starting query <span aria-hidden="true">→</span></a><div class="research-tags"><span>Research dynamics</span><span>Collaboration</span><span>Open science</span></div></div>
-  <div class="query-preview"><div class="code-toolbar"><span><span class="signal-dot"></span> research_question.sql</span><button class="copy-button" data-copy="home-query" aria-label="Copy example SQL">Copy <span aria-hidden="true">⧉</span></button></div><p class="query-question">How has research output changed over time?</p><pre><code id="home-query"><span class="sql-keyword">SELECT</span> publication_year,
+  <div class="wrap research-grid"><div class="research-copy"><p class="eyebrow">Example analysis</p><h2>Article counts by publication year</h2><p>This query counts records classified as articles for 2015–2025. Its unit of analysis is the work record. Changes in counts can reflect source coverage and metadata updates as well as publication activity.</p><a class="text-link" href="/queries/">Find a starting query <span aria-hidden="true">→</span></a><div class="research-tags"><span>Research dynamics</span><span>Collaboration</span><span>Open science</span></div></div>
+  <div class="query-preview"><div class="code-toolbar"><span><span class="signal-dot"></span> research_question.sql</span><button class="copy-button" data-copy="home-query" aria-label="Copy example SQL">Copy <span aria-hidden="true">⧉</span></button></div><p class="query-question">How many article records occur in each publication year?</p><pre><code id="home-query"><span class="sql-keyword">SELECT</span> publication_year,
        <span class="sql-function">COUNT</span>(*) <span class="sql-keyword">AS</span> works
 <span class="sql-keyword">FROM</span> openalex.works
 <span class="sql-keyword">WHERE</span> publication_year <span class="sql-keyword">BETWEEN</span> <span class="sql-number">2015</span> <span class="sql-keyword">AND</span> <span class="sql-number">2025</span>
   <span class="sql-keyword">AND</span> type = <span class="sql-string">'article'</span>
 <span class="sql-keyword">GROUP BY</span> publication_year
-<span class="sql-keyword">ORDER BY</span> publication_year;</code></pre><div class="query-footnote">Real schema. Copyable SQL. Run against your local database.</div></div></div>
+<span class="sql-keyword">ORDER BY</span> publication_year;</code></pre><div class="query-footnote">Illustrative SQL; no result is computed here. Counts depend on the loaded snapshot.</div></div></div>
 </section>
 
-<section class="section wrap ecosystem-section"><div class="section-heading"><div><p class="eyebrow">Inside the repository</p><h2 id="repository">A toolkit, beyond the snapshot.</h2></div><p class="section-aside">Three connected ways to work<br>with the scholarly record.</p></div><div class="toolkit-grid"><a href="https://github.com/science-as-data/openalex/tree/main/api" class="toolkit-card"><span class="toolkit-path">api/ <span>↗</span></span><h3>Start with the live API</h3><p>Explore fields, look up records, and try worked examples before loading the full dataset.</p><span class="small-link">Reference &amp; examples →</span></a><a href="/schema/" class="toolkit-card"><span class="toolkit-path">datadump/ <span>↗</span></span><h3>Understand the data model</h3><p>See how nested entities become related tables, while richer structures stay in JSONB.</p><span class="small-link">Explore the schema →</span></a><a href="https://github.com/science-as-data/openalex/tree/main/matching" class="toolkit-card"><span class="toolkit-path">matching/ <span>↗</span></span><h3>Connect OpenAlex to Scopus</h3><p>Match journals through ISSNs and titles, then sample works by Scopus discipline and coverage.</p><span class="small-link">Journal crosswalk · in development →</span></a></div></section>
+<section class="section wrap ecosystem-section"><div class="section-heading"><div><p class="eyebrow">Inside the repository</p><h2 id="repository">Related repository components</h2></div><p class="section-aside">API access, relational representation,<br>and journal matching.</p></div><div class="toolkit-grid"><a href="https://github.com/science-as-data/openalex/tree/main/api" class="toolkit-card"><span class="toolkit-path">api/ <span>↗</span></span><h3>API tools</h3><p>Explore fields, look up records, and try worked examples before loading the full dataset.</p><span class="small-link">Reference &amp; examples →</span></a><a href="/schema/" class="toolkit-card"><span class="toolkit-path">datadump/ <span>↗</span></span><h3>Relational schema</h3><p>See how nested entities become related tables, while richer structures stay in JSONB.</p><span class="small-link">Explore the schema →</span></a><a href="/data-matching/" class="toolkit-card"><span class="toolkit-path">matching/ <span>↗</span></span><h3>OpenAlex–Scopus journal matching</h3><p>Match journals through ISSNs and titles, then sample works by Scopus discipline and coverage.</p><span class="small-link">Journal crosswalk · in development →</span></a></div></section>
 
-<section class="start-section wrap"><div><p class="eyebrow">Make the data your own</p><h2>Your next research question starts here.</h2><p>Review the requirements, test a sample, and build your database.</p></div><a class="button" href="/protocol/">Get started <span aria-hidden="true">↗</span></a></section>
+<section class="start-section wrap"><div><p class="eyebrow">Scope and limitations</p><h2>Define the analytical population</h2><p>The snapshot is not a complete census of research. Specify work types, dates, and source coverage; inspect missing metadata and account for multiple authors, affiliations, and topics when joining tables.</p></div><a class="text-link" href="/queries/#practice">Read analysis notes <span aria-hidden="true">↗</span></a></section>

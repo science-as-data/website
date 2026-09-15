@@ -3,7 +3,7 @@ title = "arXiv: preprint metadata"
 +++
 
 ~~~
-<header class="article-header wrap"><p class="eyebrow">Project / arXiv</p><h1>Preprints, with their history.</h1><p class="lede">A versioned path from the Cornell arXiv metadata snapshot to PostgreSQL, preserving the records needed to study research over time.</p></header>
+<header class="article-header wrap"><p class="eyebrow">Project / arXiv</p><h1>arXiv metadata workflow</h1><p class="lede">A workflow for loading versioned Cornell arXiv metadata snapshots into PostgreSQL. The data model includes papers, author occurrences, categories, revisions, and provenance.</p></header>
 <div class="article-layout wrap">
 <nav class="article-nav" aria-label="arXiv project sections"><strong>arXiv</strong><a href="#outputs">Project outputs</a><a href="#workflow">The workflow</a><a href="#scope">Current scope</a><a href="https://github.com/science-as-data/arxiv">Repository ↗</a></nav>
 <article class="article">
