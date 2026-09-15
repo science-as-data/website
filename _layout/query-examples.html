@@ -1,0 +1,68 @@
+<div class="query-tabs" aria-label="Research question"><button class="query-tab" id="tab-output" aria-controls="output">Research output</button><button class="query-tab" id="tab-collaboration" aria-controls="collaboration">Collaboration</button><button class="query-tab" id="tab-access" aria-controls="access">Open access</button><button class="query-tab" id="tab-citations" aria-controls="citations">Citation networks</button></div>
+<section class="query-panel" id="output" aria-labelledby="tab-output"><div class="query-meta"><span>Unit: work</span><span>2015–2025</span></div><h3>How is a field’s output changing?</h3><p>Count articles assigned to Computer Science through their primary topic. Using the primary topic gives each work at most one field in this query.</p><pre><code>SELECT w.publication_year,
+       COUNT(*) AS articles
+FROM openalex.works AS w
+JOIN openalex.topics AS t
+  ON t.id = w.primary_topic_id
+WHERE t.field_display_name = 'Computer Science'
+  AND w.publication_year BETWEEN 2015 AND 2025
+  AND w.type = 'article'
+GROUP BY w.publication_year
+ORDER BY w.publication_year;</code></pre><p class="interpretation"><strong>Read the result:</strong> one row per observed year, with the article count for that field. Works without a primary topic are excluded. Changes may reflect indexing coverage as well as research activity.</p></section>
+<section class="query-panel" id="collaboration" aria-labelledby="tab-collaboration"><div class="query-meta"><span>Unit: institution pair</span><span>2024</span></div><h3>Which institutions publish together?</h3><p>Build an undirected collaboration edge for each pair of distinct affiliated institutions on an article. Deduplicate affiliations before constructing pairs.</p><pre><code>WITH affiliations AS (
+  SELECT DISTINCT a.work_id, a.institution_id
+  FROM openalex.works_authorship_institutions AS a
+  JOIN openalex.works AS w ON w.id = a.work_id
+  WHERE w.publication_year = 2024
+    AND w.type = 'article'
+    AND a.institution_id IS NOT NULL
+), pairs AS (
+  SELECT a.institution_id AS institution_a,
+         b.institution_id AS institution_b,
+         COUNT(*) AS shared_articles
+  FROM affiliations AS a
+  JOIN affiliations AS b
+    ON a.work_id = b.work_id
+   AND a.institution_id &lt; b.institution_id
+  GROUP BY a.institution_id, b.institution_id
+)
+SELECT ia.display_name AS institution_a,
+       ib.display_name AS institution_b,
+       p.shared_articles
+FROM pairs AS p
+JOIN openalex.institutions AS ia
+  ON ia.id = p.institution_a
+JOIN openalex.institutions AS ib
+  ON ib.id = p.institution_b
+ORDER BY p.shared_articles DESC,
+         p.institution_a, p.institution_b
+LIMIT 50;</code></pre><p class="interpretation"><strong>Read the result:</strong> the 50 pairs with the most shared articles, counting each article once per pair. Dual affiliations can also create edges. This is full counting, and articles with many institutions contribute to many pairs. The pair expansion can be expensive.</p></section>
+<section class="query-panel" id="access" aria-labelledby="tab-access"><div class="query-meta"><span>Unit: work</span><span>2015–2025</span></div><h3>How does open access vary by year?</h3><p>Retain articles with missing open-access records as an explicit “unknown” category. Compute each status’s share within a publication year.</p><pre><code>WITH counts AS (
+  SELECT w.publication_year,
+         COALESCE(oa.oa_status, 'unknown') AS oa_status,
+         COUNT(*) AS articles
+  FROM openalex.works AS w
+  LEFT JOIN openalex.works_open_access AS oa
+    ON oa.work_id = w.id
+  WHERE w.publication_year BETWEEN 2015 AND 2025
+    AND w.type = 'article'
+  GROUP BY w.publication_year,
+           COALESCE(oa.oa_status, 'unknown')
+)
+SELECT publication_year, oa_status, articles,
+       ROUND(100.0 * articles /
+         SUM(articles) OVER (PARTITION BY publication_year),
+         2) AS percent_of_year
+FROM counts
+ORDER BY publication_year, oa_status;</code></pre><p class="interpretation"><strong>Read the result:</strong> article counts and percentage shares by publication year and access category. Status is observed at the snapshot date; this is not a historical measure of access at publication.</p></section>
+<section class="query-panel" id="citations" aria-labelledby="tab-citations"><div class="query-meta"><span>Unit: directed citation edge</span><span>Citing works: 2024</span></div><h3>Build a citation-network edge list.</h3><p>Extract a preview of outgoing citations from 2024 Computer Science articles. The source ID is the citing work; the target ID is the referenced work.</p><pre><code>SELECT DISTINCT r.work_id AS source,
+       r.referenced_work_id AS target
+FROM openalex.works_referenced_works AS r
+JOIN openalex.works AS w ON w.id = r.work_id
+JOIN openalex.topics AS t ON t.id = w.primary_topic_id
+WHERE w.publication_year = 2024
+  AND w.type = 'article'
+  AND t.field_display_name = 'Computer Science'
+  AND r.referenced_work_id IS NOT NULL
+ORDER BY source, target
+LIMIT 1000;</code></pre><p class="interpretation"><strong>Read the result:</strong> up to 1,000 directed edges, ordered by identifier. This preview is not a random sample. Targets may lie outside the field, year, or loaded snapshot; join them to <code>openalex.works</code> if your design requires resolved target metadata.</p></section>

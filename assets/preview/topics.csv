@@ -1,0 +1,209 @@
+id,display_name,subfield_display_name,field_display_name,domain_display_name
+https://openalex.org/T10018,Advancements in Battery Materials,Electrical and Electronic Engineering,Engineering,Physical Sciences
+https://openalex.org/T10019,Corporate Finance and Governance,Accounting,"Business, Management and Accounting",Social Sciences
+https://openalex.org/T10026,"Galaxies: Formation, Evolution, Phenomena",Astronomy and Astrophysics,Physics and Astronomy,Physical Sciences
+https://openalex.org/T10037,Physics of Superconductivity and Magnetism,Condensed Matter Physics,Physics and Astronomy,Physical Sciences
+https://openalex.org/T10051,Asthma and respiratory diseases,Physiology,Medicine,Health Sciences
+https://openalex.org/T10101,Cloud Computing and Resource Management,Information Systems,Computer Science,Physical Sciences
+https://openalex.org/T10106,Autism Spectrum Disorder Research,Cognitive Neuroscience,Neuroscience,Life Sciences
+https://openalex.org/T10152,Animal Nutrition and Physiology,Animal Science and Zoology,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T10166,Mosquito-borne diseases and control,"Public Health, Environmental and Occupational Health",Medicine,Health Sciences
+https://openalex.org/T10187,Radio Frequency Integrated Circuit Design,Electrical and Electronic Engineering,Engineering,Physical Sciences
+https://openalex.org/T10190,Air Quality and Health Impacts,"Health, Toxicology and Mutagenesis",Environmental Science,Physical Sciences
+https://openalex.org/T10198,Heart Failure Treatment and Management,Cardiology and Cardiovascular Medicine,Medicine,Health Sciences
+https://openalex.org/T10208,Labor market dynamics and wage inequality,Economics and Econometrics,"Economics, Econometrics and Finance",Social Sciences
+https://openalex.org/T10240,Plant tissue culture and regeneration,Molecular Biology,"Biochemistry, Genetics and Molecular Biology",Life Sciences
+https://openalex.org/T10262,Microwave Engineering and Waveguides,Electrical and Electronic Engineering,Engineering,Physical Sciences
+https://openalex.org/T10263,Eating Disorders and Behaviors,Clinical Psychology,Psychology,Social Sciences
+https://openalex.org/T10265,Multilingual Education and Policy,Linguistics and Language,Social Sciences,Social Sciences
+https://openalex.org/T10266,Plant Water Relations and Carbon Dynamics,Global and Planetary Change,Environmental Science,Physical Sciences
+https://openalex.org/T10274,Synthesis and biological activity,Organic Chemistry,Chemistry,Physical Sciences
+https://openalex.org/T10281,Advanced Battery Materials and Technologies,Electrical and Electronic Engineering,Engineering,Physical Sciences
+https://openalex.org/T10285,Venous Thromboembolism Diagnosis and Management,Internal Medicine,Medicine,Health Sciences
+https://openalex.org/T10286,Information Retrieval and Search Behavior,Information Systems,Computer Science,Physical Sciences
+https://openalex.org/T10296,Vector-borne infectious diseases,Parasitology,Immunology and Microbiology,Life Sciences
+https://openalex.org/T10303,Photosynthetic Processes and Mechanisms,Molecular Biology,"Biochemistry, Genetics and Molecular Biology",Life Sciences
+https://openalex.org/T10306,Liquid Crystal Research Advancements,"Electronic, Optical and Magnetic Materials",Materials Science,Physical Sciences
+https://openalex.org/T10333,Meat and Animal Product Quality,Animal Science and Zoology,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T10358,Advanced Radiotherapy Techniques,Radiation,Physics and Astronomy,Physical Sciences
+https://openalex.org/T10359,Dental Implant Techniques and Outcomes,Oral Surgery,Dentistry,Health Sciences
+https://openalex.org/T10360,Fluid Dynamics and Turbulent Flows,Computational Mechanics,Engineering,Physical Sciences
+https://openalex.org/T10362,Biblical Studies and Interpretation,Religious studies,Arts and Humanities,Social Sciences
+https://openalex.org/T10377,Metal and Thin Film Mechanics,Mechanics of Materials,Engineering,Physical Sciences
+https://openalex.org/T10378,Advanced MRI Techniques and Applications,"Radiology, Nuclear Medicine and Imaging",Medicine,Health Sciences
+https://openalex.org/T10403,Phonetics and Phonology Research,Experimental and Cognitive Psychology,Psychology,Social Sciences
+https://openalex.org/T10453,Maternal and Perinatal Health Interventions,Obstetrics and Gynecology,Medicine,Health Sciences
+https://openalex.org/T10461,Gas Sensing Nanomaterials and Sensors,Electrical and Electronic Engineering,Engineering,Physical Sciences
+https://openalex.org/T10475,Psychological Well-being and Life Satisfaction,Social Psychology,Psychology,Social Sciences
+https://openalex.org/T10502,Advanced Memory and Neural Computing,Electrical and Electronic Engineering,Engineering,Physical Sciences
+https://openalex.org/T10539,Sustainable Supply Chain Management,Strategy and Management,"Business, Management and Accounting",Social Sciences
+https://openalex.org/T10571,Robotic Mechanisms and Dynamics,Control and Systems Engineering,Engineering,Physical Sciences
+https://openalex.org/T10599,Reconstructive Surgery and Microvascular Techniques,Surgery,Medicine,Health Sciences
+https://openalex.org/T10607,Magnetic and transport properties of perovskites and related materials,"Electronic, Optical and Magnetic Materials",Materials Science,Physical Sciences
+https://openalex.org/T10624,Silicon and Solar Cell Technologies,Electrical and Electronic Engineering,Engineering,Physical Sciences
+https://openalex.org/T10632,Housing Market and Economics,Economics and Econometrics,"Economics, Econometrics and Finance",Social Sciences
+https://openalex.org/T10634,Food Allergy and Anaphylaxis Research,Immunology and Allergy,Medicine,Health Sciences
+https://openalex.org/T10636,Innovative Teaching and Learning Methods,Developmental and Educational Psychology,Psychology,Social Sciences
+https://openalex.org/T10641,Central Venous Catheters and Hemodialysis,Emergency Medical Services,Health Professions,Health Sciences
+https://openalex.org/T10658,Bone fractures and treatments,Epidemiology,Medicine,Health Sciences
+https://openalex.org/T10660,Conducting polymers and applications,Polymers and Plastics,Materials Science,Physical Sciences
+https://openalex.org/T10661,biodegradable polymer synthesis and properties,Biomaterials,Materials Science,Physical Sciences
+https://openalex.org/T10681,Rare-earth and actinide compounds,Condensed Matter Physics,Physics and Astronomy,Physical Sciences
+https://openalex.org/T10685,Viral-associated cancers and disorders,Oncology,Medicine,Health Sciences
+https://openalex.org/T10702,Insect and Arachnid Ecology and Behavior,Genetics,"Biochemistry, Genetics and Molecular Biology",Life Sciences
+https://openalex.org/T10742,Peer-to-Peer Network Technologies,Computer Networks and Communications,Computer Science,Physical Sciences
+https://openalex.org/T10745,Heart Rate Variability and Autonomic Control,Cardiology and Cardiovascular Medicine,Medicine,Health Sciences
+https://openalex.org/T10750,Fermentation and Sensory Analysis,Food Science,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T10754,Neuroendocrine Tumor Research Advances,Epidemiology,Medicine,Health Sciences
+https://openalex.org/T10760,Pancreatitis Pathology and Treatment,Surgery,Medicine,Health Sciences
+https://openalex.org/T10784,Muscle activation and electromyography studies,Biomedical Engineering,Engineering,Physical Sciences
+https://openalex.org/T10786,Maternal Mental Health During Pregnancy and Postpartum,"Public Health, Environmental and Occupational Health",Medicine,Health Sciences
+https://openalex.org/T10794,Islamic Studies and History,Political Science and International Relations,Social Sciences,Social Sciences
+https://openalex.org/T10817,Multicomponent Synthesis of Heterocycles,Organic Chemistry,Chemistry,Physical Sciences
+https://openalex.org/T10826,Behavioral and Psychological Studies,Developmental and Educational Psychology,Psychology,Social Sciences
+https://openalex.org/T10838,Animal Behavior and Welfare Studies,Small Animals,Veterinary,Health Sciences
+https://openalex.org/T10850,Heat Transfer and Boiling Studies,Mechanical Engineering,Engineering,Physical Sciences
+https://openalex.org/T10853,"Anxiety, Depression, Psychometrics, Treatment, Cognitive Processes",Experimental and Cognitive Psychology,Psychology,Social Sciences
+https://openalex.org/T10856,Intellectual Property and Patents,Management of Technology and Innovation,"Business, Management and Accounting",Social Sciences
+https://openalex.org/T10870,Interstitial Lung Diseases and Idiopathic Pulmonary Fibrosis,Pulmonary and Respiratory Medicine,Medicine,Health Sciences
+https://openalex.org/T10877,Allergic Rhinitis and Sensitization,Immunology and Allergy,Medicine,Health Sciences
+https://openalex.org/T10879,Robotic Locomotion and Control,Biomedical Engineering,Engineering,Physical Sciences
+https://openalex.org/T10880,Environmental Sustainability in Business,Marketing,"Business, Management and Accounting",Social Sciences
+https://openalex.org/T10892,Drilling and Well Engineering,Ocean Engineering,Engineering,Physical Sciences
+https://openalex.org/T10893,Chinese history and philosophy,Sociology and Political Science,Social Sciences,Social Sciences
+https://openalex.org/T10902,Complementary and Alternative Medicine Studies,Complementary and alternative medicine,Medicine,Health Sciences
+https://openalex.org/T10907,International Student and Expatriate Challenges,Communication,Social Sciences,Social Sciences
+https://openalex.org/T10908,Analytical Chemistry and Chromatography,Spectroscopy,Chemistry,Physical Sciences
+https://openalex.org/T10969,Water resources management and optimization,Ocean Engineering,Engineering,Physical Sciences
+https://openalex.org/T10979,Breastfeeding Practices and Influences,Epidemiology,Medicine,Health Sciences
+https://openalex.org/T10980,Vascular Malformations and Hemangiomas,Surgery,Medicine,Health Sciences
+https://openalex.org/T10981,Cytomegalovirus and herpesvirus research,Epidemiology,Medicine,Health Sciences
+https://openalex.org/T10987,Microfinance and Financial Inclusion,Economics and Econometrics,"Economics, Econometrics and Finance",Social Sciences
+https://openalex.org/T10998,Heat Transfer and Optimization,Mechanical Engineering,Engineering,Physical Sciences
+https://openalex.org/T11008,Aerodynamics and Acoustics in Jet Flows,Aerospace Engineering,Engineering,Physical Sciences
+https://openalex.org/T11033,Contact Dermatitis and Allergies,Dermatology,Medicine,Health Sciences
+https://openalex.org/T11035,Salivary Gland Tumors Diagnosis and Treatment,Surgery,Medicine,Health Sciences
+https://openalex.org/T11065,Insect Pest Control Strategies,Plant Science,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T11075,Insect Resistance and Genetics,Molecular Biology,"Biochemistry, Genetics and Molecular Biology",Life Sciences
+https://openalex.org/T11084,Workplace Health and Well-being,General Health Professions,Health Professions,Health Sciences
+https://openalex.org/T11112,Viral Infections and Immunology Research,Cardiology and Cardiovascular Medicine,Medicine,Health Sciences
+https://openalex.org/T11123,Obsessive-Compulsive Spectrum Disorders,Clinical Psychology,Psychology,Social Sciences
+https://openalex.org/T11128,Transition Metal Oxide Nanomaterials,Polymers and Plastics,Materials Science,Physical Sciences
+https://openalex.org/T11138,Tribology and Lubrication Engineering,Mechanical Engineering,Engineering,Physical Sciences
+https://openalex.org/T11144,melanin and skin pigmentation,Cell Biology,"Biochemistry, Genetics and Molecular Biology",Life Sciences
+https://openalex.org/T11159,Manufacturing Process and Optimization,Industrial and Manufacturing Engineering,Engineering,Physical Sciences
+https://openalex.org/T11170,Biomimetic flight and propulsion mechanisms,Aerospace Engineering,Engineering,Physical Sciences
+https://openalex.org/T11176,Radiation Therapy and Dosimetry,Pulmonary and Respiratory Medicine,Medicine,Health Sciences
+https://openalex.org/T11189,Transplantation: Methods and Outcomes,Surgery,Medicine,Health Sciences
+https://openalex.org/T11212,Cultural Heritage Materials Analysis,Archeology,Arts and Humanities,Social Sciences
+https://openalex.org/T11213,Genomic variations and chromosomal abnormalities,Genetics,"Biochemistry, Genetics and Molecular Biology",Life Sciences
+https://openalex.org/T11244,Climate Change and Health Impacts,"Health, Toxicology and Mutagenesis",Environmental Science,Physical Sciences
+https://openalex.org/T11254,Fluid Dynamics and Vibration Analysis,Computational Mechanics,Engineering,Physical Sciences
+https://openalex.org/T11271,Myasthenia Gravis and Thymoma,Neurology,Medicine,Health Sciences
+https://openalex.org/T11357,Risk and Safety Analysis,"Statistics, Probability and Uncertainty",Decision Sciences,Social Sciences
+https://openalex.org/T11383,Advanced Antenna and Metasurface Technologies,Aerospace Engineering,Engineering,Physical Sciences
+https://openalex.org/T11392,Energy Harvesting in Wireless Networks,Electrical and Electronic Engineering,Engineering,Physical Sciences
+https://openalex.org/T11400,Motivation and Self-Concept in Sports,Social Psychology,Psychology,Social Sciences
+https://openalex.org/T11423,Pesticide Residue Analysis and Safety,Food Science,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T11436,Entomopathogenic Microorganisms in Pest Control,Insect Science,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T11454,Cultural Differences and Values,Social Psychology,Psychology,Social Sciences
+https://openalex.org/T11460,Analytical Methods in Pharmaceuticals,Analytical Chemistry,Chemistry,Physical Sciences
+https://openalex.org/T11472,Analytical Chemistry and Sensors,Bioengineering,Chemical Engineering,Physical Sciences
+https://openalex.org/T11478,Caching and Content Delivery,Computer Networks and Communications,Computer Science,Physical Sciences
+https://openalex.org/T11511,Dyeing and Modifying Textile Fibers,Building and Construction,Engineering,Physical Sciences
+https://openalex.org/T11542,Behavioral Health and Interventions,Applied Psychology,Psychology,Social Sciences
+https://openalex.org/T11544,"Gender, Labor, and Family Dynamics",Gender Studies,Social Sciences,Social Sciences
+https://openalex.org/T11546,Plant Physiology and Cultivation Studies,Plant Science,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T11556,"Poverty, Education, and Child Welfare",Safety Research,Social Sciences,Social Sciences
+https://openalex.org/T11557,Lubricants and Their Additives,Mechanical Engineering,Engineering,Physical Sciences
+https://openalex.org/T11570,Periodontal Regeneration and Treatments,Urology,Medicine,Health Sciences
+https://openalex.org/T11582,Nanopore and Nanochannel Transport Studies,Biomedical Engineering,Engineering,Physical Sciences
+https://openalex.org/T11613,Phytochemistry and Biological Activities,Plant Science,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T11622,Maritime Navigation and Safety,Ocean Engineering,Engineering,Physical Sciences
+https://openalex.org/T11631,"Retirement, Disability, and Employment",Demography,Social Sciences,Social Sciences
+https://openalex.org/T11638,Cardiac tumors and thrombi,Cardiology and Cardiovascular Medicine,Medicine,Health Sciences
+https://openalex.org/T11664,Fiber-reinforced polymer composites,Mechanical Engineering,Engineering,Physical Sciences
+https://openalex.org/T11666,Color Science and Applications,"Atomic and Molecular Physics, and Optics",Physics and Astronomy,Physical Sciences
+https://openalex.org/T11682,Advanced Condensed Matter Physics,Condensed Matter Physics,Physics and Astronomy,Physical Sciences
+https://openalex.org/T11696,Conflict Management and Negotiation,Sociology and Political Science,Social Sciences,Social Sciences
+https://openalex.org/T11708,Photochromic and Fluorescence Chemistry,Materials Chemistry,Materials Science,Physical Sciences
+https://openalex.org/T11745,Potato Plant Research,Food Science,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T11746,Inorganic and Organometallic Chemistry,Organic Chemistry,Chemistry,Physical Sciences
+https://openalex.org/T11760,Plant responses to elevated CO2,Plant Science,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T11766,Iron-based superconductors research,"Electronic, Optical and Magnetic Materials",Materials Science,Physical Sciences
+https://openalex.org/T11770,Fiscal Policy and Economic Growth,Economics and Econometrics,"Economics, Econometrics and Finance",Social Sciences
+https://openalex.org/T11771,Plant Pathogens and Resistance,Plant Science,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T11796,Horticultural and Viticultural Research,Plant Science,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T11799,"Adhesion, Friction, and Surface Interactions",Mechanics of Materials,Engineering,Physical Sciences
+https://openalex.org/T11801,Reservoir Engineering and Simulation Methods,Ocean Engineering,Engineering,Physical Sciences
+https://openalex.org/T11807,Infrastructure Resilience and Vulnerability Analysis,Civil and Structural Engineering,Engineering,Physical Sciences
+https://openalex.org/T11809,Advanced NMR Techniques and Applications,Spectroscopy,Chemistry,Physical Sciences
+https://openalex.org/T11887,Quasicrystal Structures and Properties,Materials Chemistry,Materials Science,Physical Sciences
+https://openalex.org/T11924,Polyamine Metabolism and Applications,Molecular Biology,"Biochemistry, Genetics and Molecular Biology",Life Sciences
+https://openalex.org/T11945,Heat Transfer Mechanisms,Mechanical Engineering,Engineering,Physical Sciences
+https://openalex.org/T11947,Molten salt chemistry and electrochemical processes,Fluid Flow and Transfer Processes,Chemical Engineering,Physical Sciences
+https://openalex.org/T11950,Cardiovascular Syncope and Autonomic Disorders,Surgery,Medicine,Health Sciences
+https://openalex.org/T11951,Trauma Management and Diagnosis,Surgery,Medicine,Health Sciences
+https://openalex.org/T11963,Impact of Light on Environment and Health,Global and Planetary Change,Environmental Science,Physical Sciences
+https://openalex.org/T11988,Sustainable Building Design and Assessment,Building and Construction,Engineering,Physical Sciences
+https://openalex.org/T12005,Spaceflight effects on biology,Physiology,Medicine,Health Sciences
+https://openalex.org/T12031,Speech and dialogue systems,Artificial Intelligence,Computer Science,Physical Sciences
+https://openalex.org/T12047,Viral Infections and Vectors,Infectious Diseases,Medicine,Health Sciences
+https://openalex.org/T12058,Allelopathy and phytotoxic interactions,Plant Science,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T12074,Membrane-based Ion Separation Techniques,Biomedical Engineering,Engineering,Physical Sciences
+https://openalex.org/T12084,Synthesis and properties of polymers,Polymers and Plastics,Materials Science,Physical Sciences
+https://openalex.org/T12099,Advanced materials and composites,Mechanical Engineering,Engineering,Physical Sciences
+https://openalex.org/T12123,Financial Analysis and Corporate Governance,Accounting,"Business, Management and Accounting",Social Sciences
+https://openalex.org/T12263,Peacebuilding and International Security,Sociology and Political Science,Social Sciences,Social Sciences
+https://openalex.org/T12270,Microwave-Assisted Synthesis and Applications,Organic Chemistry,Chemistry,Physical Sciences
+https://openalex.org/T12274,Electrostatics and Colloid Interactions,Physical and Theoretical Chemistry,Chemistry,Physical Sciences
+https://openalex.org/T12278,Vascular Tumors and Angiosarcomas,Oncology,Medicine,Health Sciences
+https://openalex.org/T12295,"Foucault, Power, and Ethics",Sociology and Political Science,Social Sciences,Social Sciences
+https://openalex.org/T12309,solar cell performance optimization,Electrical and Electronic Engineering,Engineering,Physical Sciences
+https://openalex.org/T12316,Oil Spill Detection and Mitigation,Pollution,Environmental Science,Physical Sciences
+https://openalex.org/T12323,Asian American and Pacific Histories,Cultural Studies,Social Sciences,Social Sciences
+https://openalex.org/T12330,Botanical Research and Applications,Food Science,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T12358,Thermal and Kinetic Analysis,Materials Chemistry,Materials Science,Physical Sciences
+https://openalex.org/T12375,Cuban History and Society,Sociology and Political Science,Social Sciences,Social Sciences
+https://openalex.org/T12381,Electron Spin Resonance Studies,Biophysics,"Biochemistry, Genetics and Molecular Biology",Life Sciences
+https://openalex.org/T12388,Identification and Quantification in Food,Molecular Biology,"Biochemistry, Genetics and Molecular Biology",Life Sciences
+https://openalex.org/T12389,Infrared Target Detection Methodologies,Aerospace Engineering,Engineering,Physical Sciences
+https://openalex.org/T12427,Metal Alloys Wear and Properties,Materials Chemistry,Materials Science,Physical Sciences
+https://openalex.org/T12434,Phosphodiesterase function and regulation,Molecular Biology,"Biochemistry, Genetics and Molecular Biology",Life Sciences
+https://openalex.org/T12452,Electrowetting and Microfluidic Technologies,Electrical and Electronic Engineering,Engineering,Physical Sciences
+https://openalex.org/T12539,Pharmacology and Obesity Treatment,Pharmacology,Medicine,Health Sciences
+https://openalex.org/T12544,Working Capital and Financial Performance,Accounting,"Business, Management and Accounting",Social Sciences
+https://openalex.org/T12635,African studies and sociopolitical issues,Sociology and Political Science,Social Sciences,Social Sciences
+https://openalex.org/T12697,Water Quality Monitoring Technologies,Water Science and Technology,Environmental Science,Physical Sciences
+https://openalex.org/T12704,Stress and Burnout Research,Social Psychology,Psychology,Social Sciences
+https://openalex.org/T12813,Plant and Biological Electrophysiology Studies,Plant Science,Agricultural and Biological Sciences,Life Sciences
+https://openalex.org/T12849,Parvovirus B19 Infection Studies,Infectious Diseases,Medicine,Health Sciences
+https://openalex.org/T12852,Chemical Thermodynamics and Molecular Structure,Organic Chemistry,Chemistry,Physical Sciences
+https://openalex.org/T12907,Mechanical Engineering and Vibrations Research,Mechanical Engineering,Engineering,Physical Sciences
+https://openalex.org/T12917,Astronomy and Astrophysical Research,Instrumentation,Physics and Astronomy,Physical Sciences
+https://openalex.org/T13049,Surface Roughness and Optical Measurements,Computational Mechanics,Engineering,Physical Sciences
+https://openalex.org/T13050,Oil and Gas Production Techniques,Ocean Engineering,Engineering,Physical Sciences
+https://openalex.org/T13108,Therapeutic Uses of Natural Elements,Complementary and Manual Therapy,Health Professions,Health Sciences
+https://openalex.org/T13123,Advances in Oncology and Radiotherapy,"Radiology, Nuclear Medicine and Imaging",Medicine,Health Sciences
+https://openalex.org/T13126,Scientific Research and Discoveries,Statistical and Nonlinear Physics,Physics and Astronomy,Physical Sciences
+https://openalex.org/T13154,Legal and Regulatory Analysis,Transportation,Social Sciences,Social Sciences
+https://openalex.org/T13199,Digestive system and related health,Genetics,"Biochemistry, Genetics and Molecular Biology",Life Sciences
+https://openalex.org/T13274,Expert finding and Q&A systems,Information Systems,Computer Science,Physical Sciences
+https://openalex.org/T13386,Educational Methods and Teacher Development,Information Systems,Computer Science,Physical Sciences
+https://openalex.org/T13393,Child Nutrition and Feeding Issues,Psychiatry and Mental health,Medicine,Health Sciences
+https://openalex.org/T13394,"Ecology, Conservation, and Geographical Studies",Nature and Landscape Conservation,Environmental Science,Physical Sciences
+https://openalex.org/T13443,Mineralogy and Gemology Studies,Geochemistry and Petrology,Earth and Planetary Sciences,Physical Sciences
+https://openalex.org/T13494,Military History and Strategy,Political Science and International Relations,Social Sciences,Social Sciences
+https://openalex.org/T13560,Socioeconomic Development in MENA,Sociology and Political Science,Social Sciences,Social Sciences
+https://openalex.org/T13634,Middle East and Rwanda Conflicts,Sociology and Political Science,Social Sciences,Social Sciences
+https://openalex.org/T13652,Education and Social Development in Ukraine,Education,Social Sciences,Social Sciences
+https://openalex.org/T13768,Oral and gingival health research,Pharmacy,Health Professions,Health Sciences
+https://openalex.org/T13957,Corporate Governance and Financial Management,Strategy and Management,"Business, Management and Accounting",Social Sciences
+https://openalex.org/T14210,Historical and Linguistic Studies,Sociology and Political Science,Social Sciences,Social Sciences
+https://openalex.org/T14235,"Linguistic, Cultural, and Literary Studies",Sociology and Political Science,Social Sciences,Social Sciences
+https://openalex.org/T14306,Technology Assessment and Management,"Safety, Risk, Reliability and Quality",Engineering,Physical Sciences
+https://openalex.org/T14308,Psychological and Educational Research Studies,Experimental and Cognitive Psychology,Psychology,Social Sciences
+https://openalex.org/T14342,"Military, Security, and Education Studies",Sociology and Political Science,Social Sciences,Social Sciences
+https://openalex.org/T14389,"Innovation, Technology, and Society",Sociology and Political Science,Social Sciences,Social Sciences
+https://openalex.org/T14418,"Development, Ethics, and Society",Development,Social Sciences,Social Sciences
+https://openalex.org/T14423,Military Technology and Strategies,Aerospace Engineering,Engineering,Physical Sciences

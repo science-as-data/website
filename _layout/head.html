@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}} · Science as Data</title>
+  <meta name="description" content="{{website_descr}}">
+  <meta name="theme-color" content="#173f3c">
+  <meta property="og:title" content="{{title}} · Science as Data">
+  <meta property="og:description" content="{{website_descr}}">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/site.css">
+  <script src="/libs/site.js" defer></script>
+  {{ispage preview}}
+  <link rel="stylesheet" href="/css/preview.css">
+  <script src="/libs/preview.js" defer></script>
+  {{end}}
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Science as Data home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Science <span class="brand-light">as Data</span></span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">＋</span></button>
+  <nav id="main-nav" aria-label="Main navigation">
+    <a href="/#projects">Projects</a>
+    <a href="/openalex/" {{ispage openalex protocol schema preview queries}}aria-current="page"{{end}}>OpenAlex</a>
+    <a href="/arxiv/" {{ispage arxiv}}aria-current="page"{{end}}>arXiv</a>
+    <a href="/core/" {{ispage core}}aria-current="page"{{end}}>CORE</a>
+    <a class="nav-source" href="https://github.com/science-as-data">GitHub <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
+<main id="main" tabindex="-1">
