@@ -1,0 +1,177 @@
+category,works,group,name
+cs.LG,285051,Computer Science,Machine Learning
+cs.CV,205034,Computer Science,Computer Vision and Pattern Recognition
+cs.AI,199222,Computer Science,Artificial Intelligence
+hep-ph,199160,Physics,High Energy Physics - Phenomenology
+quant-ph,186217,Physics,Quantum Physics
+hep-th,185497,Physics,High Energy Physics - Theory
+gr-qc,124556,Physics,General Relativity and Quantum Cosmology
+cs.CL,118753,Computer Science,Computation and Language
+cond-mat.mtrl-sci,112131,Physics,Materials Science
+astro-ph,105380,Legacy / unmapped,Historical code; retained as supplied
+cond-mat.mes-hall,103263,Physics,Mesoscale and Nanoscale Physics
+math.MP,92196,Mathematics,Mathematical Physics
+math-ph,92196,Physics,Mathematical Physics
+cond-mat.str-el,84486,Physics,Strongly Correlated Electrons
+cond-mat.stat-mech,83162,Physics,Statistical Mechanics
+math.CO,82002,Mathematics,Combinatorics
+stat.ML,79911,Statistics,Machine Learning
+astro-ph.GA,79663,Physics,Astrophysics of Galaxies
+astro-ph.CO,78733,Physics,Cosmology and Nongalactic Astrophysics
+math.AP,76780,Mathematics,Analysis of PDEs
+astro-ph.SR,71021,Physics,Solar and Stellar Astrophysics
+astro-ph.HE,70991,Physics,High Energy Astrophysical Phenomena
+math.PR,67991,Mathematics,Probability
+math.OC,64171,Mathematics,Optimization and Control
+nucl-th,63511,Physics,Nuclear Theory
+hep-ex,61313,Physics,High Energy Physics - Experiment
+math.AG,61100,Mathematics,Algebraic Geometry
+physics.optics,58080,Physics,Optics
+cs.RO,57833,Computer Science,Robotics
+cs.IT,56004,Computer Science,Information Theory
+math.IT,56004,Mathematics,Information Theory
+cs.CR,51916,Computer Science,Cryptography and Security
+math.NA,51534,Mathematics,Numerical Analysis
+cs.NA,51533,Computer Science,Numerical Analysis
+math.NT,50700,Mathematics,Number Theory
+math.DG,49223,Mathematics,Differential Geometry
+cs.SY,48161,Computer Science,Systems and Control
+eess.SY,48159,Electrical Engineering and Systems Science,Systems and Control
+cond-mat.supr-con,47962,Physics,Superconductivity
+cond-mat.soft,46066,Physics,Soft Condensed Matter
+math.DS,44324,Mathematics,Dynamical Systems
+eess.SP,41998,Electrical Engineering and Systems Science,Signal Processing
+stat.ME,37741,Statistics,Methodology
+astro-ph.IM,37364,Physics,Instrumentation and Methods for Astrophysics
+math.FA,37232,Mathematics,Functional Analysis
+astro-ph.EP,36021,Physics,Earth and Planetary Astrophysics
+physics.flu-dyn,35191,Physics,Fluid Dynamics
+cs.HC,32695,Computer Science,Human-Computer Interaction
+eess.IV,31591,Electrical Engineering and Systems Science,Image and Video Processing
+math.RT,30857,Mathematics,Representation Theory
+hep-lat,30755,Physics,High Energy Physics - Lattice
+cs.CY,30324,Computer Science,Computers and Society
+cs.DC,30036,Computer Science,"Distributed, Parallel, and Cluster Computing"
+cs.DS,29904,Computer Science,Data Structures and Algorithms
+physics.comp-ph,29482,Physics,Computational Physics
+cs.SE,29365,Computer Science,Software Engineering
+math.ST,28939,Mathematics,Statistics Theory
+stat.TH,28939,Statistics,Statistics Theory
+nucl-ex,28916,Physics,Nuclear Experiment
+cs.NI,28328,Computer Science,Networking and Internet Architecture
+physics.chem-ph,28071,Physics,Chemical Physics
+cs.IR,27079,Computer Science,Information Retrieval
+cond-mat.dis-nn,27035,Physics,Disordered Systems and Neural Networks
+math.GR,26342,Mathematics,Group Theory
+math.GT,26338,Mathematics,Geometric Topology
+physics.soc-ph,25663,Physics,Physics and Society
+math.CA,25660,Mathematics,Classical Analysis and ODEs
+physics.ins-det,24873,Physics,Instrumentation and Detectors
+cond-mat.quant-gas,24644,Physics,Quantum Gases
+physics.atom-ph,24400,Physics,Atomic Physics
+stat.AP,24226,Statistics,Applications
+physics.app-ph,24208,Physics,Applied Physics
+cs.SI,23901,Computer Science,Social and Information Networks
+eess.AS,22362,Electrical Engineering and Systems Science,Audio and Speech Processing
+cs.SD,21998,Computer Science,Sound
+math.QA,21205,Mathematics,Quantum Algebra
+math.RA,20601,Mathematics,Rings and Algebras
+physics.plasm-ph,20481,Physics,Plasma Physics
+cs.LO,20141,Computer Science,Logic in Computer Science
+math.CV,19969,Mathematics,Complex Variables
+math.AT,18402,Mathematics,Algebraic Topology
+cs.NE,18249,Computer Science,Neural and Evolutionary Computing
+physics.bio-ph,18062,Physics,Biological Physics
+nlin.CD,17470,Physics,Chaotic Dynamics
+cond-mat.other,17434,Physics,Other Condensed Matter
+cs.DM,16093,Computer Science,Discrete Mathematics
+math.LO,16034,Mathematics,Logic
+cs.GT,15479,Computer Science,Computer Science and Game Theory
+math.AC,15236,Mathematics,Commutative Algebra
+math.OA,14549,Mathematics,Operator Algebras
+cond-mat,14215,Legacy / unmapped,Historical code; retained as supplied
+cs.MA,13590,Computer Science,Multiagent Systems
+q-bio.QM,13570,Quantitative Biology,Quantitative Methods
+math.MG,13541,Mathematics,Metric Geometry
+cs.CC,13357,Computer Science,Computational Complexity
+q-bio.PE,13231,Quantitative Biology,Populations and Evolution
+nlin.SI,13035,Physics,Exactly Solvable and Integrable Systems
+q-bio.NC,12471,Quantitative Biology,Neurons and Cognition
+cs.DB,12354,Computer Science,Databases
+physics.data-an,12145,Physics,"Data Analysis, Statistics and Probability"
+math.SP,11564,Mathematics,Spectral Theory
+cs.CE,11216,Computer Science,"Computational Engineering, Finance, and Science"
+physics.gen-ph,10995,Physics,General Physics
+nlin.PS,10946,Physics,Pattern Formation and Solitons
+stat.CO,10572,Statistics,Computation
+math.CT,10545,Mathematics,Category Theory
+math.SG,10379,Mathematics,Symplectic Geometry
+cs.PL,10292,Computer Science,Programming Languages
+cs.MM,10051,Computer Science,Multimedia
+cs.GR,9740,Computer Science,Graphics
+physics.class-ph,9584,Physics,Classical Physics
+physics.med-ph,9201,Physics,Medical Physics
+cs.AR,9019,Computer Science,Hardware Architecture
+physics.acc-ph,9010,Physics,Accelerator Physics
+physics.geo-ph,8939,Physics,Geophysics
+physics.ao-ph,8649,Physics,Atmospheric and Oceanic Physics
+nlin.AO,8340,Physics,Adaptation and Self-Organizing Systems
+cs.CG,8337,Computer Science,Computational Geometry
+cs.ET,7863,Computer Science,Emerging Technologies
+physics.space-ph,7716,Physics,Space Physics
+q-fin.EC,7533,Quantitative Finance,Economics
+econ.GN,7532,Economics,General Economics
+q-bio.BM,6874,Quantitative Biology,Biomolecules
+math.KT,6713,Mathematics,K-Theory and Homology
+cs.DL,6318,Computer Science,Digital Libraries
+cs.FL,6209,Computer Science,Formal Languages and Automata Theory
+math.GN,6052,Mathematics,General Topology
+econ.EM,5831,Economics,Econometrics
+physics.hist-ph,5721,Physics,History and Philosophy of Physics
+cs.PF,5567,Computer Science,Performance
+math.GM,4981,Mathematics,General Mathematics
+physics.ed-ph,4685,Physics,Physics Education
+q-fin.ST,4362,Quantitative Finance,Statistical Finance
+econ.TH,4354,Economics,Theoretical Economics
+math.HO,4324,Mathematics,History and Overview
+q-bio.MN,4230,Quantitative Biology,Molecular Networks
+q-bio.GN,3936,Quantitative Biology,Genomics
+q-fin.MF,3412,Quantitative Finance,Mathematical Finance
+q-fin.CP,3348,Quantitative Finance,Computational Finance
+cs.SC,3241,Computer Science,Symbolic Computation
+q-fin.GN,3079,Quantitative Finance,General Finance
+q-fin.RM,3056,Quantitative Finance,Risk Management
+physics.atm-clus,3036,Physics,Atomic and Molecular Clusters
+cs.MS,2754,Computer Science,Mathematical Software
+physics.pop-ph,2688,Physics,Popular Physics
+q-bio.TO,2652,Quantitative Biology,Tissues and Organs
+q-bio.CB,2480,Quantitative Biology,Cell Behavior
+q-fin.PM,2459,Quantitative Finance,Portfolio Management
+chao-dyn,2398,Legacy / unmapped,Historical code; retained as supplied
+q-fin.TR,2353,Quantitative Finance,Trading and Market Microstructure
+cs.OH,2321,Computer Science,Other Computer Science
+q-fin.PR,2264,Quantitative Finance,Pricing of Securities
+q-bio.SC,1825,Quantitative Biology,Subcellular Processes
+stat.OT,1737,Statistics,Other Statistics
+nlin.CG,1702,Physics,Cellular Automata and Lattice Gases
+q-bio.OT,1627,Quantitative Biology,Other Quantitative Biology
+q-alg,1578,Legacy / unmapped,Historical code; retained as supplied
+cs.OS,1465,Computer Science,Operating Systems
+alg-geom,1423,Legacy / unmapped,Historical code; retained as supplied
+solv-int,1413,Legacy / unmapped,Historical code; retained as supplied
+q-bio,1356,Legacy / unmapped,Historical code; retained as supplied
+cmp-lg,894,Legacy / unmapped,Historical code; retained as supplied
+dg-ga,732,Legacy / unmapped,Historical code; retained as supplied
+patt-sol,650,Legacy / unmapped,Historical code; retained as supplied
+adap-org,584,Legacy / unmapped,Historical code; retained as supplied
+funct-an,427,Legacy / unmapped,Historical code; retained as supplied
+mtrl-th,262,Legacy / unmapped,Historical code; retained as supplied
+chem-ph,251,Legacy / unmapped,Historical code; retained as supplied
+cs.GL,245,Computer Science,General Literature
+comp-gas,221,Legacy / unmapped,Historical code; retained as supplied
+supr-con,175,Legacy / unmapped,Historical code; retained as supplied
+atom-ph,123,Legacy / unmapped,Historical code; retained as supplied
+acc-phys,49,Legacy / unmapped,Historical code; retained as supplied
+plasm-ph,38,Legacy / unmapped,Historical code; retained as supplied
+ao-sci,17,Legacy / unmapped,Historical code; retained as supplied
+bayes-an,16,Legacy / unmapped,Historical code; retained as supplied

@@ -1,0 +1,3143 @@
+{
+  "runs": [
+    {
+      "run_id": 1,
+      "dataset_version": 303,
+      "snapshot_sha256": "03eeb74453679e66ed6ac1b4e6fa47ab5a8ff128de16d4a54592035c0e964348",
+      "status": "complete",
+      "records_loaded": 3164528,
+      "finished_at": "2026-09-13 22:17:25.509759+00:00"
+    }
+  ],
+  "summary": {
+    "works": 3164437,
+    "missing_first_submission": 0,
+    "earliest_submission": "1986-04-25 15:39:49+00:00",
+    "latest_submission": "2026-09-10 17:59:57+00:00",
+    "with_doi": 1332579,
+    "with_abstract": 3164437,
+    "earliest_update": "2007-05-23",
+    "latest_update": "2026-09-11"
+  },
+  "years": [
+    {
+      "year": 1986,
+      "works": 1
+    },
+    {
+      "year": 1988,
+      "works": 1
+    },
+    {
+      "year": 1989,
+      "works": 6
+    },
+    {
+      "year": 1990,
+      "works": 26
+    },
+    {
+      "year": 1991,
+      "works": 353
+    },
+    {
+      "year": 1992,
+      "works": 3190
+    },
+    {
+      "year": 1993,
+      "works": 6729
+    },
+    {
+      "year": 1994,
+      "works": 10078
+    },
+    {
+      "year": 1995,
+      "works": 13006
+    },
+    {
+      "year": 1996,
+      "works": 15872
+    },
+    {
+      "year": 1997,
+      "works": 19610
+    },
+    {
+      "year": 1998,
+      "works": 24170
+    },
+    {
+      "year": 1999,
+      "works": 27700
+    },
+    {
+      "year": 2000,
+      "works": 30669
+    },
+    {
+      "year": 2001,
+      "works": 33140
+    },
+    {
+      "year": 2002,
+      "works": 36105
+    },
+    {
+      "year": 2003,
+      "works": 39392
+    },
+    {
+      "year": 2004,
+      "works": 43713
+    },
+    {
+      "year": 2005,
+      "works": 46874
+    },
+    {
+      "year": 2006,
+      "works": 50305
+    },
+    {
+      "year": 2007,
+      "works": 55749
+    },
+    {
+      "year": 2008,
+      "works": 58810
+    },
+    {
+      "year": 2009,
+      "works": 64071
+    },
+    {
+      "year": 2010,
+      "works": 70288
+    },
+    {
+      "year": 2011,
+      "works": 76602
+    },
+    {
+      "year": 2012,
+      "works": 84374
+    },
+    {
+      "year": 2013,
+      "works": 92875
+    },
+    {
+      "year": 2014,
+      "works": 97590
+    },
+    {
+      "year": 2015,
+      "works": 105130
+    },
+    {
+      "year": 2016,
+      "works": 113440
+    },
+    {
+      "year": 2017,
+      "works": 123781
+    },
+    {
+      "year": 2018,
+      "works": 140377
+    },
+    {
+      "year": 2019,
+      "works": 155917
+    },
+    {
+      "year": 2020,
+      "works": 178275
+    },
+    {
+      "year": 2021,
+      "works": 181599
+    },
+    {
+      "year": 2022,
+      "works": 185987
+    },
+    {
+      "year": 2023,
+      "works": 209223
+    },
+    {
+      "year": 2024,
+      "works": 243690
+    },
+    {
+      "year": 2025,
+      "works": 284162
+    },
+    {
+      "year": 2026,
+      "works": 241557
+    }
+  ],
+  "months": [
+    {
+      "month": "1986-04",
+      "works": 1
+    },
+    {
+      "month": "1988-11",
+      "works": 1
+    },
+    {
+      "month": "1989-04",
+      "works": 1
+    },
+    {
+      "month": "1989-10",
+      "works": 3
+    },
+    {
+      "month": "1989-11",
+      "works": 2
+    },
+    {
+      "month": "1990-01",
+      "works": 6
+    },
+    {
+      "month": "1990-02",
+      "works": 2
+    },
+    {
+      "month": "1990-03",
+      "works": 2
+    },
+    {
+      "month": "1990-04",
+      "works": 2
+    },
+    {
+      "month": "1990-05",
+      "works": 2
+    },
+    {
+      "month": "1990-06",
+      "works": 2
+    },
+    {
+      "month": "1990-07",
+      "works": 2
+    },
+    {
+      "month": "1990-08",
+      "works": 1
+    },
+    {
+      "month": "1990-09",
+      "works": 4
+    },
+    {
+      "month": "1990-11",
+      "works": 1
+    },
+    {
+      "month": "1990-12",
+      "works": 2
+    },
+    {
+      "month": "1991-01",
+      "works": 10
+    },
+    {
+      "month": "1991-02",
+      "works": 3
+    },
+    {
+      "month": "1991-03",
+      "works": 3
+    },
+    {
+      "month": "1991-04",
+      "works": 4
+    },
+    {
+      "month": "1991-05",
+      "works": 3
+    },
+    {
+      "month": "1991-06",
+      "works": 6
+    },
+    {
+      "month": "1991-07",
+      "works": 4
+    },
+    {
+      "month": "1991-08",
+      "works": 30
+    },
+    {
+      "month": "1991-09",
+      "works": 61
+    },
+    {
+      "month": "1991-10",
+      "works": 82
+    },
+    {
+      "month": "1991-11",
+      "works": 67
+    },
+    {
+      "month": "1991-12",
+      "works": 80
+    },
+    {
+      "month": "1992-01",
+      "works": 108
+    },
+    {
+      "month": "1992-02",
+      "works": 131
+    },
+    {
+      "month": "1992-03",
+      "works": 119
+    },
+    {
+      "month": "1992-04",
+      "works": 241
+    },
+    {
+      "month": "1992-05",
+      "works": 235
+    },
+    {
+      "month": "1992-06",
+      "works": 237
+    },
+    {
+      "month": "1992-07",
+      "works": 298
+    },
+    {
+      "month": "1992-08",
+      "works": 228
+    },
+    {
+      "month": "1992-09",
+      "works": 337
+    },
+    {
+      "month": "1992-10",
+      "works": 399
+    },
+    {
+      "month": "1992-11",
+      "works": 450
+    },
+    {
+      "month": "1992-12",
+      "works": 407
+    },
+    {
+      "month": "1993-01",
+      "works": 377
+    },
+    {
+      "month": "1993-02",
+      "works": 437
+    },
+    {
+      "month": "1993-03",
+      "works": 505
+    },
+    {
+      "month": "1993-04",
+      "works": 504
+    },
+    {
+      "month": "1993-05",
+      "works": 542
+    },
+    {
+      "month": "1993-06",
+      "works": 539
+    },
+    {
+      "month": "1993-07",
+      "works": 640
+    },
+    {
+      "month": "1993-08",
+      "works": 543
+    },
+    {
+      "month": "1993-09",
+      "works": 520
+    },
+    {
+      "month": "1993-10",
+      "works": 672
+    },
+    {
+      "month": "1993-11",
+      "works": 713
+    },
+    {
+      "month": "1993-12",
+      "works": 737
+    },
+    {
+      "month": "1994-01",
+      "works": 615
+    },
+    {
+      "month": "1994-02",
+      "works": 651
+    },
+    {
+      "month": "1994-03",
+      "works": 750
+    },
+    {
+      "month": "1994-04",
+      "works": 725
+    },
+    {
+      "month": "1994-05",
+      "works": 846
+    },
+    {
+      "month": "1994-06",
+      "works": 890
+    },
+    {
+      "month": "1994-07",
+      "works": 855
+    },
+    {
+      "month": "1994-08",
+      "works": 764
+    },
+    {
+      "month": "1994-09",
+      "works": 880
+    },
+    {
+      "month": "1994-10",
+      "works": 940
+    },
+    {
+      "month": "1994-11",
+      "works": 1109
+    },
+    {
+      "month": "1994-12",
+      "works": 1053
+    },
+    {
+      "month": "1995-01",
+      "works": 924
+    },
+    {
+      "month": "1995-02",
+      "works": 982
+    },
+    {
+      "month": "1995-03",
+      "works": 1146
+    },
+    {
+      "month": "1995-04",
+      "works": 938
+    },
+    {
+      "month": "1995-05",
+      "works": 1107
+    },
+    {
+      "month": "1995-06",
+      "works": 1161
+    },
+    {
+      "month": "1995-07",
+      "works": 1049
+    },
+    {
+      "month": "1995-08",
+      "works": 1031
+    },
+    {
+      "month": "1995-09",
+      "works": 1105
+    },
+    {
+      "month": "1995-10",
+      "works": 1239
+    },
+    {
+      "month": "1995-11",
+      "works": 1176
+    },
+    {
+      "month": "1995-12",
+      "works": 1148
+    },
+    {
+      "month": "1996-01",
+      "works": 1045
+    },
+    {
+      "month": "1996-02",
+      "works": 1080
+    },
+    {
+      "month": "1996-03",
+      "works": 1159
+    },
+    {
+      "month": "1996-04",
+      "works": 1217
+    },
+    {
+      "month": "1996-05",
+      "works": 1335
+    },
+    {
+      "month": "1996-06",
+      "works": 1341
+    },
+    {
+      "month": "1996-07",
+      "works": 1429
+    },
+    {
+      "month": "1996-08",
+      "works": 1465
+    },
+    {
+      "month": "1996-09",
+      "works": 1421
+    },
+    {
+      "month": "1996-10",
+      "works": 1509
+    },
+    {
+      "month": "1996-11",
+      "works": 1462
+    },
+    {
+      "month": "1996-12",
+      "works": 1409
+    },
+    {
+      "month": "1997-01",
+      "works": 1364
+    },
+    {
+      "month": "1997-02",
+      "works": 1341
+    },
+    {
+      "month": "1997-03",
+      "works": 1376
+    },
+    {
+      "month": "1997-04",
+      "works": 1472
+    },
+    {
+      "month": "1997-05",
+      "works": 1579
+    },
+    {
+      "month": "1997-06",
+      "works": 1701
+    },
+    {
+      "month": "1997-07",
+      "works": 1795
+    },
+    {
+      "month": "1997-08",
+      "works": 1448
+    },
+    {
+      "month": "1997-09",
+      "works": 1852
+    },
+    {
+      "month": "1997-10",
+      "works": 2016
+    },
+    {
+      "month": "1997-11",
+      "works": 1768
+    },
+    {
+      "month": "1997-12",
+      "works": 1898
+    },
+    {
+      "month": "1998-01",
+      "works": 1751
+    },
+    {
+      "month": "1998-02",
+      "works": 1662
+    },
+    {
+      "month": "1998-03",
+      "works": 1897
+    },
+    {
+      "month": "1998-04",
+      "works": 1741
+    },
+    {
+      "month": "1998-05",
+      "works": 1963
+    },
+    {
+      "month": "1998-06",
+      "works": 2052
+    },
+    {
+      "month": "1998-07",
+      "works": 2095
+    },
+    {
+      "month": "1998-08",
+      "works": 1829
+    },
+    {
+      "month": "1998-09",
+      "works": 2419
+    },
+    {
+      "month": "1998-10",
+      "works": 2353
+    },
+    {
+      "month": "1998-11",
+      "works": 2212
+    },
+    {
+      "month": "1998-12",
+      "works": 2196
+    },
+    {
+      "month": "1999-01",
+      "works": 1889
+    },
+    {
+      "month": "1999-02",
+      "works": 1933
+    },
+    {
+      "month": "1999-03",
+      "works": 2350
+    },
+    {
+      "month": "1999-04",
+      "works": 2150
+    },
+    {
+      "month": "1999-05",
+      "works": 2227
+    },
+    {
+      "month": "1999-06",
+      "works": 2435
+    },
+    {
+      "month": "1999-07",
+      "works": 2434
+    },
+    {
+      "month": "1999-08",
+      "works": 2114
+    },
+    {
+      "month": "1999-09",
+      "works": 2489
+    },
+    {
+      "month": "1999-10",
+      "works": 2477
+    },
+    {
+      "month": "1999-11",
+      "works": 2616
+    },
+    {
+      "month": "1999-12",
+      "works": 2586
+    },
+    {
+      "month": "2000-01",
+      "works": 2364
+    },
+    {
+      "month": "2000-02",
+      "works": 2365
+    },
+    {
+      "month": "2000-03",
+      "works": 2600
+    },
+    {
+      "month": "2000-04",
+      "works": 2135
+    },
+    {
+      "month": "2000-05",
+      "works": 2675
+    },
+    {
+      "month": "2000-06",
+      "works": 2431
+    },
+    {
+      "month": "2000-07",
+      "works": 2463
+    },
+    {
+      "month": "2000-08",
+      "works": 2614
+    },
+    {
+      "month": "2000-09",
+      "works": 2552
+    },
+    {
+      "month": "2000-10",
+      "works": 2886
+    },
+    {
+      "month": "2000-11",
+      "works": 2862
+    },
+    {
+      "month": "2000-12",
+      "works": 2722
+    },
+    {
+      "month": "2001-01",
+      "works": 2522
+    },
+    {
+      "month": "2001-02",
+      "works": 2429
+    },
+    {
+      "month": "2001-03",
+      "works": 2754
+    },
+    {
+      "month": "2001-04",
+      "works": 2572
+    },
+    {
+      "month": "2001-05",
+      "works": 2912
+    },
+    {
+      "month": "2001-06",
+      "works": 2898
+    },
+    {
+      "month": "2001-07",
+      "works": 2724
+    },
+    {
+      "month": "2001-08",
+      "works": 2421
+    },
+    {
+      "month": "2001-09",
+      "works": 2619
+    },
+    {
+      "month": "2001-10",
+      "works": 3347
+    },
+    {
+      "month": "2001-11",
+      "works": 3236
+    },
+    {
+      "month": "2001-12",
+      "works": 2706
+    },
+    {
+      "month": "2002-01",
+      "works": 2719
+    },
+    {
+      "month": "2002-02",
+      "works": 2565
+    },
+    {
+      "month": "2002-03",
+      "works": 2714
+    },
+    {
+      "month": "2002-04",
+      "works": 2809
+    },
+    {
+      "month": "2002-05",
+      "works": 3086
+    },
+    {
+      "month": "2002-06",
+      "works": 2751
+    },
+    {
+      "month": "2002-07",
+      "works": 3222
+    },
+    {
+      "month": "2002-08",
+      "works": 2744
+    },
+    {
+      "month": "2002-09",
+      "works": 3289
+    },
+    {
+      "month": "2002-10",
+      "works": 3528
+    },
+    {
+      "month": "2002-11",
+      "works": 3456
+    },
+    {
+      "month": "2002-12",
+      "works": 3222
+    },
+    {
+      "month": "2003-01",
+      "works": 2930
+    },
+    {
+      "month": "2003-02",
+      "works": 2879
+    },
+    {
+      "month": "2003-03",
+      "works": 3021
+    },
+    {
+      "month": "2003-04",
+      "works": 3108
+    },
+    {
+      "month": "2003-05",
+      "works": 3315
+    },
+    {
+      "month": "2003-06",
+      "works": 3411
+    },
+    {
+      "month": "2003-07",
+      "works": 3421
+    },
+    {
+      "month": "2003-08",
+      "works": 2818
+    },
+    {
+      "month": "2003-09",
+      "works": 3664
+    },
+    {
+      "month": "2003-10",
+      "works": 3826
+    },
+    {
+      "month": "2003-11",
+      "works": 3429
+    },
+    {
+      "month": "2003-12",
+      "works": 3570
+    },
+    {
+      "month": "2004-01",
+      "works": 3111
+    },
+    {
+      "month": "2004-02",
+      "works": 3326
+    },
+    {
+      "month": "2004-03",
+      "works": 3518
+    },
+    {
+      "month": "2004-04",
+      "works": 3369
+    },
+    {
+      "month": "2004-05",
+      "works": 3556
+    },
+    {
+      "month": "2004-06",
+      "works": 3716
+    },
+    {
+      "month": "2004-07",
+      "works": 3706
+    },
+    {
+      "month": "2004-08",
+      "works": 3266
+    },
+    {
+      "month": "2004-09",
+      "works": 3937
+    },
+    {
+      "month": "2004-10",
+      "works": 4155
+    },
+    {
+      "month": "2004-11",
+      "works": 4066
+    },
+    {
+      "month": "2004-12",
+      "works": 3987
+    },
+    {
+      "month": "2005-01",
+      "works": 3507
+    },
+    {
+      "month": "2005-02",
+      "works": 3232
+    },
+    {
+      "month": "2005-03",
+      "works": 3891
+    },
+    {
+      "month": "2005-04",
+      "works": 3731
+    },
+    {
+      "month": "2005-05",
+      "works": 3735
+    },
+    {
+      "month": "2005-06",
+      "works": 3987
+    },
+    {
+      "month": "2005-07",
+      "works": 3927
+    },
+    {
+      "month": "2005-08",
+      "works": 3691
+    },
+    {
+      "month": "2005-09",
+      "works": 4349
+    },
+    {
+      "month": "2005-10",
+      "works": 4413
+    },
+    {
+      "month": "2005-11",
+      "works": 4294
+    },
+    {
+      "month": "2005-12",
+      "works": 4117
+    },
+    {
+      "month": "2006-01",
+      "works": 3822
+    },
+    {
+      "month": "2006-02",
+      "works": 3523
+    },
+    {
+      "month": "2006-03",
+      "works": 4200
+    },
+    {
+      "month": "2006-04",
+      "works": 3582
+    },
+    {
+      "month": "2006-05",
+      "works": 4130
+    },
+    {
+      "month": "2006-06",
+      "works": 4114
+    },
+    {
+      "month": "2006-07",
+      "works": 4206
+    },
+    {
+      "month": "2006-08",
+      "works": 4061
+    },
+    {
+      "month": "2006-09",
+      "works": 4341
+    },
+    {
+      "month": "2006-10",
+      "works": 5071
+    },
+    {
+      "month": "2006-11",
+      "works": 4854
+    },
+    {
+      "month": "2006-12",
+      "works": 4401
+    },
+    {
+      "month": "2007-01",
+      "works": 4541
+    },
+    {
+      "month": "2007-02",
+      "works": 4165
+    },
+    {
+      "month": "2007-03",
+      "works": 4510
+    },
+    {
+      "month": "2007-04",
+      "works": 3991
+    },
+    {
+      "month": "2007-05",
+      "works": 4686
+    },
+    {
+      "month": "2007-06",
+      "works": 4524
+    },
+    {
+      "month": "2007-07",
+      "works": 4649
+    },
+    {
+      "month": "2007-08",
+      "works": 4394
+    },
+    {
+      "month": "2007-09",
+      "works": 4828
+    },
+    {
+      "month": "2007-10",
+      "works": 5811
+    },
+    {
+      "month": "2007-11",
+      "works": 5019
+    },
+    {
+      "month": "2007-12",
+      "works": 4631
+    },
+    {
+      "month": "2008-01",
+      "works": 4753
+    },
+    {
+      "month": "2008-02",
+      "works": 4458
+    },
+    {
+      "month": "2008-03",
+      "works": 4527
+    },
+    {
+      "month": "2008-04",
+      "works": 4890
+    },
+    {
+      "month": "2008-05",
+      "works": 4906
+    },
+    {
+      "month": "2008-06",
+      "works": 4916
+    },
+    {
+      "month": "2008-07",
+      "works": 5144
+    },
+    {
+      "month": "2008-08",
+      "works": 4269
+    },
+    {
+      "month": "2008-09",
+      "works": 5177
+    },
+    {
+      "month": "2008-10",
+      "works": 5772
+    },
+    {
+      "month": "2008-11",
+      "works": 4903
+    },
+    {
+      "month": "2008-12",
+      "works": 5095
+    },
+    {
+      "month": "2009-01",
+      "works": 4905
+    },
+    {
+      "month": "2009-02",
+      "works": 4930
+    },
+    {
+      "month": "2009-03",
+      "works": 5476
+    },
+    {
+      "month": "2009-04",
+      "works": 4922
+    },
+    {
+      "month": "2009-05",
+      "works": 5099
+    },
+    {
+      "month": "2009-06",
+      "works": 5483
+    },
+    {
+      "month": "2009-07",
+      "works": 5593
+    },
+    {
+      "month": "2009-08",
+      "works": 4621
+    },
+    {
+      "month": "2009-09",
+      "works": 5699
+    },
+    {
+      "month": "2009-10",
+      "works": 6010
+    },
+    {
+      "month": "2009-11",
+      "works": 5659
+    },
+    {
+      "month": "2009-12",
+      "works": 5674
+    },
+    {
+      "month": "2010-01",
+      "works": 5454
+    },
+    {
+      "month": "2010-02",
+      "works": 5093
+    },
+    {
+      "month": "2010-03",
+      "works": 5987
+    },
+    {
+      "month": "2010-04",
+      "works": 5605
+    },
+    {
+      "month": "2010-05",
+      "works": 5734
+    },
+    {
+      "month": "2010-06",
+      "works": 5975
+    },
+    {
+      "month": "2010-07",
+      "works": 5603
+    },
+    {
+      "month": "2010-08",
+      "works": 5330
+    },
+    {
+      "month": "2010-09",
+      "works": 6205
+    },
+    {
+      "month": "2010-10",
+      "works": 6481
+    },
+    {
+      "month": "2010-11",
+      "works": 6522
+    },
+    {
+      "month": "2010-12",
+      "works": 6299
+    },
+    {
+      "month": "2011-01",
+      "works": 5804
+    },
+    {
+      "month": "2011-02",
+      "works": 5786
+    },
+    {
+      "month": "2011-03",
+      "works": 6290
+    },
+    {
+      "month": "2011-04",
+      "works": 5780
+    },
+    {
+      "month": "2011-05",
+      "works": 6301
+    },
+    {
+      "month": "2011-06",
+      "works": 6381
+    },
+    {
+      "month": "2011-07",
+      "works": 6176
+    },
+    {
+      "month": "2011-08",
+      "works": 6191
+    },
+    {
+      "month": "2011-09",
+      "works": 6923
+    },
+    {
+      "month": "2011-10",
+      "works": 6952
+    },
+    {
+      "month": "2011-11",
+      "works": 7308
+    },
+    {
+      "month": "2011-12",
+      "works": 6710
+    },
+    {
+      "month": "2012-01",
+      "works": 6418
+    },
+    {
+      "month": "2012-02",
+      "works": 6720
+    },
+    {
+      "month": "2012-03",
+      "works": 7022
+    },
+    {
+      "month": "2012-04",
+      "works": 6642
+    },
+    {
+      "month": "2012-05",
+      "works": 7044
+    },
+    {
+      "month": "2012-06",
+      "works": 7209
+    },
+    {
+      "month": "2012-07",
+      "works": 7259
+    },
+    {
+      "month": "2012-08",
+      "works": 6579
+    },
+    {
+      "month": "2012-09",
+      "works": 6841
+    },
+    {
+      "month": "2012-10",
+      "works": 8329
+    },
+    {
+      "month": "2012-11",
+      "works": 7348
+    },
+    {
+      "month": "2012-12",
+      "works": 6963
+    },
+    {
+      "month": "2013-01",
+      "works": 7708
+    },
+    {
+      "month": "2013-02",
+      "works": 7301
+    },
+    {
+      "month": "2013-03",
+      "works": 8007
+    },
+    {
+      "month": "2013-04",
+      "works": 7623
+    },
+    {
+      "month": "2013-05",
+      "works": 7507
+    },
+    {
+      "month": "2013-06",
+      "works": 7163
+    },
+    {
+      "month": "2013-07",
+      "works": 8258
+    },
+    {
+      "month": "2013-08",
+      "works": 6947
+    },
+    {
+      "month": "2013-09",
+      "works": 7952
+    },
+    {
+      "month": "2013-10",
+      "works": 8609
+    },
+    {
+      "month": "2013-11",
+      "works": 7822
+    },
+    {
+      "month": "2013-12",
+      "works": 7978
+    },
+    {
+      "month": "2014-01",
+      "works": 8060
+    },
+    {
+      "month": "2014-02",
+      "works": 7420
+    },
+    {
+      "month": "2014-03",
+      "works": 8208
+    },
+    {
+      "month": "2014-04",
+      "works": 7864
+    },
+    {
+      "month": "2014-05",
+      "works": 7967
+    },
+    {
+      "month": "2014-06",
+      "works": 7832
+    },
+    {
+      "month": "2014-07",
+      "works": 8508
+    },
+    {
+      "month": "2014-08",
+      "works": 7358
+    },
+    {
+      "month": "2014-09",
+      "works": 8509
+    },
+    {
+      "month": "2014-10",
+      "works": 8850
+    },
+    {
+      "month": "2014-11",
+      "works": 8305
+    },
+    {
+      "month": "2014-12",
+      "works": 8709
+    },
+    {
+      "month": "2015-01",
+      "works": 7904
+    },
+    {
+      "month": "2015-02",
+      "works": 8005
+    },
+    {
+      "month": "2015-03",
+      "works": 9005
+    },
+    {
+      "month": "2015-04",
+      "works": 8368
+    },
+    {
+      "month": "2015-05",
+      "works": 8423
+    },
+    {
+      "month": "2015-06",
+      "works": 8979
+    },
+    {
+      "month": "2015-07",
+      "works": 8999
+    },
+    {
+      "month": "2015-08",
+      "works": 8012
+    },
+    {
+      "month": "2015-09",
+      "works": 9322
+    },
+    {
+      "month": "2015-10",
+      "works": 9371
+    },
+    {
+      "month": "2015-11",
+      "works": 9442
+    },
+    {
+      "month": "2015-12",
+      "works": 9300
+    },
+    {
+      "month": "2016-01",
+      "works": 8605
+    },
+    {
+      "month": "2016-02",
+      "works": 8890
+    },
+    {
+      "month": "2016-03",
+      "works": 9716
+    },
+    {
+      "month": "2016-04",
+      "works": 9019
+    },
+    {
+      "month": "2016-05",
+      "works": 9718
+    },
+    {
+      "month": "2016-06",
+      "works": 9581
+    },
+    {
+      "month": "2016-07",
+      "works": 9103
+    },
+    {
+      "month": "2016-08",
+      "works": 8795
+    },
+    {
+      "month": "2016-09",
+      "works": 9863
+    },
+    {
+      "month": "2016-10",
+      "works": 10091
+    },
+    {
+      "month": "2016-11",
+      "works": 10347
+    },
+    {
+      "month": "2016-12",
+      "works": 9712
+    },
+    {
+      "month": "2017-01",
+      "works": 9029
+    },
+    {
+      "month": "2017-02",
+      "works": 8892
+    },
+    {
+      "month": "2017-03",
+      "works": 11054
+    },
+    {
+      "month": "2017-04",
+      "works": 9335
+    },
+    {
+      "month": "2017-05",
+      "works": 10953
+    },
+    {
+      "month": "2017-06",
+      "works": 10236
+    },
+    {
+      "month": "2017-07",
+      "works": 10079
+    },
+    {
+      "month": "2017-08",
+      "works": 9857
+    },
+    {
+      "month": "2017-09",
+      "works": 10636
+    },
+    {
+      "month": "2017-10",
+      "works": 11477
+    },
+    {
+      "month": "2017-11",
+      "works": 11621
+    },
+    {
+      "month": "2017-12",
+      "works": 10612
+    },
+    {
+      "month": "2018-01",
+      "works": 10336
+    },
+    {
+      "month": "2018-02",
+      "works": 10563
+    },
+    {
+      "month": "2018-03",
+      "works": 11706
+    },
+    {
+      "month": "2018-04",
+      "works": 11226
+    },
+    {
+      "month": "2018-05",
+      "works": 12570
+    },
+    {
+      "month": "2018-06",
+      "works": 11707
+    },
+    {
+      "month": "2018-07",
+      "works": 11844
+    },
+    {
+      "month": "2018-08",
+      "works": 10804
+    },
+    {
+      "month": "2018-09",
+      "works": 11643
+    },
+    {
+      "month": "2018-10",
+      "works": 13078
+    },
+    {
+      "month": "2018-11",
+      "works": 12975
+    },
+    {
+      "month": "2018-12",
+      "works": 11925
+    },
+    {
+      "month": "2019-01",
+      "works": 11541
+    },
+    {
+      "month": "2019-02",
+      "works": 11333
+    },
+    {
+      "month": "2019-03",
+      "works": 13090
+    },
+    {
+      "month": "2019-04",
+      "works": 12939
+    },
+    {
+      "month": "2019-05",
+      "works": 13783
+    },
+    {
+      "month": "2019-06",
+      "works": 12736
+    },
+    {
+      "month": "2019-07",
+      "works": 13224
+    },
+    {
+      "month": "2019-08",
+      "works": 11983
+    },
+    {
+      "month": "2019-09",
+      "works": 13791
+    },
+    {
+      "month": "2019-10",
+      "works": 14647
+    },
+    {
+      "month": "2019-11",
+      "works": 13538
+    },
+    {
+      "month": "2019-12",
+      "works": 13312
+    },
+    {
+      "month": "2020-01",
+      "works": 11949
+    },
+    {
+      "month": "2020-02",
+      "works": 13234
+    },
+    {
+      "month": "2020-03",
+      "works": 14167
+    },
+    {
+      "month": "2020-04",
+      "works": 15077
+    },
+    {
+      "month": "2020-05",
+      "works": 15168
+    },
+    {
+      "month": "2020-06",
+      "works": 16455
+    },
+    {
+      "month": "2020-07",
+      "works": 16251
+    },
+    {
+      "month": "2020-08",
+      "works": 13776
+    },
+    {
+      "month": "2020-09",
+      "works": 14805
+    },
+    {
+      "month": "2020-10",
+      "works": 16709
+    },
+    {
+      "month": "2020-11",
+      "works": 14968
+    },
+    {
+      "month": "2020-12",
+      "works": 15716
+    },
+    {
+      "month": "2021-01",
+      "works": 13185
+    },
+    {
+      "month": "2021-02",
+      "works": 13820
+    },
+    {
+      "month": "2021-03",
+      "works": 16794
+    },
+    {
+      "month": "2021-04",
+      "works": 15079
+    },
+    {
+      "month": "2021-05",
+      "works": 15210
+    },
+    {
+      "month": "2021-06",
+      "works": 16226
+    },
+    {
+      "month": "2021-07",
+      "works": 15022
+    },
+    {
+      "month": "2021-08",
+      "works": 13760
+    },
+    {
+      "month": "2021-09",
+      "works": 15310
+    },
+    {
+      "month": "2021-10",
+      "works": 16462
+    },
+    {
+      "month": "2021-11",
+      "works": 15238
+    },
+    {
+      "month": "2021-12",
+      "works": 15493
+    },
+    {
+      "month": "2022-01",
+      "works": 13537
+    },
+    {
+      "month": "2022-02",
+      "works": 14028
+    },
+    {
+      "month": "2022-03",
+      "works": 17211
+    },
+    {
+      "month": "2022-04",
+      "works": 14524
+    },
+    {
+      "month": "2022-05",
+      "works": 15860
+    },
+    {
+      "month": "2022-06",
+      "works": 15482
+    },
+    {
+      "month": "2022-07",
+      "works": 15273
+    },
+    {
+      "month": "2022-08",
+      "works": 14590
+    },
+    {
+      "month": "2022-09",
+      "works": 15603
+    },
+    {
+      "month": "2022-10",
+      "works": 17654
+    },
+    {
+      "month": "2022-11",
+      "works": 17182
+    },
+    {
+      "month": "2022-12",
+      "works": 15043
+    },
+    {
+      "month": "2023-01",
+      "works": 13708
+    },
+    {
+      "month": "2023-02",
+      "works": 14854
+    },
+    {
+      "month": "2023-03",
+      "works": 18325
+    },
+    {
+      "month": "2023-04",
+      "works": 15368
+    },
+    {
+      "month": "2023-05",
+      "works": 19792
+    },
+    {
+      "month": "2023-06",
+      "works": 17715
+    },
+    {
+      "month": "2023-07",
+      "works": 17087
+    },
+    {
+      "month": "2023-08",
+      "works": 16896
+    },
+    {
+      "month": "2023-09",
+      "works": 17895
+    },
+    {
+      "month": "2023-10",
+      "works": 20371
+    },
+    {
+      "month": "2023-11",
+      "works": 18897
+    },
+    {
+      "month": "2023-12",
+      "works": 18315
+    },
+    {
+      "month": "2024-01",
+      "works": 17622
+    },
+    {
+      "month": "2024-02",
+      "works": 19521
+    },
+    {
+      "month": "2024-03",
+      "works": 20806
+    },
+    {
+      "month": "2024-04",
+      "works": 19303
+    },
+    {
+      "month": "2024-05",
+      "works": 21126
+    },
+    {
+      "month": "2024-06",
+      "works": 20717
+    },
+    {
+      "month": "2024-07",
+      "works": 20666
+    },
+    {
+      "month": "2024-08",
+      "works": 17789
+    },
+    {
+      "month": "2024-09",
+      "works": 20448
+    },
+    {
+      "month": "2024-10",
+      "works": 24129
+    },
+    {
+      "month": "2024-11",
+      "works": 20228
+    },
+    {
+      "month": "2024-12",
+      "works": 21335
+    },
+    {
+      "month": "2025-01",
+      "works": 18932
+    },
+    {
+      "month": "2025-02",
+      "works": 21532
+    },
+    {
+      "month": "2025-03",
+      "works": 24386
+    },
+    {
+      "month": "2025-04",
+      "works": 21701
+    },
+    {
+      "month": "2025-05",
+      "works": 25658
+    },
+    {
+      "month": "2025-06",
+      "works": 23514
+    },
+    {
+      "month": "2025-07",
+      "works": 23650
+    },
+    {
+      "month": "2025-08",
+      "works": 22596
+    },
+    {
+      "month": "2025-09",
+      "works": 26158
+    },
+    {
+      "month": "2025-10",
+      "works": 27477
+    },
+    {
+      "month": "2025-11",
+      "works": 24398
+    },
+    {
+      "month": "2025-12",
+      "works": 24160
+    },
+    {
+      "month": "2026-01",
+      "works": 24135
+    },
+    {
+      "month": "2026-02",
+      "works": 24378
+    },
+    {
+      "month": "2026-03",
+      "works": 29578
+    },
+    {
+      "month": "2026-04",
+      "works": 28201
+    },
+    {
+      "month": "2026-05",
+      "works": 33044
+    },
+    {
+      "month": "2026-06",
+      "works": 31000
+    },
+    {
+      "month": "2026-07",
+      "works": 29539
+    },
+    {
+      "month": "2026-08",
+      "works": 30571
+    },
+    {
+      "month": "2026-09",
+      "works": 11111
+    }
+  ],
+  "categories": [
+    {
+      "category": "cs.LG",
+      "works": 285051,
+      "group": "Computer Science",
+      "name": "Machine Learning"
+    },
+    {
+      "category": "cs.CV",
+      "works": 205034,
+      "group": "Computer Science",
+      "name": "Computer Vision and Pattern Recognition"
+    },
+    {
+      "category": "cs.AI",
+      "works": 199222,
+      "group": "Computer Science",
+      "name": "Artificial Intelligence"
+    },
+    {
+      "category": "hep-ph",
+      "works": 199160,
+      "group": "Physics",
+      "name": "High Energy Physics - Phenomenology"
+    },
+    {
+      "category": "quant-ph",
+      "works": 186217,
+      "group": "Physics",
+      "name": "Quantum Physics"
+    },
+    {
+      "category": "hep-th",
+      "works": 185497,
+      "group": "Physics",
+      "name": "High Energy Physics - Theory"
+    },
+    {
+      "category": "gr-qc",
+      "works": 124556,
+      "group": "Physics",
+      "name": "General Relativity and Quantum Cosmology"
+    },
+    {
+      "category": "cs.CL",
+      "works": 118753,
+      "group": "Computer Science",
+      "name": "Computation and Language"
+    },
+    {
+      "category": "cond-mat.mtrl-sci",
+      "works": 112131,
+      "group": "Physics",
+      "name": "Materials Science"
+    },
+    {
+      "category": "astro-ph",
+      "works": 105380,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "cond-mat.mes-hall",
+      "works": 103263,
+      "group": "Physics",
+      "name": "Mesoscale and Nanoscale Physics"
+    },
+    {
+      "category": "math.MP",
+      "works": 92196,
+      "group": "Mathematics",
+      "name": "Mathematical Physics"
+    },
+    {
+      "category": "math-ph",
+      "works": 92196,
+      "group": "Physics",
+      "name": "Mathematical Physics"
+    },
+    {
+      "category": "cond-mat.str-el",
+      "works": 84486,
+      "group": "Physics",
+      "name": "Strongly Correlated Electrons"
+    },
+    {
+      "category": "cond-mat.stat-mech",
+      "works": 83162,
+      "group": "Physics",
+      "name": "Statistical Mechanics"
+    },
+    {
+      "category": "math.CO",
+      "works": 82002,
+      "group": "Mathematics",
+      "name": "Combinatorics"
+    },
+    {
+      "category": "stat.ML",
+      "works": 79911,
+      "group": "Statistics",
+      "name": "Machine Learning"
+    },
+    {
+      "category": "astro-ph.GA",
+      "works": 79663,
+      "group": "Physics",
+      "name": "Astrophysics of Galaxies"
+    },
+    {
+      "category": "astro-ph.CO",
+      "works": 78733,
+      "group": "Physics",
+      "name": "Cosmology and Nongalactic Astrophysics"
+    },
+    {
+      "category": "math.AP",
+      "works": 76780,
+      "group": "Mathematics",
+      "name": "Analysis of PDEs"
+    },
+    {
+      "category": "astro-ph.SR",
+      "works": 71021,
+      "group": "Physics",
+      "name": "Solar and Stellar Astrophysics"
+    },
+    {
+      "category": "astro-ph.HE",
+      "works": 70991,
+      "group": "Physics",
+      "name": "High Energy Astrophysical Phenomena"
+    },
+    {
+      "category": "math.PR",
+      "works": 67991,
+      "group": "Mathematics",
+      "name": "Probability"
+    },
+    {
+      "category": "math.OC",
+      "works": 64171,
+      "group": "Mathematics",
+      "name": "Optimization and Control"
+    },
+    {
+      "category": "nucl-th",
+      "works": 63511,
+      "group": "Physics",
+      "name": "Nuclear Theory"
+    },
+    {
+      "category": "hep-ex",
+      "works": 61313,
+      "group": "Physics",
+      "name": "High Energy Physics - Experiment"
+    },
+    {
+      "category": "math.AG",
+      "works": 61100,
+      "group": "Mathematics",
+      "name": "Algebraic Geometry"
+    },
+    {
+      "category": "physics.optics",
+      "works": 58080,
+      "group": "Physics",
+      "name": "Optics"
+    },
+    {
+      "category": "cs.RO",
+      "works": 57833,
+      "group": "Computer Science",
+      "name": "Robotics"
+    },
+    {
+      "category": "cs.IT",
+      "works": 56004,
+      "group": "Computer Science",
+      "name": "Information Theory"
+    },
+    {
+      "category": "math.IT",
+      "works": 56004,
+      "group": "Mathematics",
+      "name": "Information Theory"
+    },
+    {
+      "category": "cs.CR",
+      "works": 51916,
+      "group": "Computer Science",
+      "name": "Cryptography and Security"
+    },
+    {
+      "category": "math.NA",
+      "works": 51534,
+      "group": "Mathematics",
+      "name": "Numerical Analysis"
+    },
+    {
+      "category": "cs.NA",
+      "works": 51533,
+      "group": "Computer Science",
+      "name": "Numerical Analysis"
+    },
+    {
+      "category": "math.NT",
+      "works": 50700,
+      "group": "Mathematics",
+      "name": "Number Theory"
+    },
+    {
+      "category": "math.DG",
+      "works": 49223,
+      "group": "Mathematics",
+      "name": "Differential Geometry"
+    },
+    {
+      "category": "cs.SY",
+      "works": 48161,
+      "group": "Computer Science",
+      "name": "Systems and Control"
+    },
+    {
+      "category": "eess.SY",
+      "works": 48159,
+      "group": "Electrical Engineering and Systems Science",
+      "name": "Systems and Control"
+    },
+    {
+      "category": "cond-mat.supr-con",
+      "works": 47962,
+      "group": "Physics",
+      "name": "Superconductivity"
+    },
+    {
+      "category": "cond-mat.soft",
+      "works": 46066,
+      "group": "Physics",
+      "name": "Soft Condensed Matter"
+    },
+    {
+      "category": "math.DS",
+      "works": 44324,
+      "group": "Mathematics",
+      "name": "Dynamical Systems"
+    },
+    {
+      "category": "eess.SP",
+      "works": 41998,
+      "group": "Electrical Engineering and Systems Science",
+      "name": "Signal Processing"
+    },
+    {
+      "category": "stat.ME",
+      "works": 37741,
+      "group": "Statistics",
+      "name": "Methodology"
+    },
+    {
+      "category": "astro-ph.IM",
+      "works": 37364,
+      "group": "Physics",
+      "name": "Instrumentation and Methods for Astrophysics"
+    },
+    {
+      "category": "math.FA",
+      "works": 37232,
+      "group": "Mathematics",
+      "name": "Functional Analysis"
+    },
+    {
+      "category": "astro-ph.EP",
+      "works": 36021,
+      "group": "Physics",
+      "name": "Earth and Planetary Astrophysics"
+    },
+    {
+      "category": "physics.flu-dyn",
+      "works": 35191,
+      "group": "Physics",
+      "name": "Fluid Dynamics"
+    },
+    {
+      "category": "cs.HC",
+      "works": 32695,
+      "group": "Computer Science",
+      "name": "Human-Computer Interaction"
+    },
+    {
+      "category": "eess.IV",
+      "works": 31591,
+      "group": "Electrical Engineering and Systems Science",
+      "name": "Image and Video Processing"
+    },
+    {
+      "category": "math.RT",
+      "works": 30857,
+      "group": "Mathematics",
+      "name": "Representation Theory"
+    },
+    {
+      "category": "hep-lat",
+      "works": 30755,
+      "group": "Physics",
+      "name": "High Energy Physics - Lattice"
+    },
+    {
+      "category": "cs.CY",
+      "works": 30324,
+      "group": "Computer Science",
+      "name": "Computers and Society"
+    },
+    {
+      "category": "cs.DC",
+      "works": 30036,
+      "group": "Computer Science",
+      "name": "Distributed, Parallel, and Cluster Computing"
+    },
+    {
+      "category": "cs.DS",
+      "works": 29904,
+      "group": "Computer Science",
+      "name": "Data Structures and Algorithms"
+    },
+    {
+      "category": "physics.comp-ph",
+      "works": 29482,
+      "group": "Physics",
+      "name": "Computational Physics"
+    },
+    {
+      "category": "cs.SE",
+      "works": 29365,
+      "group": "Computer Science",
+      "name": "Software Engineering"
+    },
+    {
+      "category": "math.ST",
+      "works": 28939,
+      "group": "Mathematics",
+      "name": "Statistics Theory"
+    },
+    {
+      "category": "stat.TH",
+      "works": 28939,
+      "group": "Statistics",
+      "name": "Statistics Theory"
+    },
+    {
+      "category": "nucl-ex",
+      "works": 28916,
+      "group": "Physics",
+      "name": "Nuclear Experiment"
+    },
+    {
+      "category": "cs.NI",
+      "works": 28328,
+      "group": "Computer Science",
+      "name": "Networking and Internet Architecture"
+    },
+    {
+      "category": "physics.chem-ph",
+      "works": 28071,
+      "group": "Physics",
+      "name": "Chemical Physics"
+    },
+    {
+      "category": "cs.IR",
+      "works": 27079,
+      "group": "Computer Science",
+      "name": "Information Retrieval"
+    },
+    {
+      "category": "cond-mat.dis-nn",
+      "works": 27035,
+      "group": "Physics",
+      "name": "Disordered Systems and Neural Networks"
+    },
+    {
+      "category": "math.GR",
+      "works": 26342,
+      "group": "Mathematics",
+      "name": "Group Theory"
+    },
+    {
+      "category": "math.GT",
+      "works": 26338,
+      "group": "Mathematics",
+      "name": "Geometric Topology"
+    },
+    {
+      "category": "physics.soc-ph",
+      "works": 25663,
+      "group": "Physics",
+      "name": "Physics and Society"
+    },
+    {
+      "category": "math.CA",
+      "works": 25660,
+      "group": "Mathematics",
+      "name": "Classical Analysis and ODEs"
+    },
+    {
+      "category": "physics.ins-det",
+      "works": 24873,
+      "group": "Physics",
+      "name": "Instrumentation and Detectors"
+    },
+    {
+      "category": "cond-mat.quant-gas",
+      "works": 24644,
+      "group": "Physics",
+      "name": "Quantum Gases"
+    },
+    {
+      "category": "physics.atom-ph",
+      "works": 24400,
+      "group": "Physics",
+      "name": "Atomic Physics"
+    },
+    {
+      "category": "stat.AP",
+      "works": 24226,
+      "group": "Statistics",
+      "name": "Applications"
+    },
+    {
+      "category": "physics.app-ph",
+      "works": 24208,
+      "group": "Physics",
+      "name": "Applied Physics"
+    },
+    {
+      "category": "cs.SI",
+      "works": 23901,
+      "group": "Computer Science",
+      "name": "Social and Information Networks"
+    },
+    {
+      "category": "eess.AS",
+      "works": 22362,
+      "group": "Electrical Engineering and Systems Science",
+      "name": "Audio and Speech Processing"
+    },
+    {
+      "category": "cs.SD",
+      "works": 21998,
+      "group": "Computer Science",
+      "name": "Sound"
+    },
+    {
+      "category": "math.QA",
+      "works": 21205,
+      "group": "Mathematics",
+      "name": "Quantum Algebra"
+    },
+    {
+      "category": "math.RA",
+      "works": 20601,
+      "group": "Mathematics",
+      "name": "Rings and Algebras"
+    },
+    {
+      "category": "physics.plasm-ph",
+      "works": 20481,
+      "group": "Physics",
+      "name": "Plasma Physics"
+    },
+    {
+      "category": "cs.LO",
+      "works": 20141,
+      "group": "Computer Science",
+      "name": "Logic in Computer Science"
+    },
+    {
+      "category": "math.CV",
+      "works": 19969,
+      "group": "Mathematics",
+      "name": "Complex Variables"
+    },
+    {
+      "category": "math.AT",
+      "works": 18402,
+      "group": "Mathematics",
+      "name": "Algebraic Topology"
+    },
+    {
+      "category": "cs.NE",
+      "works": 18249,
+      "group": "Computer Science",
+      "name": "Neural and Evolutionary Computing"
+    },
+    {
+      "category": "physics.bio-ph",
+      "works": 18062,
+      "group": "Physics",
+      "name": "Biological Physics"
+    },
+    {
+      "category": "nlin.CD",
+      "works": 17470,
+      "group": "Physics",
+      "name": "Chaotic Dynamics"
+    },
+    {
+      "category": "cond-mat.other",
+      "works": 17434,
+      "group": "Physics",
+      "name": "Other Condensed Matter"
+    },
+    {
+      "category": "cs.DM",
+      "works": 16093,
+      "group": "Computer Science",
+      "name": "Discrete Mathematics"
+    },
+    {
+      "category": "math.LO",
+      "works": 16034,
+      "group": "Mathematics",
+      "name": "Logic"
+    },
+    {
+      "category": "cs.GT",
+      "works": 15479,
+      "group": "Computer Science",
+      "name": "Computer Science and Game Theory"
+    },
+    {
+      "category": "math.AC",
+      "works": 15236,
+      "group": "Mathematics",
+      "name": "Commutative Algebra"
+    },
+    {
+      "category": "math.OA",
+      "works": 14549,
+      "group": "Mathematics",
+      "name": "Operator Algebras"
+    },
+    {
+      "category": "cond-mat",
+      "works": 14215,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "cs.MA",
+      "works": 13590,
+      "group": "Computer Science",
+      "name": "Multiagent Systems"
+    },
+    {
+      "category": "q-bio.QM",
+      "works": 13570,
+      "group": "Quantitative Biology",
+      "name": "Quantitative Methods"
+    },
+    {
+      "category": "math.MG",
+      "works": 13541,
+      "group": "Mathematics",
+      "name": "Metric Geometry"
+    },
+    {
+      "category": "cs.CC",
+      "works": 13357,
+      "group": "Computer Science",
+      "name": "Computational Complexity"
+    },
+    {
+      "category": "q-bio.PE",
+      "works": 13231,
+      "group": "Quantitative Biology",
+      "name": "Populations and Evolution"
+    },
+    {
+      "category": "nlin.SI",
+      "works": 13035,
+      "group": "Physics",
+      "name": "Exactly Solvable and Integrable Systems"
+    },
+    {
+      "category": "q-bio.NC",
+      "works": 12471,
+      "group": "Quantitative Biology",
+      "name": "Neurons and Cognition"
+    },
+    {
+      "category": "cs.DB",
+      "works": 12354,
+      "group": "Computer Science",
+      "name": "Databases"
+    },
+    {
+      "category": "physics.data-an",
+      "works": 12145,
+      "group": "Physics",
+      "name": "Data Analysis, Statistics and Probability"
+    },
+    {
+      "category": "math.SP",
+      "works": 11564,
+      "group": "Mathematics",
+      "name": "Spectral Theory"
+    },
+    {
+      "category": "cs.CE",
+      "works": 11216,
+      "group": "Computer Science",
+      "name": "Computational Engineering, Finance, and Science"
+    },
+    {
+      "category": "physics.gen-ph",
+      "works": 10995,
+      "group": "Physics",
+      "name": "General Physics"
+    },
+    {
+      "category": "nlin.PS",
+      "works": 10946,
+      "group": "Physics",
+      "name": "Pattern Formation and Solitons"
+    },
+    {
+      "category": "stat.CO",
+      "works": 10572,
+      "group": "Statistics",
+      "name": "Computation"
+    },
+    {
+      "category": "math.CT",
+      "works": 10545,
+      "group": "Mathematics",
+      "name": "Category Theory"
+    },
+    {
+      "category": "math.SG",
+      "works": 10379,
+      "group": "Mathematics",
+      "name": "Symplectic Geometry"
+    },
+    {
+      "category": "cs.PL",
+      "works": 10292,
+      "group": "Computer Science",
+      "name": "Programming Languages"
+    },
+    {
+      "category": "cs.MM",
+      "works": 10051,
+      "group": "Computer Science",
+      "name": "Multimedia"
+    },
+    {
+      "category": "cs.GR",
+      "works": 9740,
+      "group": "Computer Science",
+      "name": "Graphics"
+    },
+    {
+      "category": "physics.class-ph",
+      "works": 9584,
+      "group": "Physics",
+      "name": "Classical Physics"
+    },
+    {
+      "category": "physics.med-ph",
+      "works": 9201,
+      "group": "Physics",
+      "name": "Medical Physics"
+    },
+    {
+      "category": "cs.AR",
+      "works": 9019,
+      "group": "Computer Science",
+      "name": "Hardware Architecture"
+    },
+    {
+      "category": "physics.acc-ph",
+      "works": 9010,
+      "group": "Physics",
+      "name": "Accelerator Physics"
+    },
+    {
+      "category": "physics.geo-ph",
+      "works": 8939,
+      "group": "Physics",
+      "name": "Geophysics"
+    },
+    {
+      "category": "physics.ao-ph",
+      "works": 8649,
+      "group": "Physics",
+      "name": "Atmospheric and Oceanic Physics"
+    },
+    {
+      "category": "nlin.AO",
+      "works": 8340,
+      "group": "Physics",
+      "name": "Adaptation and Self-Organizing Systems"
+    },
+    {
+      "category": "cs.CG",
+      "works": 8337,
+      "group": "Computer Science",
+      "name": "Computational Geometry"
+    },
+    {
+      "category": "cs.ET",
+      "works": 7863,
+      "group": "Computer Science",
+      "name": "Emerging Technologies"
+    },
+    {
+      "category": "physics.space-ph",
+      "works": 7716,
+      "group": "Physics",
+      "name": "Space Physics"
+    },
+    {
+      "category": "q-fin.EC",
+      "works": 7533,
+      "group": "Quantitative Finance",
+      "name": "Economics"
+    },
+    {
+      "category": "econ.GN",
+      "works": 7532,
+      "group": "Economics",
+      "name": "General Economics"
+    },
+    {
+      "category": "q-bio.BM",
+      "works": 6874,
+      "group": "Quantitative Biology",
+      "name": "Biomolecules"
+    },
+    {
+      "category": "math.KT",
+      "works": 6713,
+      "group": "Mathematics",
+      "name": "K-Theory and Homology"
+    },
+    {
+      "category": "cs.DL",
+      "works": 6318,
+      "group": "Computer Science",
+      "name": "Digital Libraries"
+    },
+    {
+      "category": "cs.FL",
+      "works": 6209,
+      "group": "Computer Science",
+      "name": "Formal Languages and Automata Theory"
+    },
+    {
+      "category": "math.GN",
+      "works": 6052,
+      "group": "Mathematics",
+      "name": "General Topology"
+    },
+    {
+      "category": "econ.EM",
+      "works": 5831,
+      "group": "Economics",
+      "name": "Econometrics"
+    },
+    {
+      "category": "physics.hist-ph",
+      "works": 5721,
+      "group": "Physics",
+      "name": "History and Philosophy of Physics"
+    },
+    {
+      "category": "cs.PF",
+      "works": 5567,
+      "group": "Computer Science",
+      "name": "Performance"
+    },
+    {
+      "category": "math.GM",
+      "works": 4981,
+      "group": "Mathematics",
+      "name": "General Mathematics"
+    },
+    {
+      "category": "physics.ed-ph",
+      "works": 4685,
+      "group": "Physics",
+      "name": "Physics Education"
+    },
+    {
+      "category": "q-fin.ST",
+      "works": 4362,
+      "group": "Quantitative Finance",
+      "name": "Statistical Finance"
+    },
+    {
+      "category": "econ.TH",
+      "works": 4354,
+      "group": "Economics",
+      "name": "Theoretical Economics"
+    },
+    {
+      "category": "math.HO",
+      "works": 4324,
+      "group": "Mathematics",
+      "name": "History and Overview"
+    },
+    {
+      "category": "q-bio.MN",
+      "works": 4230,
+      "group": "Quantitative Biology",
+      "name": "Molecular Networks"
+    },
+    {
+      "category": "q-bio.GN",
+      "works": 3936,
+      "group": "Quantitative Biology",
+      "name": "Genomics"
+    },
+    {
+      "category": "q-fin.MF",
+      "works": 3412,
+      "group": "Quantitative Finance",
+      "name": "Mathematical Finance"
+    },
+    {
+      "category": "q-fin.CP",
+      "works": 3348,
+      "group": "Quantitative Finance",
+      "name": "Computational Finance"
+    },
+    {
+      "category": "cs.SC",
+      "works": 3241,
+      "group": "Computer Science",
+      "name": "Symbolic Computation"
+    },
+    {
+      "category": "q-fin.GN",
+      "works": 3079,
+      "group": "Quantitative Finance",
+      "name": "General Finance"
+    },
+    {
+      "category": "q-fin.RM",
+      "works": 3056,
+      "group": "Quantitative Finance",
+      "name": "Risk Management"
+    },
+    {
+      "category": "physics.atm-clus",
+      "works": 3036,
+      "group": "Physics",
+      "name": "Atomic and Molecular Clusters"
+    },
+    {
+      "category": "cs.MS",
+      "works": 2754,
+      "group": "Computer Science",
+      "name": "Mathematical Software"
+    },
+    {
+      "category": "physics.pop-ph",
+      "works": 2688,
+      "group": "Physics",
+      "name": "Popular Physics"
+    },
+    {
+      "category": "q-bio.TO",
+      "works": 2652,
+      "group": "Quantitative Biology",
+      "name": "Tissues and Organs"
+    },
+    {
+      "category": "q-bio.CB",
+      "works": 2480,
+      "group": "Quantitative Biology",
+      "name": "Cell Behavior"
+    },
+    {
+      "category": "q-fin.PM",
+      "works": 2459,
+      "group": "Quantitative Finance",
+      "name": "Portfolio Management"
+    },
+    {
+      "category": "chao-dyn",
+      "works": 2398,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "q-fin.TR",
+      "works": 2353,
+      "group": "Quantitative Finance",
+      "name": "Trading and Market Microstructure"
+    },
+    {
+      "category": "cs.OH",
+      "works": 2321,
+      "group": "Computer Science",
+      "name": "Other Computer Science"
+    },
+    {
+      "category": "q-fin.PR",
+      "works": 2264,
+      "group": "Quantitative Finance",
+      "name": "Pricing of Securities"
+    },
+    {
+      "category": "q-bio.SC",
+      "works": 1825,
+      "group": "Quantitative Biology",
+      "name": "Subcellular Processes"
+    },
+    {
+      "category": "stat.OT",
+      "works": 1737,
+      "group": "Statistics",
+      "name": "Other Statistics"
+    },
+    {
+      "category": "nlin.CG",
+      "works": 1702,
+      "group": "Physics",
+      "name": "Cellular Automata and Lattice Gases"
+    },
+    {
+      "category": "q-bio.OT",
+      "works": 1627,
+      "group": "Quantitative Biology",
+      "name": "Other Quantitative Biology"
+    },
+    {
+      "category": "q-alg",
+      "works": 1578,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "cs.OS",
+      "works": 1465,
+      "group": "Computer Science",
+      "name": "Operating Systems"
+    },
+    {
+      "category": "alg-geom",
+      "works": 1423,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "solv-int",
+      "works": 1413,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "q-bio",
+      "works": 1356,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "cmp-lg",
+      "works": 894,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "dg-ga",
+      "works": 732,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "patt-sol",
+      "works": 650,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "adap-org",
+      "works": 584,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "funct-an",
+      "works": 427,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "mtrl-th",
+      "works": 262,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "chem-ph",
+      "works": 251,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "cs.GL",
+      "works": 245,
+      "group": "Computer Science",
+      "name": "General Literature"
+    },
+    {
+      "category": "comp-gas",
+      "works": 221,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "supr-con",
+      "works": 175,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "atom-ph",
+      "works": 123,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "acc-phys",
+      "works": 49,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "plasm-ph",
+      "works": 38,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "ao-sci",
+      "works": 17,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    },
+    {
+      "category": "bayes-an",
+      "works": 16,
+      "group": "Legacy / unmapped",
+      "name": "Historical code; retained as supplied"
+    }
+  ],
+  "category_counts": [
+    {
+      "categories_per_work": 1,
+      "works": 1635445
+    },
+    {
+      "categories_per_work": 2,
+      "works": 962900
+    },
+    {
+      "categories_per_work": 3,
+      "works": 391691
+    },
+    {
+      "categories_per_work": 4,
+      "works": 127160
+    },
+    {
+      "categories_per_work": 5,
+      "works": 37332
+    },
+    {
+      "categories_per_work": 6,
+      "works": 8411
+    },
+    {
+      "categories_per_work": 7,
+      "works": 1233
+    },
+    {
+      "categories_per_work": 8,
+      "works": 210
+    },
+    {
+      "categories_per_work": 9,
+      "works": 38
+    },
+    {
+      "categories_per_work": 10,
+      "works": 14
+    },
+    {
+      "categories_per_work": 11,
+      "works": 1
+    },
+    {
+      "categories_per_work": 12,
+      "works": 1
+    },
+    {
+      "categories_per_work": 13,
+      "works": 1
+    }
+  ],
+  "table_counts": {
+    "papers": 3164437,
+    "paper_authors": 15071663,
+    "paper_categories": 5492913,
+    "paper_versions": 5055641,
+    "raw_records": 3164437,
+    "duplicate_records": 91,
+    "ingestion_runs": 1
+  },
+  "groups": [
+    {
+      "subject_group": "Physics",
+      "works": 1509514
+    },
+    {
+      "subject_group": "Computer Science",
+      "works": 1007356
+    },
+    {
+      "subject_group": "Mathematics",
+      "works": 782055
+    },
+    {
+      "subject_group": "Statistics",
+      "works": 150644
+    },
+    {
+      "subject_group": "Electrical Engineering and Systems Science",
+      "works": 138770
+    },
+    {
+      "subject_group": "Legacy / unmapped",
+      "works": 129782
+    },
+    {
+      "subject_group": "Quantitative Biology",
+      "works": 55236
+    },
+    {
+      "subject_group": "Quantitative Finance",
+      "works": 25879
+    },
+    {
+      "subject_group": "Economics",
+      "works": 17334
+    }
+  ],
+  "provenance": {
+    "exported_at_utc": "2026-09-15T09:17:46.427362+00:00",
+    "database": "arxiv",
+    "schema": "arxiv",
+    "count_basis": "Exact counts after duplicate resolution, from a read-only repeatable-read transaction.",
+    "date_basis": "Earliest available version number (first_submitted_at), grouped in UTC; not journal publication or metadata update dates.",
+    "taxonomy_source": "https://arxiv.org/category_taxonomy",
+    "taxonomy_retrieved_at": "2026-09-15T09:17:14.317261+00:00",
+    "queries": {
+      "runs": "SELECT run_id, dataset_version, snapshot_sha256, status, records_loaded, finished_at FROM arxiv.ingestion_runs ORDER BY run_id",
+      "summary": "SELECT count(*) AS works, count(*) FILTER (WHERE first_submitted_at IS NULL) AS missing_first_submission,\n        min(first_submitted_at) AS earliest_submission, max(first_submitted_at) AS latest_submission,\n        count(*) FILTER (WHERE doi IS NOT NULL AND btrim(doi) <> '') AS with_doi,\n        count(*) FILTER (WHERE abstract IS NOT NULL AND btrim(abstract) <> '') AS with_abstract,\n        min(update_date) AS earliest_update, max(update_date) AS latest_update FROM arxiv.papers",
+      "years": "SELECT extract(year FROM first_submitted_at AT TIME ZONE 'UTC')::int AS year, count(*) AS works FROM arxiv.papers WHERE first_submitted_at IS NOT NULL GROUP BY 1 ORDER BY 1",
+      "months": "SELECT to_char(first_submitted_at AT TIME ZONE 'UTC', 'YYYY-MM') AS month, count(*) AS works FROM arxiv.papers WHERE first_submitted_at IS NOT NULL GROUP BY 1 ORDER BY 1",
+      "categories": "SELECT category, count(DISTINCT arxiv_id) AS works FROM arxiv.paper_categories GROUP BY category ORDER BY works DESC, category",
+      "category_counts": "SELECT n AS categories_per_work, count(*) AS works FROM (SELECT p.arxiv_id, count(DISTINCT c.category) AS n FROM arxiv.papers p LEFT JOIN arxiv.paper_categories c USING (arxiv_id) GROUP BY p.arxiv_id) x GROUP BY n ORDER BY n"
+    },
+    "group_query": "WITH taxonomy AS (SELECT * FROM unnest(%s::text[], %s::text[]) AS t(category, subject_group))\n            SELECT t.subject_group, count(DISTINCT c.arxiv_id) AS works\n            FROM arxiv.paper_categories c JOIN taxonomy t USING(category) GROUP BY 1 ORDER BY works DESC"
+  }
+}
