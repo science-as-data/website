@@ -3,7 +3,7 @@ title = "The schema"
 +++
 
 ~~~
-<header class="article-header wrap"><p class="eyebrow">02 / The schema</p><h1>Keep the connections.<br>Make them queryable.</h1><p class="lede">Entities become tables. Nested arrays become relationships. The result is an explicit data model for moving between works, authors, institutions, and ideas.</p></header>
+<header class="article-header wrap"><h1>Keep the connections.<br>Make them queryable.</h1><p class="lede">Entities become tables. Nested arrays become relationships. The result is an explicit data model for moving between works, authors, institutions, and ideas.</p></header>
 <div class="article-layout wrap"><aside class="article-nav" aria-label="On this page"><strong>In this guide</strong><a href="#model">The relational model</a><a href="#join">Join paths</a><a href="#identifiers">IDs &amp; nested values</a><a href="#source">One source of truth</a><a href="#limits">Model boundaries</a></aside><article class="article">
 ~~~
 

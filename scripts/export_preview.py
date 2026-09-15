@@ -97,7 +97,7 @@ def generate_fragment(dataset):
   <button id="preview-reset" class="preview-secondary" type="button">Reset</button>
 </div>
 <section class="preview-browser" aria-labelledby="preview-table-title">
-  <div class="preview-table-toolbar"><div><p class="eyebrow">openalex / public metadata</p><h2 id="preview-table-title">works</h2></div><a id="preview-csv" class="preview-secondary" href="/assets/preview/works.csv" download>Download CSV ↓</a></div>
+  <div class="preview-table-toolbar"><div><h2 id="preview-table-title">works</h2></div><a id="preview-csv" class="preview-secondary" href="/assets/preview/works.csv" download>Download CSV ↓</a></div>
   <p id="preview-table-description">{esc(DESCRIPTIONS['works'])}</p>
   <div class="preview-table-scroll" tabindex="0" role="region" aria-label="Dataset sample table"><table id="preview-records"><caption class="sr-only">Static sample of OpenAlex works</caption><thead><tr><th scope="col">id</th><th scope="col">title</th><th scope="col">publication_year</th><th scope="col">type</th><th scope="col">cited_by_count</th></tr></thead><tbody>{''.join(body)}</tbody></table></div>
   <div class="preview-pagination" hidden><p id="preview-count" role="status" aria-live="polite"></p><div><button id="preview-prev" class="preview-secondary" type="button">← Previous</button><button id="preview-next" class="preview-secondary" type="button">Next →</button></div></div>

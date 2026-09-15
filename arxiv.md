@@ -3,7 +3,7 @@ title = "arXiv: data and PostgreSQL database"
 +++
 
 ~~~
-<header class="article-header wrap"><p class="eyebrow">Project / arXiv</p><h1>arXiv data in PostgreSQL</h1><p class="lede">Explore the size, submission history, and subject coverage of the loaded Cornell arXiv metadata snapshot, and the relational model that makes it queryable.</p></header>
+<header class="article-header wrap"><h1>arXiv data in PostgreSQL</h1><p class="lede">Explore the size, submission history, and subject coverage of the loaded Cornell arXiv metadata snapshot, and the relational model that makes it queryable.</p></header>
 <div class="article-layout wrap">
 <nav class="article-nav" aria-label="arXiv project sections"><strong>arXiv</strong><a href="#arxiv-counts">Dataset size</a><a href="#time">Works over time</a><a href="#categories">Subjects and categories</a><a href="#database">Database structure</a><a href="#downloads">Download statistics</a><a href="#scope">Scope and interpretation</a><a href="https://github.com/science-as-data/arxiv">Repository ↗</a></nav>
 <article class="article">

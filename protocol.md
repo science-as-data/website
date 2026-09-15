@@ -3,7 +3,7 @@ title = "The protocol"
 +++
 
 ~~~
-<header class="article-header wrap"><p class="eyebrow">01 / The protocol</p><h1>OpenAlex loading protocol</h1><p class="lede">A staged workflow to download, flatten, and load OpenAlex into PostgreSQL. The instructions specify the reference release, storage requirements, sample validation, and full snapshot loading stages.</p></header>
+<header class="article-header wrap"><h1>OpenAlex loading protocol</h1><p class="lede">A staged workflow to download, flatten, and load OpenAlex into PostgreSQL. The instructions specify the reference release, storage requirements, sample validation, and full snapshot loading stages.</p></header>
 <div class="article-layout wrap"><aside class="article-nav" aria-label="On this page"><strong>In this protocol</strong><a href="#prepare">Before you begin</a><a href="#verify">Test a sample</a><a href="#download">01 · Download</a><a href="#flatten">02 · Flatten</a><a href="#load">03 · Load &amp; index</a><a href="#query">04 · Query</a><a href="#refresh">Refresh &amp; reproduce</a></aside><article class="article">
 ~~~
 

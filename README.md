@@ -35,6 +35,14 @@ FRANKLIN_PREPATH="website" julia --project=. build.jl
 
 Upload the contents of `__site/` to your static host. A production build with a prefix must be served at that prefix; use `serve()` for the usual local preview. Building does not publish the website. See Franklin’s [deployment guide](https://franklinjl.org/workflow/deploy/) for hosting options. Pre-rendering and minification are disabled in accordance with the [Franklin project guidance](https://github.com/JuliaDocs/Franklin.jl).
 
+## Publish
+
+The public site is https://science-as-data.github.io/website/.
+Pushing to `main` runs `.github/workflows/pages.yml`, which builds with Julia
+1.12.6 and the `website` URL prefix, then deploys `__site/` to GitHub Pages.
+You can also run **Publish website** manually from the repository’s Actions tab.
+GitHub Pages uses **GitHub Actions** as its publishing source.
+
 ## Edit the site
 
 - `index.md` and `_layout/organization.html`: organization homepage and project summaries.
