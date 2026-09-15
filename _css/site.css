@@ -42,3 +42,5 @@ h1,h2,h3,h4,h5,h6,.article h3,.query-panel h3{font-family:JuliaMono,var(--mono);
 @media(max-width:640px){.overview-intro{padding-block:32px 24px}.overview-intro>p:not(.eyebrow){font-size:16px}}
 
 @media(max-width:820px){.site-footer{grid-template-columns:1fr;gap:20px}.footer-links{justify-content:flex-start}}
+
+.brand-icon{display:block;width:36px;height:36px;flex-shrink:0;object-fit:contain}
