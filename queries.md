@@ -22,15 +22,15 @@ Before exporting results, record the snapshot release, repository revision, exac
 - **Define your denominator.** Articles, all work types, and journal-only records are different populations.
 - **Respect multiplicity.** Count works distinctly after joins to authors, affiliations, or multiple topics. Fractional counting may be more appropriate for some questions.
 - **Treat missingness explicitly.** Missing affiliations and unresolved citation targets are not evidence of no collaboration or no citations.
-- **Separate publication time from observation time.** Citations and open-access status reflect the snapshot, not necessarily the year of publication.
+- **Separate publication time from observation time.** Citations and open-access status reflect the snapshot, not necessarily the year of publication. The [publication-date audit](/openalex/#quality) also distinguishes journal events, preprint histories, partial dates, and unresolved evidence.
 - **Inspect performance first.** `EXPLAIN` estimates a plan; `EXPLAIN ANALYZE` actually runs the query. Start with smaller cohorts where possible.
 
 \label{crosswalk}
 ## Add Scopus disciplines
 
-The repository’s `matching/` tools build an OpenAlex–Scopus journal crosswalk using ISSNs, normalized titles, and scored candidate pairs. It is an extension under development, with ambiguous pairs routed to review.
+The OpenAlex repository’s `matching/` tools build an OpenAlex–Scopus journal crosswalk using ISSNs, normalized titles, and scored candidate pairs. It is an extension under development, with ambiguous pairs routed to review.
 
-Source coverage is time-dependent: when sampling works, join publication year to the Scopus coverage interval. Keep all ASJC discipline assignments; choosing the first code discards information. The [matching guide](https://github.com/science-as-data/openalex/blob/main/matching/README.md) documents source-list loading, optional API enrichment, review, and evaluation.
+Source coverage is time-dependent: when sampling works, join publication year to the Scopus coverage interval. Keep all ASJC discipline assignments; choosing the first code discards information. The [matching guide](https://github.com/science-as-data/openalex/blob/main/matching/README.md) documents source-list loading, optional API enrichment, review, and evaluation. The organization’s broader linkage scope and other implemented routes are documented under [Data matching](/data-matching/).
 
 \label{faq}
 ## Common questions

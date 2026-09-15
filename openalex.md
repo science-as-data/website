@@ -1,5 +1,5 @@
 +++
-title = "OpenAlex: from snapshot to science"
+title = "OpenAlex: access, PostgreSQL, and quality"
 +++
 
 {{insert landing.html}}

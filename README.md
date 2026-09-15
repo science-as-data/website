@@ -2,7 +2,11 @@
 
 The organization website for [Science as Data](https://github.com/science-as-data), built with [Franklin.jl](https://franklinjl.org/). It documents OpenAlex, arXiv, CORE, Pre-registrations, and Data matching, with explicit status notes for planned work. This is a standalone repository, moved from `openalex/website/`.
 
-The homepage introduces the projects; `/openalex/` retains the original OpenAlex overview, and `/arxiv/` describes the metadata workflow and its current scope. `/core/` reserves space for CORE outcomes, pending project details. Existing `/protocol/`, `/schema/`, `/queries/`, and `/preview/` routes remain OpenAlex resources. Builds use saved assets and require no database access.
+The homepage introduces each project. `/arxiv/` presents exact snapshot statistics,
+`/core/` documents the loaded dump and historical assessment, `/pre-registrations/`
+covers source collection, and `/data-matching/` describes linkage routes and outcomes.
+Existing OpenAlex pages and the static preview remain available. Builds use saved
+assets and require no database or API access.
 
 ## Preview locally
 
@@ -35,10 +39,10 @@ Upload the contents of `__site/` to your static host. A production build with a 
 
 - `index.md` and `_layout/organization.html`: organization homepage and project summaries.
 - `openalex.md` and `_layout/landing.html`: OpenAlex overview and conceptual data illustration.
-- `arxiv.md`: arXiv outcomes, workflow, and current scope.
-- `core.md`: CORE project status; add verified outcomes when available.
-- `pre-registrations.md`: planned research area and documentation status.
-- `data-matching.md`: journal matching methods, limitations, and repository links.
+- `arxiv.md` and `_layout/arxiv-statistics.html`: arXiv schema, counts, and distributions.
+- `core.md`: CORE data model, documented load totals, and dated sample estimates.
+- `pre-registrations.md`: implemented collectors, fields, and coverage limitations.
+- `data-matching.md`: linkage network, implemented/planned routes, and historical outcomes.
 - The Overview tab links to the organization homepage; each research area has its own navigation entry.
 - `protocol.md`, `schema.md`, `queries.md`, `preview.md`: Markdown documentation and dataset preview pages.
 - `_layout/query-examples.html`: query tabs and SQL examples.
@@ -71,3 +75,49 @@ python scripts/export_preview.py --render-only
 ```
 
 The Franklin build uses the saved artifacts and never runs the exporter. The generator lives in `scripts/`, which is excluded from the published output.
+
+## arXiv statistics
+
+`assets/arxiv/summary.json` stores exact read-only database aggregates, SQL,
+ingestion checksums, count units, and export timestamps. Annual and monthly
+counts use first submission dates in UTC. Category groups count distinct works
+within each group; cross-listing makes groups overlap. Historical category codes
+absent from the saved official taxonomy are retained under “Legacy / unmapped.”
+
+From this repository, explicitly refresh with psycopg 3 and database access:
+
+```bash
+python scripts/export_arxiv.py
+# Or regenerate the HTML from saved aggregates without a database:
+python scripts/export_arxiv.py --render-only
+```
+
+Set `ARXIV_DATABASE_URL` to override the local `arxiv` database connection.
+The exporter rejects unfinished ingestion runs and checks aggregate totals.
+Commit the JSON, CSVs, and generated layout together. `assets/arxiv/taxonomy.json`
+records the source URL and retrieval date for saved taxonomy labels; review it
+when refreshing. The website build never runs the exporter.
+
+CORE and linkage figures are historical documentation summaries, not fresh
+live-database counts. Keep assessment dates, sampling denominators, matching
+units, and source-report links attached when editing them.
+
+## Project scope review
+
+Last reviewed against local checkouts: **2026-09-15**. Check the following sources
+when updating the homepage, project pages, or linkage diagram:
+
+| Project | Scope reflected on the website | Repository evidence |
+|---|---|---|
+| OpenAlex | API tools, PostgreSQL snapshot pipeline, publication-date audits, and the existing journal matcher | `openalex/README.md`, `quality/publication_dates/README.md`, `results_fulltext_decades_20260914.md` |
+| arXiv | Loaded metadata snapshot, exact exported statistics, relational schema; OAI-PMH and bulk text workflows planned | `arxiv/kaggle/README.md`, `kaggle/sql/schema.sql`, `oai_pmh/README.md`, `s3/README.md` |
+| CORE | Loaded 2024 dump, parsing/ingestion, completed baseline and API sizing, sampled drift assessment; field-fill outstanding | `core/docs/INGESTION.md`, `docs/COMPLETENESS_ASSESSMENT.md` |
+| Pre-registrations | Five implemented collectors and platform-specific data representation; matching/EDA moved out | `study-preregistrations/README.md` and individual collector READMEs |
+| Data matching | Cross-source linkage ownership; migrated registration matcher/training/EDA; journal matcher still in OpenAlex | `data-matching/README.md`, `preregistrations/README.md`, `preregistrations/EDA/REPORT.md` |
+
+Repository evidence paths are relative to the named sibling checkout. General
+OpenAlex–arXiv matching remains planned, while the OpenAlex date audit documents
+nine bounded arXiv history checks. Keep that distinction in both project pages
+and the linkage diagram. Do not infer a validated crosswalk from adapters or
+rule-selected positive candidates. Review dates describe scope checks, not new
+data collection or refreshed measurements.
