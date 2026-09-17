@@ -11,6 +11,9 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/css/site.css">
+  {{ispage openalex protocol schema preview queries arxiv core pre-registrations data-matching}}
+  <link rel="stylesheet" href="/css/projects.css">
+  {{end}}
   <script src="/libs/site.js" defer></script>
   {{ispage arxiv core pre-registrations data-matching}}
   <link rel="stylesheet" href="/css/datasets.css">
@@ -23,19 +26,19 @@
   <script src="/libs/preview.js" defer></script>
   {{end}}
 </head>
-<body>
+<body id="page-top">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <a class="brand" href="/" aria-label="Science as Data home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Science <span class="brand-light">as Data</span></span></a>
+  <span class="current-section-label" aria-hidden="true"></span>
   <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">＋</span></button>
   <nav id="main-nav" aria-label="Main navigation">
-    <a href="/" {{ispage index}}aria-current="page"{{end}}>Overview</a>
-    <a href="/openalex/" {{ispage openalex protocol schema preview queries}}aria-current="page"{{end}}>OpenAlex</a>
-    <a href="/arxiv/" {{ispage arxiv}}aria-current="page"{{end}}>arXiv</a>
-    <a href="/core/" {{ispage core}}aria-current="page"{{end}}>CORE</a>
-    <a href="/pre-registrations/" {{ispage pre-registrations}}aria-current="page"{{end}}>Pre-registrations</a>
-    <a href="/data-matching/" {{ispage data-matching}}aria-current="page"{{end}}>Data matching</a>
-    <a class="nav-source" href="https://github.com/science-as-data">GitHub <span aria-hidden="true">↗</span></a>
+    {{insert navigation-links.html}}
   </nav>
 </header>
+<aside class="scroll-navigation" hidden aria-label="Site sections">
+  <a class="scroll-navigation-brand" href="/">Science as Data</a>
+  <nav aria-label="Section navigation">{{insert navigation-links.html}}</nav>
+  <a class="back-to-top" href="#page-top">Back to top ↑</a>
+</aside>
 <main id="main" tabindex="-1">

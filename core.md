@@ -3,9 +3,32 @@ title = "CORE: dataset and ingestion outcomes"
 +++
 
 ~~~
-<header class="article-header wrap"><h1>CORE data in PostgreSQL</h1><p class="lede">A loaded scholarly metadata and full-text snapshot, a streaming ingestion pipeline, and an assessment of its completeness. The figures below describe the 12 July 2024 dump held locally.</p></header>
-<div class="article-layout wrap"><nav class="article-nav" aria-label="CORE project sections"><strong>CORE</strong><a href="#outcomes">Completed work</a><a href="#data">Dataset features</a><a href="#schema">Database structure</a><a href="#coverage">Coverage and limitations</a><a href="#next">Remaining work</a><a href="https://github.com/science-as-data/core">Repository ↗</a></nav><article class="article">
-<section aria-labelledby="outcomes"><h2 id="outcomes">Completed work</h2><div class="dataset-metrics"><div><strong>219,972,470</strong><span>works · one row per CORE ID</span></div><div><strong>26,366,740</strong><span>works with stored full text</span></div><div><strong>1,009,086,624</strong><span>ordered author-name rows</span></div><div><strong>137</strong><span>snapshot batches processed</span></div></div>
+<section class="hero wrap project-hero" aria-labelledby="project-title">
+  <div class="hero-copy">
+    <p class="project-identity"><span class="project-icon project-icon-core" aria-hidden="true"><img src="/assets/core-mark.svg" width="36" height="36" alt=""></span><span>CORE</span></p>
+    <h1 id="project-title">CORE data for research</h1>
+    <p class="hero-description">The CORE snapshot combines publication metadata, repository identifiers, and extracted text for a subset of works.</p>
+    <p class="hero-description">The pipeline reads archives in batches and loads metadata, ordered author names, source fields, and full text into separate PostgreSQL tables.</p>
+    <p class="hero-description">The resulting database supports metadata-based selection and retrieval of available text. The documented load uses the 12 July 2024 dump; coverage and completeness are assessed separately.</p>
+    <div class="hero-actions"><a class="button" href="#schema">Database structure <span aria-hidden="true">↗</span></a><a class="text-link" href="#coverage">Coverage assessment <span aria-hidden="true">↗</span></a></div>
+  </div>
+  <figure class="transformation process-figure" aria-labelledby="process-title">
+    <figcaption class="figure-topline" id="process-title">FROM SOURCE RECORDS TO RESEARCH DATA</figcaption>
+    <div class="process-input"><h2>Input: CORE snapshot archives</h2><p>core_id · title · identifiers</p><p>authors · source fields · fullText</p></div>
+    <div class="transform-connector"><span class="connector-line" aria-hidden="true"></span><span>STREAM → PARSE → LOAD</span><span class="process-arrow" aria-hidden="true">↓</span></div>
+    <div class="process-outputs" aria-label="Outputs"><div class="process-output"><h3>works</h3><p>Publication metadata</p></div><div class="process-output"><h3>works_authors</h3><p>Ordered author names</p></div><div class="process-output"><h3>works_fulltext</h3><p>Text where supplied</p></div><div class="process-output"><h3>works_doc</h3><p>Retained source values</p></div></div>
+    <p class="figure-note">Tables join on core_id. A download link does not establish that full text is stored.</p>
+  </figure>
+</section>
+<section class="snapshot-band project-summary"><div class="wrap"><h2>Documented snapshot load</h2><div class="dataset-metrics"><div><strong>219,972,470</strong><span>works · one row per CORE ID</span></div><div><strong>26,366,740</strong><span>works with stored full text</span></div><div><strong>1,009,086,624</strong><span>ordered author-name rows</span></div><div><strong>137</strong><span>snapshot batches processed</span></div></div><p>12 July 2024 dump · historical load totals. <a href="#outcomes">Load evidence and accounting</a>.</p></div></section>
+<section class="section wrap project-workflow" aria-labelledby="workflow-title"><div class="section-heading"><h2 id="workflow-title">Data processing workflow</h2></div><div class="workflow-grid"><a class="workflow-step" href="#outcomes"><span class="step-index">01 <span aria-hidden="true">↗</span></span><h3>Read archives</h3><p>Discover and download snapshot batches; record their completion.</p></a>
+<a class="workflow-step" href="#data"><span class="step-index">02 <span aria-hidden="true">↗</span></span><h3>Parse records</h3><p>Extract metadata and text while handling missing fields and malformed records.</p></a>
+<a class="workflow-step" href="#schema"><span class="step-index">03 <span aria-hidden="true">↗</span></span><h3>Load tables</h3><p>Store related records separately and build indexes after loading.</p></a>
+<a class="workflow-step" href="#coverage"><span class="step-index">04 <span aria-hidden="true">↗</span></span><h3>Assess coverage</h3><p>Compare local metadata and sampled records with the documented API baseline.</p></a></div></section>
+<nav class="project-sections wrap" aria-label="CORE project sections"><strong>In this section</strong><a href="#outcomes">Completed work</a><a href="#data">Dataset features</a><a href="#schema">Database structure</a><a href="#coverage">Coverage and limitations</a><a href="#next">Remaining work</a><a href="https://github.com/science-as-data/core">Repository ↗</a></nav>
+<div class="wrap project-details"><article class="article">
+
+<section aria-labelledby="outcomes"><h2 id="outcomes">Completed work</h2>
 <p>These are historical load totals reported in the repository’s <a href="https://github.com/science-as-data/core/blob/main/docs/INGESTION.md">ingestion documentation</a> and <a href="https://github.com/science-as-data/core/blob/main/docs/COMPLETENESS_ASSESSMENT.md">5 June 2026 completeness assessment</a>. They have not been refreshed from the database for this page.</p>
 <ul><li><strong>Ingestion:</strong> snapshot discovery and download, PostgreSQL provisioning, streaming archive-to-table loading, restart support, and post-load indexing.</li><li><strong>Parsing:</strong> a Julia library for record and XML-manifest parsing, with fixture-based tests and tolerance for missing fields and alternate source shapes. The bulk loader uses a separate Python streaming parser.</li><li><strong>Assessment:</strong> a local metadata baseline, per-year and document-type comparisons against the API, and sampled record-survival and field-drift checks.</li></ul>
 <p>The batch accounting covers all 137 archives. The documented resumed run processed 182,266,035 records with 10 malformed JSON records skipped; the error total for the earlier 19 batches is not available. Batch completion therefore does not establish zero record loss.</p></section>

@@ -3,7 +3,7 @@ title = "Dataset preview"
 +++
 
 ~~~
-<header class="article-header wrap"><h1>OpenAlex metadata sample</h1><p class="lede">A static export of 80 works and linked metadata across 10 tables. This block sample illustrates the database structure and is not representative of OpenAlex coverage or research activity.</p><div class="preview-header-links"><a class="text-link" href="#sample">Browse the sample ↓</a><a class="text-link" href="#catalog">Explore all 50 tables ↓</a><a class="text-link" href="/assets/preview/dataset.json" download>Download the sample JSON ↓</a></div></header>
+<header class="article-header wrap"><a class="project-identity" href="/openalex/" aria-label="OpenAlex section overview"><img src="/assets/openalex-mark.png" width="36" height="36" alt=""><span>OpenAlex</span></a><h1>OpenAlex metadata sample</h1><p class="lede">A static block sample of 80 works and linked metadata across 10 tables illustrates the database structure. Records can be searched, inspected, and downloaded. The sample is not representative and does not support population estimates.</p><div class="preview-header-links"><a class="text-link" href="#sample">Browse the sample ↓</a><a class="text-link" href="#catalog">Explore all 50 tables ↓</a><a class="text-link" href="/assets/preview/dataset.json" download>Download the sample JSON ↓</a></div></header>
 <section class="wrap preview-section" id="sample" aria-label="Dataset sample">
 ~~~
 

@@ -55,10 +55,10 @@ GitHub Pages uses **GitHub Actions** as its publishing source.
 - `protocol.md`, `schema.md`, `queries.md`, `preview.md`: Markdown documentation and dataset preview pages.
 - `_layout/query-examples.html`: query tabs and SQL examples.
 - `_layout/head.html`, `_layout/foot.html`: shared navigation and footer.
-- `_css/site.css`, `_libs/site.js`: responsive styles and progressive enhancements (published as `css/` and `libs/`).
+- `_css/site.css`, `_css/projects.css`, `_css/datasets.css`, `_libs/site.js`: shared styles, project overviews, dataset tables, and progressive enhancements (published as `css/` and `libs/`).
 - `config.md`: site metadata, output container, ignored build inputs, and deployment prefix.
 
-Assets and the JuliaMono heading font are served locally; body text uses system fonts. JuliaMono is distributed under the SIL Open Font License in `assets/fonts/JuliaMono-LICENSE.txt`. Copy buttons report clipboard failures and select the code for manual copying. Query tabs support arrow keys, Home, End, and URL fragments. Without JavaScript, all examples and navigation links remain visible.
+Assets and JuliaMono, used for all headings and monospace text, are served locally; body text uses system fonts. JuliaMono is distributed under the SIL Open Font License in `assets/fonts/JuliaMono-LICENSE.txt`. Copy buttons report clipboard failures and select the code for manual copying. Query tabs support arrow keys, Home, End, and URL fragments. Without JavaScript, all examples and navigation links remain visible.
 
 Check desktop and mobile layouts, keyboard navigation, copy controls, and internal links after changes. Review SQL against `datadump/scripts/sql/01_create_schema.sql` in the OpenAlex repository; do not add automatically executed research queries to the build. Preserve the reference release label when updating snapshot figures. The main database smoke test is unnecessary for website-only edits.
 
@@ -104,7 +104,7 @@ Set `ARXIV_DATABASE_URL` to override the local `arxiv` database connection.
 The exporter rejects unfinished ingestion runs and checks aggregate totals.
 Commit the JSON, CSVs, and generated layout together. `assets/arxiv/taxonomy.json`
 records the source URL and retrieval date for saved taxonomy labels; review it
-when refreshing. The website build never runs the exporter.
+when refreshing. The website build never runs the exporter. The renderer generates both `_layout/arxiv-summary.html` for the overview metrics and `_layout/arxiv-statistics.html` for the detailed distributions from the same saved aggregates.
 
 CORE and linkage figures are historical documentation summaries, not fresh
 live-database counts. Keep assessment dates, sampling denominators, matching

@@ -3,8 +3,31 @@ title = "Data matching: connections between sources"
 +++
 
 ~~~
-<header class="article-header wrap"><h1>Connecting scholarly data sources</h1><p class="lede">Link registrations to papers, identify the same work across catalogs, and connect journals across indexes. Each connection needs its own identifiers, evidence, and evaluation.</p></header>
-<div class="article-layout wrap"><nav class="article-nav" aria-label="Data matching sections"><strong>Data matching</strong><a href="#network">The linkage network</a><a href="#routes">Implemented and planned routes</a><a href="#achieved">Measured outcomes</a><a href="#methods">Methods and outputs</a><a href="#ownership">Repository ownership</a><a href="https://github.com/science-as-data/data-matching">Repository ↗</a></nav><article class="article">
+<section class="hero wrap project-hero" aria-labelledby="project-title">
+  <div class="hero-copy">
+    <p class="project-identity"><span class="project-icon project-icon-data-matching" aria-hidden="true"><img src="/assets/data-matching-mark.svg" width="36" height="36" alt=""></span><span>Data matching</span></p>
+    <h1 id="project-title">Linking registrations and publications</h1>
+    <p class="hero-description">Registration identifiers, titles, and authors provide inputs for retrieving candidate publications from supported search sources.</p>
+    <p class="hero-description">The implemented workflow compares identifiers and bibliographic details, scores linkage evidence, and groups records that may describe the same paper. Candidate links and run information are retained for review.</p>
+    <p class="hero-description">These outputs support comparison of study plans and publications. Historical scores and rule-based labels require independent validation before use as measures of linkage accuracy.</p>
+    <div class="hero-actions"><a class="button" href="#methods">Matching methods <span aria-hidden="true">↗</span></a><a class="text-link" href="#achieved">Measured outcomes <span aria-hidden="true">↗</span></a></div>
+  </div>
+  <figure class="transformation process-figure" aria-labelledby="process-title">
+    <figcaption class="figure-topline" id="process-title">FROM SOURCE RECORDS TO RESEARCH DATA</figcaption>
+    <div class="process-input"><h2>Input: Registration records + paper searches</h2><p>Registry identifiers · titles · authors</p><p>Candidate records · search evidence</p></div>
+    <div class="transform-connector"><span class="connector-line" aria-hidden="true"></span><span>RETRIEVE → SCORE → GROUP</span><span class="process-arrow" aria-hidden="true">↓</span></div>
+    <div class="process-outputs" aria-label="Outputs"><div class="process-output"><h3>Candidate pairs</h3><p>Registration–paper links</p></div><div class="process-output"><h3>Evidence</h3><p>Identifiers and source matches</p></div><div class="process-output"><h3>Scores and groups</h3><p>Method scores · paper clusters</p></div><div class="process-output"><h3>Run records</h3><p>Search and processing history</p></div></div>
+    <p class="figure-note">Candidate links are stored in JSONL or PostgreSQL. Scores do not establish independently validated matches.</p>
+  </figure>
+</section>
+<section class="snapshot-band project-summary"><div class="wrap"><h2>Historical matching results</h2><div class="dataset-metrics"><div><strong>924</strong><span>AEA RCT positive candidate pairs</span></div><div><strong>907</strong><span>distinct AEA RCT registrations</span></div><div><strong>2,710</strong><span>AsPredicted positive candidate pairs</span></div><div><strong>1,756</strong><span>distinct AsPredicted registrations</span></div></div><p>May 2026 experiments · rule-selected positive candidates, not independently validated matches. <a href="#achieved">Counting units and evidence</a>.</p></div></section>
+<section class="section wrap project-workflow" aria-labelledby="workflow-title"><div class="section-heading"><h2 id="workflow-title">Data processing workflow</h2></div><div class="workflow-grid"><a class="workflow-step" href="#methods"><span class="step-index">01 <span aria-hidden="true">↗</span></span><h3>Prepare inputs</h3><p>Extract identifiers and bibliographic fields while preserving platform identity.</p></a>
+<a class="workflow-step" href="#routes"><span class="step-index">02 <span aria-hidden="true">↗</span></span><h3>Retrieve candidates</h3><p>Search supported sources using identifiers, titles, authors, and URLs.</p></a>
+<a class="workflow-step" href="#methods"><span class="step-index">03 <span aria-hidden="true">↗</span></span><h3>Score and group</h3><p>Retain method evidence and group possible instances of the same paper.</p></a>
+<a class="workflow-step" href="#achieved"><span class="step-index">04 <span aria-hidden="true">↗</span></span><h3>Evaluate</h3><p>Review candidate links and assess labels before estimating linkage accuracy.</p></a></div></section>
+<nav class="project-sections wrap" aria-label="Data matching sections"><strong>In this section</strong><a href="#network">The linkage network</a><a href="#routes">Implemented and planned routes</a><a href="#achieved">Measured outcomes</a><a href="#methods">Methods and outputs</a><a href="#ownership">Repository ownership</a><a href="https://github.com/science-as-data/data-matching">Repository ↗</a></nav>
+<div class="wrap project-details"><article class="article">
+
 <section aria-labelledby="network"><h2 id="network">The linkage network</h2><p>Solid lines indicate an implemented retrieval or matching workflow; dashed lines indicate planned work. An implemented route does not establish a validated crosswalk. The table below gives the unit and evidence for each connection.</p>
 <div class="data-table-scroll"><svg class="linkage-map" viewBox="0 0 820 390" role="img" aria-labelledby="linkage-title linkage-desc"><title id="linkage-title">Connections between registrations and scholarly catalogs</title><desc id="linkage-desc">Registration adapters connect to OpenAlex, CORE, and web search sources. OpenAlex to Scopus journal matching is under development. General OpenAlex to arXiv paper matching is planned; the date audit has checked a limited set of existing links. The table below provides all statuses.</desc>
 <g fill="none" stroke="currentColor" stroke-width="2"><path d="M215 180 H245 V60 H290 M245 180 H290 M245 180 V300 H290 M475 60 H540 V180 H595"/><path d="M475 60 H595" stroke-dasharray="7 5"/></g>

@@ -1,0 +1,16 @@
+Project section icons
+
+OpenAlex: see openalex-mark-source.txt.
+arXiv: official small logomark, https://info.arxiv.org/brand/images/brand-logomark-primary.jpg
+Brand source: https://info.arxiv.org/brand/logos.html
+The displayed image uses CSS to exclude surrounding blank space; source pixels and colors are unchanged.
+CORE: official icon, https://core.ac.uk/favicon/favicon.svg
+Pre-registrations and Data matching: original SVG symbols created for Science as Data, using the site palette. These identify multi-platform projects, not external providers.
+
+Registration platforms:
+OSF: https://osf.io/favicon.ico
+AsPredicted: https://aspredicted.org/images/credlab/ap.svg
+American Economic Association: https://www.socialscienceregistry.org/assets/AEA-transparent-59634d88bcdca2836488c4184efc982437a4552d8fe3a9840903934ac699028f.png
+Source assets retained unchanged and served locally.
+ClinicalTrials.gov: https://clinicaltrials.gov/assets/favicons/favicon.svg?v=2
+Zenodo: https://zenodo.org/static/apple-touch-icon-120.png

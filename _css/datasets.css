@@ -1,2 +1,95 @@
 .dataset-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.5rem 0}.dataset-metrics>div{padding:1rem;border:1px solid var(--line)}.dataset-metrics strong{display:block;font-size:clamp(1.4rem,3vw,2rem);font-variant-numeric:tabular-nums}.dataset-metrics span{display:block;font-size:.85rem}.data-table-scroll{overflow-x:auto;margin:1.3rem 0}.data-table-scroll table{width:100%;margin:0}.distribution th{text-align:left}.distribution td:nth-child(2){white-space:nowrap;font-variant-numeric:tabular-nums}.distribution td:last-child{width:30%;min-width:90px}.count-bar{display:block;min-width:1px;height:.65rem;background:var(--ink)}.article details{border-bottom:1px solid var(--line);padding:.8rem 0}.article summary{cursor:pointer;font-weight:600}.category-filter{display:block;margin-top:1.5rem}.category-filter[hidden]{display:none}.category-filter input{display:block;width:100%;margin-top:.4rem;padding:.75rem;border:1px solid var(--line);font:inherit;background:var(--paper);color:var(--ink)}.article section+section{margin-top:2.8rem}@media(max-width:450px){.dataset-metrics{grid-template-columns:1fr}.distribution th{min-width:120px}}@media print{details> :not(summary){display:block!important}.category-filter{display:none!important}}
 .linkage-map{display:block;width:100%;min-width:640px;height:auto;color:var(--ink)}
+
+/* Project overviews share the OpenAlex opening, metrics, and workflow layout. */
+.process-figure { margin: 0; min-height: 0; }
+.process-input { background: var(--white); border: 1px solid #d6d9cd; margin-top: 24px; }
+.process-input h2 { font: 600 15px/1.6 var(--mono); letter-spacing: 0; padding: 12px 16px; border-bottom: 1px solid #e4e5dc; margin: 0; }
+.process-input p { font: 14px/1.7 var(--mono); padding: 0 16px; margin: 12px 0; overflow-wrap: anywhere; }
+.process-arrow { font-size: 22px; margin-top: 6px; }
+.process-outputs { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; margin: 16px 0 24px; }
+.process-output { border: 1px solid #afbeac; background: var(--white); min-width: 0; }
+.process-output h3 { font: 600 15px/1.6 var(--mono); letter-spacing: 0; background: #e1e8dc; border-bottom: 1px solid #becbb7; margin: 0; padding: 8px 12px; overflow-wrap: anywhere; }
+.process-output p { font: 14px/1.7 var(--mono); padding: 10px 12px; margin: 0; overflow-wrap: anywhere; }
+.project-summary { padding-block: 24px; }
+.project-summary h2 { font: 600 16px/1.6 var(--mono); margin-bottom: 12px; letter-spacing: 0; }
+.project-summary .dataset-metrics { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px; margin: 0 0 18px; }
+.project-summary .dataset-metrics>div { border: 0; border-left: 1px solid var(--line); padding: 0 0 0 20px; }
+.project-summary .dataset-metrics>div:first-child { border: 0; padding-left: 0; }
+.project-summary .dataset-metrics strong { font: 400 23px/1.4 var(--sans); overflow-wrap: anywhere; }
+.project-summary .dataset-metrics span, .project-summary p { font-size: 14px; line-height: 1.7; }
+.project-summary p { max-width: 100ch; margin: 8px 0 0; }
+.project-workflow .workflow-step p { max-width: none; min-height: 0; }
+nav.project-sections { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 24px; padding-block: 20px; border-block: 1px solid var(--line); font-size: 15px; }
+.project-sections strong { width: 100%; font-size: 14px; color: var(--muted); }
+.project-sections a { text-decoration: underline; color: var(--copper); }
+.project-details { padding-block: 36px 60px; }
+.project-details .article { font-size: 16px; }
+.project-details .article>section { padding-block: 24px; }
+.project-details .article>section+section { border-top: 1px solid var(--line); margin-top: 12px; }
+.project-details .article>section>p, .project-details .article>section>ul, .project-details .article>section>ol { max-width: 85ch; }
+.project-details .article details { font-size: 15px; }
+.project-details .linkage-map { max-width: 900px; }
+@media(max-width:820px) {
+  .project-summary .dataset-metrics { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .project-summary .dataset-metrics>div:nth-child(3) { border: 0; padding-left: 0; }
+}
+@media(max-width:640px) {
+  .process-outputs { grid-template-columns: minmax(0,1fr); }
+  .project-summary .dataset-metrics { gap: 18px; }
+  .project-summary .dataset-metrics strong { font-size: 20px; }
+  .project-details { padding-top: 20px; }
+}
+@media print { nav.project-sections { display: none; } }
+
+/* Provider marks identify the requested registration platforms. */
+.registry-marks { display: flex; flex-wrap: wrap; gap: 18px 24px; margin: 24px 0; }
+.registry-marks a { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-size: 14px; line-height: 1.5; }
+.registry-marks a:hover { color: var(--copper); text-decoration: underline; }
+.registry-marks img { width: 40px; height: 40px; object-fit: contain; flex-shrink: 0; }
+.registry-marks small { display: block; font-size: 14px; color: var(--muted); }
+.registry-table-label { display: flex; align-items: center; gap: 10px; }
+.registry-table-label img { width: 32px; height: 32px; object-fit: contain; flex-shrink: 0; }
+.registry-seal { background: #25323b; border-radius: 50%; }
+
+.annual-chart { margin: 28px 0; padding: 24px; border: 1px solid var(--line); background: var(--white); }
+.annual-chart-scroll { overflow-x: auto; }
+.annual-chart svg { display: block; width: 100%; min-width: 600px; height: auto; }
+.annual-chart svg text { font: 14px var(--mono); fill: var(--body); }
+.chart-axis-title { font-weight: 600; }
+.chart-grid { stroke: var(--line); stroke-width: 1; }
+.chart-bar { fill: var(--copper); }
+.chart-bar-partial { fill: url(#partial-year-hatch); stroke: var(--copper); stroke-width: 1; }
+.chart-bar.is-selected { stroke: var(--ink); stroke-width: 2; }
+.annual-chart figcaption { font-size: 14px; color: var(--muted); margin: 16px 0; }
+.chart-inspector { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 20px; margin: 16px 0; }
+.chart-inspector[hidden] { display: none; }
+.chart-inspector label { font-size: 15px; }
+.chart-inspector input { flex: 1 1 180px; min-width: 0; accent-color: var(--copper); }
+.chart-inspector output { font: 14px var(--mono); min-width: 245px; }
+.chart-inspector input:focus-visible { outline: 3px solid var(--copper); outline-offset: 5px; }
+@media(max-width:640px) { .annual-chart { padding: 16px; } .chart-inspector output { min-width: 0; flex-basis: 100%; } }
+@media print { .chart-inspector { display: none; } .annual-chart svg { min-width: 0; } }
+
+.subject-chart { margin: 28px 0; padding: 24px; border: 1px solid var(--line); background: var(--white); }
+.subject-chart-axis, .subject-chart-rows li { display: grid; grid-template-columns: 235px minmax(0,1fr) 100px; gap: 20px; align-items: center; }
+.subject-chart-axis { margin-bottom: 12px; color: var(--muted); font: 14px var(--mono); }
+.subject-chart-axis>div { display: flex; justify-content: space-between; }
+.subject-chart-rows { list-style: none; padding: 0; margin: 0; }
+.article .subject-chart-rows li { padding: 0; margin: 0 0 16px; }
+.subject-chart-label { font-size: 15px; line-height: 1.5; }
+.subject-chart-track { display: block; border-left: 1px solid var(--line); background: repeating-linear-gradient(to right,transparent 0,transparent calc(25% - 1px),var(--line) calc(25% - 1px),var(--line) 25%); }
+.subject-chart-bar { display: block; height: 26px; background: var(--copper); }
+.subject-chart-value { font: 14px var(--mono); text-align: right; white-space: nowrap; }
+.subject-chart figcaption { font-size: 14px; line-height: 1.7; color: var(--muted); margin: 20px 0 14px; }
+@media(max-width:820px) {
+  .subject-chart-axis, .subject-chart-rows li { grid-template-columns: minmax(0,1fr) 90px; gap: 8px 16px; }
+  .subject-chart-label { grid-column: 1 / -1; }
+  .subject-chart-axis>span:first-child { grid-column: 1 / -1; }
+  .subject-chart-axis>div>span:nth-child(2), .subject-chart-axis>div>span:nth-child(4) { display: none; }
+  .article .subject-chart-rows li { margin-bottom: 20px; }
+}
+@media(max-width:640px) { .subject-chart { padding: 16px; } }
+
+.arxiv-schema-table th:first-child { width: 26%; min-width: 240px; }
+.arxiv-schema-table th:first-child code { white-space: nowrap; }

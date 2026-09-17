@@ -3,8 +3,8 @@ title = "The schema"
 +++
 
 ~~~
-<header class="article-header wrap"><h1>Keep the connections.<br>Make them queryable.</h1><p class="lede">Entities become tables. Nested arrays become relationships. The result is an explicit data model for moving between works, authors, institutions, and ideas.</p></header>
-<div class="article-layout wrap"><aside class="article-nav" aria-label="On this page"><strong>In this guide</strong><a href="#model">The relational model</a><a href="#join">Join paths</a><a href="#identifiers">IDs &amp; nested values</a><a href="#source">One source of truth</a><a href="#limits">Model boundaries</a></aside><article class="article">
+<header class="article-header wrap"><h1>OpenAlex relational schema</h1><p class="lede">Works, authors, topics, and references are stored in separate tables connected by identifiers. The schema defines table contents, join paths, and constraints relevant to sample construction.</p></header>
+<div class="article-layout wrap"><aside class="article-nav" aria-label="On this page"><a class="project-identity" href="/openalex/" aria-label="OpenAlex section overview"><img src="/assets/openalex-mark.png" width="36" height="36" alt=""><span>OpenAlex</span></a><strong>In this guide</strong><a href="#model">The relational model</a><a href="#join">Join paths</a><a href="#identifiers">IDs &amp; nested values</a><a href="#source">One source of truth</a><a href="#limits">Model boundaries</a></aside><article class="article">
 ~~~
 
 \label{model}

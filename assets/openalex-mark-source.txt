@@ -1,0 +1,4 @@
+OpenAlex mark, downloaded from the official OpenAlex GUI repository.
+Source: https://github.com/ourresearch/openalex-gui/blob/master/public/brand-assets/openalex-mark.png
+Git blob: 088f38eaa6814aae1aa9cdcfa0c364ccf32ad59b
+Used to identify the OpenAlex documentation section.

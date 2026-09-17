@@ -96,3 +96,25 @@ document.querySelectorAll('.article table').forEach((table) => {
   table.before(wrapper);
   wrapper.append(table);
 });
+
+// Desktop navigation moves into the left margin after the header scrolls away.
+const siteHeader = document.querySelector('.site-header');
+const scrollNavigation = document.querySelector('.scroll-navigation');
+const sectionLabel = document.querySelector('.current-section-label');
+const selectedSection = document.querySelector('#main-nav a[aria-current]');
+if (sectionLabel && selectedSection) sectionLabel.textContent = selectedSection.textContent.trim();
+if (siteHeader && scrollNavigation && 'IntersectionObserver' in window) {
+  const wideViewport = window.matchMedia('(min-width: 1400px)');
+  const updateScrollNavigation = () => {
+    const show = wideViewport.matches && siteHeader.getBoundingClientRect().bottom <= 0;
+    if (!show && scrollNavigation.contains(document.activeElement)) {
+      const focusedLink = document.activeElement.closest('a');
+      const headerLink = [...siteHeader.querySelectorAll('a')].find(a => a.href === focusedLink?.href);
+      (headerLink || siteHeader.querySelector('a')).focus({ preventScroll: true });
+    }
+    scrollNavigation.hidden = !show;
+  };
+  new IntersectionObserver(updateScrollNavigation, { threshold: 0 }).observe(siteHeader);
+  wideViewport.addEventListener('change', updateScrollNavigation);
+  updateScrollNavigation();
+}

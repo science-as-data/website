@@ -3,8 +3,8 @@ title = "Research queries"
 +++
 
 ~~~
-<header class="article-header wrap"><h1>SQL examples and analytical choices</h1><p class="lede">Copy a query, adapt the sample, and run it against your local database. These examples use the repository’s actual schema; they do not execute in your browser.</p></header>
-<div class="article-layout wrap"><aside class="article-nav" aria-label="On this page"><strong>Query notebook</strong><a href="#examples">Explore the examples</a><a href="#practice">Research practice</a><a href="#crosswalk">Add Scopus disciplines</a><a href="#faq">Common questions</a></aside><article class="article">
+<header class="article-header wrap"><h1>SQL examples and analytical choices</h1><p class="lede">SQL examples for record selection, joins, and aggregation in the local OpenAlex database. Each example specifies its unit of analysis and interpretation. Queries must be executed in a compatible database.</p></header>
+<div class="article-layout wrap"><aside class="article-nav" aria-label="On this page"><a class="project-identity" href="/openalex/" aria-label="OpenAlex section overview"><img src="/assets/openalex-mark.png" width="36" height="36" alt=""><span>OpenAlex</span></a><strong>Query notebook</strong><a href="#examples">Explore the examples</a><a href="#practice">Research practice</a><a href="#crosswalk">Add Scopus disciplines</a><a href="#faq">Common questions</a></aside><article class="article">
 ~~~
 
 \label{examples}
