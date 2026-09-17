@@ -141,7 +141,7 @@ def subject_group_chart(rows):
 def render(data):
     s = data['summary']; counts = data['table_counts']; total = s['works']
     metric = lambda value, label: f'<div><strong>{value}</strong><span>{label}</span></div>'
-    out = ['<section aria-labelledby="arxiv-counts"><h2 id="arxiv-counts">The loaded dataset</h2><div class="dataset-metrics">',
+    out = ['<section aria-labelledby="arxiv-counts"><h2 id="arxiv-counts">The connected metadata catalogue</h2><p>These counts describe the Cornell arXiv metadata snapshot distributed through Kaggle. Full-text and bibliography coverage are measured separately.</p><div class="dataset-metrics">',
         metric(f'{total:,}', 'unique works'), metric(f'{counts["paper_versions"]:,}', 'version records'),
         metric(f'{counts["paper_authors"]:,}', 'author occurrences'), metric(str(len(data['categories'])), 'observed category codes'), '</div>',
         f'<p>Snapshot version {data["runs"][-1]["dataset_version"]}. Counts measured on {data["provenance"]["exported_at_utc"][:10]} after duplicate resolution. {data["runs"][-1]["records_loaded"]:,} source records were consumed by the latest run; {counts["duplicate_records"]:,} repeated-ID events are retained for audit.</p>',

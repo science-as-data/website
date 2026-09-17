@@ -1,0 +1,71 @@
+// Documentation of the implemented schemas; no database access is needed.
+// Render: dot -Tsvg assets/arxiv/relational-structure-complete.dot -o assets/arxiv/relational-structure-complete.svg
+digraph arxiv_database {
+  graph [rankdir=LR, compound=true, newrank=true, bgcolor="#fafbf5", pad=0.4,
+    nodesep=0.5, ranksep=0.8, fontname="Arial", fontsize=24, fontcolor="#25323b",
+    labelloc=t, label="PostgreSQL database: arxiv\nBulk sources and Kaggle metadata · 19 tables + 1 view"];
+  node [shape=record, style=filled, fillcolor=white, color="#afbeac",
+    fontname="monospace", fontsize=13, fontcolor="#25323b", margin="0.15,0.12"];
+  edge [color="#62746a", fontcolor="#54615f", fontname="Arial", fontsize=11, arrowsize=0.7];
+
+  subgraph cluster_bulk {
+    label="SCHEMA arxiv_source · bulk files, parsed text and provenance";
+    fontsize=20; style="rounded,filled"; color="#d6dfd0"; fillcolor="#eef2e7";
+    s_snapshots [label="source_snapshots|PK snapshot_id\lprovider · repository · revision\lmanifest\l"];
+    s_artifacts [label="artifacts|PK artifact_sha256\lbyte_size · kind\l"];
+    s_snapshot_files [label="snapshot_files|PK (snapshot_id, remote_path)\lFK artifact_sha256\lupstream_checksums\l"];
+    s_parser [label="parser_builds|PK parser_fingerprint\lcode_sha256 · configuration\lretention_policy\l"];
+    s_batches [label="ingestion_batches|PK batch_id\lFK input_sha256 · jsonl_sha256\lFK parser_fingerprint\lcheckpoints · counts · state\l"];
+    s_records [label="paper_records|PK record_id\lFK batch_id\larxiv_id · article_version?\lmember · status · diagnostics\l", penwidth=2];
+    s_files [label="source_files|PK (record_id, file_number)\lFK content_sha256?\lpath · retention · decoding\lbibliography_markers\l"];
+    s_text [label="text_contents|PK content_sha256\lcontent · decoding · original_bytes\lTeX · BibTeX · .bbl · supporting text\l"];
+    s_verification [label="verification_receipts|PK verification_id\lFK batch_id\lUNIQUE (batch_id, verification_id)\lcounts · digests · contents · evidence\l"];
+    s_resolutions [label="record_resolutions|PK / FK record_id\lFK superseding_record_id?\ldecision · reason\l"];
+    s_copies [label="local_copies|PK copy_id\lFK artifact_sha256\lFK (snapshot_id?, remote_path?)\lhost_name · local_path\l"];
+    s_cleanup [label="cleanup_receipts|PK / FK copy_id\lFK batch_id\lFK (batch_id, verification_id)\lbackup_receipt · deleted_at?\l"];
+    s_view [label="VIEW papers_with_sources|All source records retained\lLEFT JOIN arxiv.papers by arxiv_id\lmetadata_matched = true / false\l", style="rounded,filled", fillcolor="#f8eadc", color="#a4613e"];
+  }
+
+  subgraph cluster_metadata {
+    label="SCHEMA arxiv · Kaggle metadata";
+    fontsize=20; style="rounded,filled"; color="#ded9ca"; fillcolor="#f4f1e9";
+    m_runs [label="ingestion_runs|PK run_id\ldataset_version · checksum\lmanifest · checkpoint · status\l"];
+    m_papers [label="papers|PK arxiv_id\lFK ingestion_run_id\ltitle · abstract · DOI · license\lmetadata and submission dates\l", penwidth=2];
+    m_authors [label="paper_authors|PK (arxiv_id, author_position)\lFK arxiv_id\lordered name occurrences\l"];
+    m_categories [label="paper_categories|PK (arxiv_id, category_position)\lFK arxiv_id\lcategory\l"];
+    m_versions [label="paper_versions|PK (arxiv_id, version)\lFK arxiv_id\lsubmitted_at\l"];
+    m_raw [label="raw_records|PK / FK arxiv_id\lFK ingestion_run_id\lselected source JSON values\l"];
+    m_duplicates [label="duplicate_records|PK (ingestion_run_id, source_record_number)\lFK arxiv_id · ingestion_run_id\lprevious / incoming values · decision\l"];
+  }
+
+  // Solid arrows run from the referencing table to the referenced table.
+  s_snapshot_files -> s_snapshots [label="snapshot_id"];
+  s_snapshot_files -> s_artifacts [label="artifact_sha256"];
+  s_batches -> s_artifacts [label="input_sha256 / jsonl_sha256\n(two foreign keys)"];
+  s_batches -> s_parser [label="parser_fingerprint"];
+  s_records -> s_batches [label="batch_id"];
+  s_files -> s_records [label="record_id"];
+  s_files -> s_text [label="content_sha256 (optional)"];
+  s_verification -> s_batches [label="batch_id"];
+  s_resolutions -> s_records [label="record_id / superseding_record_id?\n(two foreign keys)"];
+  s_copies -> s_artifacts [label="artifact_sha256"];
+  s_copies -> s_snapshot_files [label="(snapshot_id, remote_path)\noptional composite FK"];
+  s_cleanup -> s_copies [label="copy_id"];
+  s_cleanup -> s_batches [label="batch_id"];
+  s_cleanup -> s_verification [label="(batch_id, verification_id)\ncomposite FK"];
+
+  m_papers -> m_runs [label="ingestion_run_id"];
+  m_authors -> m_papers [label="arxiv_id"];
+  m_categories -> m_papers [label="arxiv_id"];
+  m_versions -> m_papers [label="arxiv_id"];
+  m_raw -> m_papers [label="arxiv_id"];
+  m_raw -> m_runs [label="ingestion_run_id"];
+  m_duplicates -> m_papers [label="arxiv_id"];
+  m_duplicates -> m_runs [label="ingestion_run_id"];
+
+  // This logical match is intentionally not a database foreign key.
+  s_records -> m_papers [label="arxiv_id: many source records → 0 or 1 metadata row\nEXACT-ID LEFT JOIN · not a foreign key",
+    style=dashed, color="#a4613e", fontcolor="#8c4f2f", penwidth=2, constraint=false];
+  s_view -> s_records [label="source rows", style=dotted, color="#a4613e"];
+  s_view -> m_papers [label="optional metadata", style=dotted, color="#a4613e", constraint=false];
+}

@@ -2,9 +2,12 @@
 
 The organization website for [Science as Data](https://github.com/science-as-data), built with [Franklin.jl](https://franklinjl.org/). It documents OpenAlex, arXiv, CORE, Pre-registrations, and Data matching, with explicit status notes for planned work. This is a standalone repository, moved from `openalex/website/`.
 
-The homepage introduces each project. `/arxiv/` presents exact snapshot statistics,
+The homepage introduces each project. `/arxiv/` presents the PostgreSQL bulk-source
+asset, TeX/BibTeX curation, its connection to Kaggle metadata, and exact metadata statistics;
 `/core/` documents the loaded dump and historical assessment, `/pre-registrations/`
-covers source collection, and `/data-matching/` describes linkage routes and outcomes.
+covers source collection, and `/data-matching/` follows the network of sources
+connected through OpenAlex: CORE dump/API full text, arXiv sources and metadata,
+and registered study plans.
 Existing OpenAlex pages and the static preview remain available. Builds use saved
 assets and require no database or API access.
 
@@ -47,10 +50,10 @@ GitHub Pages uses **GitHub Actions** as its publishing source.
 
 - `index.md` and `_layout/organization.html`: organization homepage and project summaries.
 - `openalex.md` and `_layout/landing.html`: OpenAlex overview and conceptual data illustration.
-- `arxiv.md` and `_layout/arxiv-statistics.html`: arXiv schema, counts, and distributions.
+- `arxiv.md`, `assets/arxiv/relational-structure.svg`, and `_layout/arxiv-statistics.html`: arXiv source curation, connected database structure, and metadata distributions.
 - `core.md`: CORE data model, documented load totals, and dated sample estimates.
-- `pre-registrations.md`: implemented collectors, fields, and coverage limitations.
-- `data-matching.md`: linkage network, implemented/planned routes, and historical outcomes.
+- `pre-registrations.md`, `_layout/preregistrations-*.html`, and `assets/preregistrations/summary.json`: AEA RCT, OSF, and AsPredicted collection figures, fields, and coverage limitations.
+- `data-matching.md`: a navigable source network centred on OpenAlex, with explanations of CORE, arXiv, and pre-registration connections and brief implementation notes.
 - The Overview tab links to the organization homepage; each research area has its own navigation entry.
 - `protocol.md`, `schema.md`, `queries.md`, `preview.md`: Markdown documentation and dataset preview pages.
 - `_layout/query-examples.html`: query tabs and SQL examples.
@@ -86,6 +89,24 @@ The Franklin build uses the saved artifacts and never runs the exporter. The gen
 
 ## arXiv statistics
 
+The arXiv page leads with the bulk-source PostgreSQL asset. Its diagram and table
+inventory follow `arxiv/huggingface/sql/source_schema.sql` and
+`arxiv/kaggle/sql/schema.sql`; update both when those schemas change. The source
+pipeline validation figures are dated 17 September 2026 and come from
+`arxiv/huggingface/POSTGRES_DESIGN.md` (three early-2000 archives, not a corpus
+coverage estimate). Source parsing preserves TeX, BibTeX, and supplied rendered
+bibliographies; structured citation extraction and target resolution are separate.
+
+The page includes a compact cross-schema overview and an expandable schematic of
+all 19 tables plus `arxiv_source.papers_with_sources`. Solid arrows in the complete
+schematic point from referencing to referenced tables; the cross-schema match is
+an optional exact-ID join, not a foreign key. Regenerate the complete SVG after
+editing its Graphviz source (Graphviz is needed only for this explicit step):
+
+```bash
+dot -Tsvg assets/arxiv/relational-structure-complete.dot -o assets/arxiv/relational-structure-complete.svg
+```
+
 `assets/arxiv/summary.json` stores exact read-only database aggregates, SQL,
 ingestion checksums, count units, and export timestamps. Annual and monthly
 counts use first submission dates in UTC. Category groups count distinct works
@@ -106,26 +127,53 @@ Commit the JSON, CSVs, and generated layout together. `assets/arxiv/taxonomy.jso
 records the source URL and retrieval date for saved taxonomy labels; review it
 when refreshing. The website build never runs the exporter. The renderer generates both `_layout/arxiv-summary.html` for the overview metrics and `_layout/arxiv-statistics.html` for the detailed distributions from the same saved aggregates.
 
-CORE and linkage figures are historical documentation summaries, not fresh
-live-database counts. Keep assessment dates, sampling denominators, matching
-units, and source-report links attached when editing them.
+CORE figures are historical documentation summaries, not fresh live-database
+counts. Preserve assessment dates, sampling denominators, and source-report
+links when editing them. Historical matching figures remain in the linked
+repository reports; the data-matching page focuses on the source network.
+
+## Pre-registration collection figures
+
+The website currently focuses on AEA RCT Registry, OSF Registries, and AsPredicted.
+`assets/preregistrations/summary.json` records exact local PostgreSQL aggregates,
+SQL, measurement time, retrieval dates, registration/creation date ranges, and
+counting definitions. Distinct IDs and stored observations are different units;
+AsPredicted retains multiple retrieval observations. OSF includes all loaded
+providers. The May 2026 matching inputs remain historical experiment counts.
+
+Refresh explicitly with psycopg 3 and database access, or regenerate the layouts
+without connecting to a database:
+
+```bash
+python scripts/export_preregistrations.py
+python scripts/export_preregistrations.py --render-only
+```
+
+Optional `AEA_RCT_DSN`, `OSF_DSN`, and `ASPREDICTED_DSN` override local connections;
+connection strings are never exported. Each database is queried in a separate
+read-only, repeatable-read transaction. Commit the saved JSON and both generated
+layouts together. Builds use saved files and never run the exporter. Date ranges
+use parsed source calendar dates; AEA's month-name strings must not be sorted
+lexicographically. Nonblank field counts measure presence, not content quality.
 
 ## Project scope review
 
-Last reviewed against local checkouts: **2026-09-15**. Check the following sources
+Last reviewed against local checkouts: **2026-09-15**, with arXiv and pre-registrations updated
+**2026-09-17**. Check the following sources
 when updating the homepage, project pages, or linkage diagram:
 
 | Project | Scope reflected on the website | Repository evidence |
 |---|---|---|
 | OpenAlex | API tools, PostgreSQL snapshot pipeline, publication-date audits, and the existing journal matcher | `openalex/README.md`, `quality/publication_dates/README.md`, `results_fulltext_decades_20260914.md` |
-| arXiv | Loaded metadata snapshot, exact exported statistics, relational schema; OAI-PMH and bulk text workflows planned | `arxiv/kaggle/README.md`, `kaggle/sql/schema.sql`, `oai_pmh/README.md`, `s3/README.md` |
+| arXiv | Bulk-source PostgreSQL schema, TeX/BibTeX curation, verified three-tar sample, and linked Kaggle metadata with exact saved statistics; structured citation extraction, Scholarweave ingestion, and OAI-PMH synchronization remain separate work | `arxiv/huggingface/POSTGRES_DESIGN.md`, `huggingface/TIGER-Lab.md`, `huggingface/sql/source_schema.sql`, `kaggle/sql/schema.sql` |
 | CORE | Loaded 2024 dump, parsing/ingestion, completed baseline and API sizing, sampled drift assessment; field-fill outstanding | `core/docs/INGESTION.md`, `docs/COMPLETENESS_ASSESSMENT.md` |
-| Pre-registrations | Five implemented collectors and platform-specific data representation; matching/EDA moved out | `study-preregistrations/README.md` and individual collector READMEs |
-| Data matching | Cross-source linkage ownership; migrated registration matcher/training/EDA; journal matcher still in OpenAlex | `data-matching/README.md`, `preregistrations/README.md`, `preregistrations/EDA/REPORT.md` |
+| Pre-registrations | AEA RCT, OSF, and AsPredicted; saved exact collection counts, retrieval/date ranges, and platform-specific fields; matching/EDA moved out | `study-preregistrations/aea-rct/CHANGELOG.md`, individual collector READMEs and schemas, `assets/preregistrations/summary.json` |
+| Data matching | OpenAlex as the common reference connecting CORE dump/API text, arXiv sources and metadata, and AEA RCT/OSF/AsPredicted plans; implemented assets and remaining crosswalk work distinguished in the development notes | `data-matching/README.md`, `preregistrations/README.md`, source-project documentation |
 
 Repository evidence paths are relative to the named sibling checkout. General
 OpenAlex–arXiv matching remains planned, while the OpenAlex date audit documents
-nine bounded arXiv history checks. Keep that distinction in both project pages
-and the linkage diagram. Do not infer a validated crosswalk from adapters or
+nine bounded arXiv history checks. The visual network expresses the integration
+model; the page's development notes distinguish existing assets and crosswalks
+that remain to be developed. Do not infer a validated crosswalk from adapters or
 rule-selected positive candidates. Review dates describe scope checks, not new
 data collection or refreshed measurements.

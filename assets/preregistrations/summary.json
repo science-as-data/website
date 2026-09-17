@@ -1,0 +1,215 @@
+{
+  "measured_at_utc": "2026-09-17T14:50:17.780995+00:00",
+  "collections": {
+    "aea_rct": {
+      "label": "AEA RCT Registry",
+      "database": "aea_rct",
+      "table": "public.trials",
+      "summary": {
+        "stored_rows": 11743,
+        "distinct_ids": 11743,
+        "first_crawled_at": "2026-05-15 17:23:04.895597+00:00",
+        "last_crawled_at": "2026-05-15 17:23:08.922557+00:00",
+        "with_title": 11743,
+        "with_abstract": 11743,
+        "with_principal_investigators": 11742,
+        "with_first_registered_on": 11743
+      },
+      "group_field": "status",
+      "groups": [
+        {
+          "label": "In development",
+          "stored_rows": 4996,
+          "distinct_ids": 4996
+        },
+        {
+          "label": "On going",
+          "stored_rows": 3340,
+          "distinct_ids": 3340
+        },
+        {
+          "label": "Completed",
+          "stored_rows": 3333,
+          "distinct_ids": 3333
+        },
+        {
+          "label": "Withdrawn",
+          "stored_rows": 72,
+          "distinct_ids": 72
+        },
+        {
+          "label": "Abandoned",
+          "stored_rows": 2,
+          "distinct_ids": 2
+        }
+      ],
+      "dates": {
+        "field": "first_registered_on",
+        "earliest": "2013-05-15",
+        "latest": "2026-03-30",
+        "missing_date_rows": 0,
+        "unparseable_date_rows": 0
+      },
+      "queries": {
+        "summary": "SELECT count(*) AS stored_rows, count(DISTINCT id) AS distinct_ids, min(crawled_at) AS first_crawled_at, max(crawled_at) AS last_crawled_at, count(DISTINCT id) FILTER (WHERE nullif(btrim(title), '') IS NOT NULL) AS with_title, count(DISTINCT id) FILTER (WHERE nullif(btrim(abstract), '') IS NOT NULL) AS with_abstract, count(DISTINCT id) FILTER (WHERE nullif(btrim(principal_investigators), '') IS NOT NULL) AS with_principal_investigators, count(DISTINCT id) FILTER (WHERE nullif(btrim(first_registered_on), '') IS NOT NULL) AS with_first_registered_on FROM public.trials",
+        "groups": "SELECT status AS label, count(*) AS stored_rows, count(DISTINCT id) AS distinct_ids FROM public.trials GROUP BY 1 ORDER BY 2 DESC, 1",
+        "dates": "SELECT first_registered_on AS source_date, count(*) AS stored_rows FROM public.trials GROUP BY 1"
+      }
+    },
+    "osf": {
+      "label": "OSF Registries",
+      "database": "osf",
+      "table": "public.registrations",
+      "summary": {
+        "stored_rows": 267960,
+        "distinct_ids": 267960,
+        "first_crawled_at": "2026-05-16 12:46:21.997098+00:00",
+        "last_crawled_at": "2026-05-17 06:50:57.037967+00:00",
+        "with_title": 267960,
+        "with_description": 210328,
+        "with_registration_supplement": 267960,
+        "with_date_registered": 267960
+      },
+      "group_field": "provider",
+      "groups": [
+        {
+          "label": "osf",
+          "stored_rows": 263266,
+          "distinct_ids": 263266
+        },
+        {
+          "label": "egap",
+          "stored_rows": 2837,
+          "distinct_ids": 2837
+        },
+        {
+          "label": "score",
+          "stored_rows": 481,
+          "distinct_ids": 481
+        },
+        {
+          "label": "characterlabregistry",
+          "stored_rows": 447,
+          "distinct_ids": 447
+        },
+        {
+          "label": "gfs",
+          "stored_rows": 328,
+          "distinct_ids": 328
+        },
+        {
+          "label": "dam",
+          "stored_rows": 163,
+          "distinct_ids": 163
+        },
+        {
+          "label": "rwe",
+          "stored_rows": 130,
+          "distinct_ids": 130
+        },
+        {
+          "label": "darpaasist",
+          "stored_rows": 80,
+          "distinct_ids": 80
+        },
+        {
+          "label": "youthstudy",
+          "stored_rows": 68,
+          "distinct_ids": 68
+        },
+        {
+          "label": "dataarchive",
+          "stored_rows": 48,
+          "distinct_ids": 48
+        },
+        {
+          "label": "lifecyclejournal",
+          "stored_rows": 46,
+          "distinct_ids": 46
+        },
+        {
+          "label": "twcfconscious",
+          "stored_rows": 29,
+          "distinct_ids": 29
+        },
+        {
+          "label": "metascience",
+          "stored_rows": 16,
+          "distinct_ids": 16
+        },
+        {
+          "label": "ogccommunity",
+          "stored_rows": 13,
+          "distinct_ids": 13
+        },
+        {
+          "label": "ncgov",
+          "stored_rows": 8,
+          "distinct_ids": 8
+        }
+      ],
+      "dates": {
+        "field": "date_registered",
+        "earliest": "2011-03-01",
+        "latest": "2026-05-16",
+        "missing_date_rows": 0,
+        "unparseable_date_rows": 0
+      },
+      "queries": {
+        "summary": "SELECT count(*) AS stored_rows, count(DISTINCT id) AS distinct_ids, min(crawled_at) AS first_crawled_at, max(crawled_at) AS last_crawled_at, count(DISTINCT id) FILTER (WHERE nullif(btrim(title), '') IS NOT NULL) AS with_title, count(DISTINCT id) FILTER (WHERE nullif(btrim(description), '') IS NOT NULL) AS with_description, count(DISTINCT id) FILTER (WHERE nullif(btrim(registration_supplement), '') IS NOT NULL) AS with_registration_supplement, count(DISTINCT id) FILTER (WHERE nullif(btrim(date_registered), '') IS NOT NULL) AS with_date_registered FROM public.registrations",
+        "groups": "SELECT provider AS label, count(*) AS stored_rows, count(DISTINCT id) AS distinct_ids FROM public.registrations GROUP BY 1 ORDER BY 2 DESC, 1",
+        "dates": "SELECT date_registered AS source_date, count(*) AS stored_rows FROM public.registrations GROUP BY 1"
+      }
+    },
+    "aspredicted": {
+      "label": "AsPredicted",
+      "database": "aspredicted",
+      "table": "public.aspredicted_registrations",
+      "summary": {
+        "stored_rows": 25436,
+        "distinct_ids": 25378,
+        "first_crawled_at": "2026-05-16 16:08:55.186846+00:00",
+        "last_crawled_at": "2026-05-16 18:03:33.353152+00:00",
+        "with_title": 25367,
+        "with_hypothesis": 25378,
+        "with_analyses": 25376,
+        "with_sample_size": 25374,
+        "with_created_date": 25378
+      },
+      "group_field": "source",
+      "groups": [
+        {
+          "label": "zyte",
+          "stored_rows": 25376,
+          "distinct_ids": 25376
+        },
+        {
+          "label": "live",
+          "stored_rows": 60,
+          "distinct_ids": 60
+        }
+      ],
+      "dates": {
+        "field": "created_date",
+        "earliest": "2016-01-11",
+        "latest": "2026-02-16",
+        "missing_date_rows": 0,
+        "unparseable_date_rows": 0
+      },
+      "queries": {
+        "summary": "SELECT count(*) AS stored_rows, count(DISTINCT id) AS distinct_ids, min(crawled_at) AS first_crawled_at, max(crawled_at) AS last_crawled_at, count(DISTINCT id) FILTER (WHERE nullif(btrim(title), '') IS NOT NULL) AS with_title, count(DISTINCT id) FILTER (WHERE nullif(btrim(hypothesis), '') IS NOT NULL) AS with_hypothesis, count(DISTINCT id) FILTER (WHERE nullif(btrim(analyses), '') IS NOT NULL) AS with_analyses, count(DISTINCT id) FILTER (WHERE nullif(btrim(sample_size), '') IS NOT NULL) AS with_sample_size, count(DISTINCT id) FILTER (WHERE nullif(btrim(created_date), '') IS NOT NULL) AS with_created_date FROM public.aspredicted_registrations",
+        "groups": "SELECT source AS label, count(*) AS stored_rows, count(DISTINCT id) AS distinct_ids FROM public.aspredicted_registrations GROUP BY 1 ORDER BY 2 DESC, 1",
+        "dates": "SELECT created_date AS source_date, count(*) AS stored_rows FROM public.aspredicted_registrations GROUP BY 1"
+      }
+    }
+  },
+  "notes": [
+    "Exact local database aggregates; not registry-wide totals or a fresh crawl.",
+    "Each database is read in its own repeatable-read, read-only transaction.",
+    "Distinct IDs are counted within platform, without cross-platform study deduplication.",
+    "Field presence counts distinct IDs with a nonblank value in at least one stored observation; not a content-quality assessment.",
+    "Registration/creation ranges use source calendar dates. AEA month-name dates are parsed before comparison, excluding optional time/zone suffixes after the second comma; ISO dates use their first ten characters.",
+    "crawled_at is retrieval/upsert time, not registration time or a guaranteed collection-completion marker.",
+    "OSF totals include all loaded providers. AsPredicted rows retain retrieval sources and archive snapshots separately."
+  ]
+}

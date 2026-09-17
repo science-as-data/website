@@ -1,51 +1,99 @@
 +++
-title = "Data matching: connections between sources"
+title = "Data matching: connecting research through OpenAlex"
 +++
 
 ~~~
-<section class="hero wrap project-hero" aria-labelledby="project-title">
-  <div class="hero-copy">
-    <p class="project-identity"><span class="project-icon project-icon-data-matching" aria-hidden="true"><img src="/assets/data-matching-mark.svg" width="36" height="36" alt=""></span><span>Data matching</span></p>
-    <h1 id="project-title">Linking registrations and publications</h1>
-    <p class="hero-description">Registration identifiers, titles, and authors provide inputs for retrieving candidate publications from supported search sources.</p>
-    <p class="hero-description">The implemented workflow compares identifiers and bibliographic details, scores linkage evidence, and groups records that may describe the same paper. Candidate links and run information are retained for review.</p>
-    <p class="hero-description">These outputs support comparison of study plans and publications. Historical scores and rule-based labels require independent validation before use as measures of linkage accuracy.</p>
-    <div class="hero-actions"><a class="button" href="#methods">Matching methods <span aria-hidden="true">↗</span></a><a class="text-link" href="#achieved">Measured outcomes <span aria-hidden="true">↗</span></a></div>
-  </div>
-  <figure class="transformation process-figure" aria-labelledby="process-title">
-    <figcaption class="figure-topline" id="process-title">FROM SOURCE RECORDS TO RESEARCH DATA</figcaption>
-    <div class="process-input"><h2>Input: Registration records + paper searches</h2><p>Registry identifiers · titles · authors</p><p>Candidate records · search evidence</p></div>
-    <div class="transform-connector"><span class="connector-line" aria-hidden="true"></span><span>RETRIEVE → SCORE → GROUP</span><span class="process-arrow" aria-hidden="true">↓</span></div>
-    <div class="process-outputs" aria-label="Outputs"><div class="process-output"><h3>Candidate pairs</h3><p>Registration–paper links</p></div><div class="process-output"><h3>Evidence</h3><p>Identifiers and source matches</p></div><div class="process-output"><h3>Scores and groups</h3><p>Method scores · paper clusters</p></div><div class="process-output"><h3>Run records</h3><p>Search and processing history</p></div></div>
-    <p class="figure-note">Candidate links are stored in JSONL or PostgreSQL. Scores do not establish independently validated matches.</p>
+<section class="wrap matching-intro" aria-labelledby="project-title">
+  <p class="project-identity"><span class="project-icon project-icon-data-matching" aria-hidden="true"><img src="/assets/data-matching-mark.svg" width="36" height="36" alt=""></span><span>Data matching</span></p>
+  <h1 id="project-title">Connecting research through OpenAlex</h1>
+  <p class="hero-description">A paper’s metadata, full text, source files, and registered study plan often live in separate collections. Data matching brings these otherwise disconnected sources into a common research network, with OpenAlex as the central point of connection.</p>
+  <p class="hero-description">CORE contributes additional full text through its dump and API. arXiv connects curated paper sources and version metadata. Pre-registration links connect study plans to the papers that may report them. Each connection adds evidence to the same research context.</p>
+</section>
+
+<section class="wrap matching-network-section" aria-labelledby="network">
+  <h2 id="network">The network of sources</h2>
+  <figure class="source-network-figure" aria-describedby="source-network-caption">
+    <div class="source-network" role="group" aria-label="Source network centred on OpenAlex; select a source to read about its connection">
+      <a class="source-network-node source-network-hub" href="#openalex-hub">
+        <span class="source-network-kicker">Central point of connection</span>
+        <span class="source-network-name">OpenAlex</span>
+        <span>Shared work identifiers</span>
+        <span>Works · authors · institutions<br>Topics · citation relationships</span>
+        <span class="source-network-action">Connect the evidence ↗</span>
+      </a>
+      <a class="source-network-node source-network-core" href="#core-link">
+        <span class="source-network-name"><img src="/assets/core-mark.svg" width="30" height="30" alt="">CORE</span>
+        <span class="source-network-detail"><strong>CORE dump</strong><span>Stored full text and metadata</span></span>
+        <span class="source-network-detail"><strong>CORE API</strong><span>Targeted retrieval and enrichment</span></span>
+        <span class="source-network-action">Read the full-text connection ↗</span>
+      </a>
+      <div class="source-network-edge source-network-edge-core" aria-hidden="true"><span>Full text</span></div>
+      <div class="source-network-edge source-network-edge-arxiv" aria-hidden="true"><span>Text +<br>metadata</span></div>
+      <a class="source-network-node source-network-arxiv" href="#arxiv-link">
+        <span class="source-network-name"><img src="/assets/arxiv-mark.jpg" width="30" height="30" alt="">arXiv</span>
+        <span class="source-network-detail"><strong>Curated bulk sources</strong><span>TeX · BibTeX · bibliographies</span></span>
+        <span class="source-network-detail"><strong>Kaggle metadata</strong><span>Paper IDs · authors · versions</span></span>
+        <span class="source-network-action">Read the arXiv connection ↗</span>
+      </a>
+      <div class="source-network-edge source-network-edge-plans" aria-hidden="true"><span>Study plans ↔ papers</span></div>
+      <a class="source-network-node source-network-plans" href="#preregistration-link">
+        <span class="source-network-name"><img src="/assets/preregistrations-mark.svg" width="30" height="30" alt="">Pre-registrations</span>
+        <span class="source-network-platforms"><span>AEA RCT Registry</span><span>OSF Registries</span><span>AsPredicted</span></span>
+        <span>Hypotheses · study designs · planned analyses · registration dates</span>
+        <span class="source-network-action">Read the study-plan connection ↗</span>
+      </a>
+    </div>
+    <figcaption id="source-network-caption">Select a source to follow its connection. The lines show the integration model around OpenAlex; source identifiers, versions, and linkage evidence remain attached to each record. Implementation notes are provided below.</figcaption>
   </figure>
 </section>
-<section class="snapshot-band project-summary"><div class="wrap"><h2>Historical matching results</h2><div class="dataset-metrics"><div><strong>924</strong><span>AEA RCT positive candidate pairs</span></div><div><strong>907</strong><span>distinct AEA RCT registrations</span></div><div><strong>2,710</strong><span>AsPredicted positive candidate pairs</span></div><div><strong>1,756</strong><span>distinct AsPredicted registrations</span></div></div><p>May 2026 experiments · rule-selected positive candidates, not independently validated matches. <a href="#achieved">Counting units and evidence</a>.</p></div></section>
-<section class="section wrap project-workflow" aria-labelledby="workflow-title"><div class="section-heading"><h2 id="workflow-title">Data processing workflow</h2></div><div class="workflow-grid"><a class="workflow-step" href="#methods"><span class="step-index">01 <span aria-hidden="true">↗</span></span><h3>Prepare inputs</h3><p>Extract identifiers and bibliographic fields while preserving platform identity.</p></a>
-<a class="workflow-step" href="#routes"><span class="step-index">02 <span aria-hidden="true">↗</span></span><h3>Retrieve candidates</h3><p>Search supported sources using identifiers, titles, authors, and URLs.</p></a>
-<a class="workflow-step" href="#methods"><span class="step-index">03 <span aria-hidden="true">↗</span></span><h3>Score and group</h3><p>Retain method evidence and group possible instances of the same paper.</p></a>
-<a class="workflow-step" href="#achieved"><span class="step-index">04 <span aria-hidden="true">↗</span></span><h3>Evaluate</h3><p>Review candidate links and assess labels before estimating linkage accuracy.</p></a></div></section>
-<nav class="project-sections wrap" aria-label="Data matching sections"><strong>In this section</strong><a href="#network">The linkage network</a><a href="#routes">Implemented and planned routes</a><a href="#achieved">Measured outcomes</a><a href="#methods">Methods and outputs</a><a href="#ownership">Repository ownership</a><a href="https://github.com/science-as-data/data-matching">Repository ↗</a></nav>
+
+<nav class="project-sections wrap" aria-label="Data matching sections"><strong>Follow the connections</strong><a href="#openalex-hub">OpenAlex as the hub</a><a href="#core-link">CORE full text</a><a href="#arxiv-link">arXiv sources and metadata</a><a href="#preregistration-link">Registered study plans</a><a href="#methods">Linkage evidence</a><a href="#ownership">Tools and development</a></nav>
 <div class="wrap project-details"><article class="article">
 
-<section aria-labelledby="network"><h2 id="network">The linkage network</h2><p>Solid lines indicate an implemented retrieval or matching workflow; dashed lines indicate planned work. An implemented route does not establish a validated crosswalk. The table below gives the unit and evidence for each connection.</p>
-<div class="data-table-scroll"><svg class="linkage-map" viewBox="0 0 820 390" role="img" aria-labelledby="linkage-title linkage-desc"><title id="linkage-title">Connections between registrations and scholarly catalogs</title><desc id="linkage-desc">Registration adapters connect to OpenAlex, CORE, and web search sources. OpenAlex to Scopus journal matching is under development. General OpenAlex to arXiv paper matching is planned; the date audit has checked a limited set of existing links. The table below provides all statuses.</desc>
-<g fill="none" stroke="currentColor" stroke-width="2"><path d="M215 180 H245 V60 H290 M245 180 H290 M245 180 V300 H290 M475 60 H540 V180 H595"/><path d="M475 60 H595" stroke-dasharray="7 5"/></g>
-<g fill="var(--paper)" stroke="currentColor"><rect x="5" y="100" width="210" height="160" rx="5"/><rect x="290" y="30" width="185" height="60" rx="5"/><rect x="290" y="150" width="185" height="60" rx="5"/><rect x="290" y="265" width="230" height="85" rx="5"/><rect x="595" y="30" width="210" height="60" rx="5"/><rect x="595" y="150" width="210" height="60" rx="5"/></g>
-<g fill="currentColor" font-size="15" text-anchor="middle"><text x="110" y="128" font-weight="bold">Registrations</text><text x="110" y="157">OSF · AsPredicted</text><text x="110" y="184">AEA RCT</text><text x="110" y="211">ClinicalTrials.gov</text><text x="110" y="238">Zenodo</text><text x="382" y="66">OpenAlex</text><text x="382" y="186">CORE</text><text x="405" y="290">Google · Scholar</text><text x="405" y="313">DuckDuckGo · Scopus</text><text x="405" y="336" font-size="12">search adapters</text><text x="700" y="66">arXiv</text><text x="700" y="186">Scopus journals</text><text x="539" y="47" font-size="11">planned matcher</text><text x="698" y="236" font-size="12">ISSN / title workflow</text><text x="406" y="375" font-size="12">Connections show routes, not numbers of validated links.</text></g></svg></div></section>
-<section aria-labelledby="routes"><h2 id="routes">What each connection represents</h2><div class="data-table-scroll"><table><thead><tr><th scope="col">Connection</th><th scope="col">Unit and method</th><th scope="col">Status</th></tr></thead><tbody>
-<tr><th scope="row">OSF → OpenAlex / CORE</th><td>Registration–candidate paper; GUID/DOI and title/author queries through shared source adapters.</td><td>Implemented input and search adapters. No OSF-specific corpus evaluation is reported here.</td></tr>
-<tr><th scope="row">AEA RCT → OpenAlex</th><td>Registration–candidate paper; AEARCTR identifier search in indexed body text, plus bibliographic fallback.</td><td>Implemented; historical experiments and linked-pair analyses available.</td></tr>
-<tr><th scope="row">AsPredicted → OpenAlex / Google results</th><td>Registration–candidate paper; title/author overlap and registration-URL search.</td><td>Implemented; complementary candidate streams analyzed.</td></tr>
-<tr><th scope="row">ClinicalTrials.gov / Zenodo → publication sources</th><td>NCT/DOI identifiers and bibliographic queries; OpenAlex, CORE, and other source adapters.</td><td>Implemented adapters; no platform-specific accuracy estimate reported here.</td></tr>
-<tr><th scope="row">OpenAlex ↔ Scopus</th><td>Journal/source identity; ISSNs, normalized journal titles, candidate scores, and review.</td><td>Under development in the OpenAlex repository; distinct from the Scopus paper-search adapter.</td></tr>
-<tr><th scope="row">OpenAlex ↔ arXiv</th><td>Paper identity across catalogs; identifier and bibliographic reconciliation.</td><td>General matcher planned. The OpenAlex date audit retrieved arXiv histories for nine sampled works with journal DOI agreement recorded; no database-wide crosswalk or linkage accuracy estimate is available.</td></tr>
-</tbody></table></div><p>The <a href="https://github.com/science-as-data/openalex/blob/main/quality/publication_dates/results_fulltext_decades_20260914.md">OpenAlex audit report</a> documents those limited arXiv checks. They use existing source links to investigate dates, rather than a general candidate-generation and matching pipeline.</p><p>A registration may lead to multiple papers, and one paper may reference multiple registrations. Finding a citation to a registration does not by itself prove that the paper reports the registered study. Cross-catalog paper identity is a different relationship and needs separate validation.</p></section>
-<section aria-labelledby="achieved"><h2 id="achieved">What has been achieved</h2><p>The migrated May 2026 experiments and exploratory analysis combine rule-selected positive candidates from identifier, bibliographic, and URL-search streams. The table uses the <a href="https://github.com/science-as-data/data-matching/blob/main/preregistrations/EDA/REPORT.md">EDA report’s explicit counting units</a>.</p><div class="data-table-scroll"><table><thead><tr><th scope="col">Input platform</th><th scope="col">Positive pairs</th><th scope="col">Distinct registrations</th><th scope="col">Distinct paper clusters</th></tr></thead><tbody><tr><th scope="row">AEA RCT</th><td>924</td><td>907</td><td>838</td></tr><tr><th scope="row">AsPredicted</th><td>2,710</td><td>1,756</td><td>2,346</td></tr></tbody></table></div>
-<p>AEA positives use OpenAlex full-text identifier hits with score ≥ 0.95. AsPredicted combines 248 OpenAlex title/author or title/year positives at score ≥ 0.95 with 2,462 filtered SerpAPI result pairs. These are historical rule-based labels, not an independently validated accuracy estimate. Paper counts use the pipeline’s <code>cluster_key</code>, not a manually verified identity registry.</p>
-<p>Supporting work includes candidate retrieval and checkpointing, PostgreSQL persistence, cross-source clustering, feature extraction, classifier training and evaluation scripts, and exploratory title/full-text alignment analyses. The old summary called 924 an AEA registration count; the downstream EDA report identifies it as pairs across 907 registrations. Stage-specific counts should not be interchanged.</p><p><a href="https://github.com/science-as-data/data-matching/blob/main/preregistrations/matching/EXPERIMENTS.md">Experiment methods and history</a> · <a href="https://github.com/science-as-data/data-matching/blob/main/preregistrations/EDA/README.md">Linked-pair analyses and limitations</a></p></section>
-<section aria-labelledby="methods"><h2 id="methods">Methods, outputs, and evaluation</h2><ol><li><strong>Normalize inputs:</strong> preserve platform identity and extract registration identifiers, titles, and authors from JSON/JSONL or PostgreSQL.</li><li><strong>Retrieve candidates:</strong> route identifiers and bibliographic queries to supported search adapters; use body-full-text identifier search where supported.</li><li><strong>Score and group:</strong> retain method and source evidence, threshold candidates, and attach cluster keys across sources.</li><li><strong>Persist and assess:</strong> write JSONL or PostgreSQL <code>paper_candidates</code> and <code>match_runs</code>; build labels and features for downstream evaluation and review.</li></ol>
-<p>Retrieval failures, quota exhaustion, missing identifiers, and unindexed text can all produce apparent non-matches. The historical experiments document these failure modes. Model scores and high-confidence training rules need independent validation before estimating publication rates or claiming linkage accuracy. Journal crosswalk analyses must also respect coverage years and multiple discipline assignments.</p></section>
-<section aria-labelledby="ownership"><h2 id="ownership">A shared home for linkage work</h2><p><a href="https://github.com/science-as-data/data-matching">data-matching</a> owns cross-source linkage methods and evaluation. The pre-registration matcher, training pipeline, experiments, and dependent EDA now live together under <code>preregistrations/</code>. The <a href="/pre-registrations/">pre-registration project</a> continues to collect and represent source records.</p><p>The existing <a href="https://github.com/science-as-data/openalex/tree/main/matching">OpenAlex–Scopus journal workflow</a> remains in its original repository for now. General cross-source matchers, including OpenAlex–arXiv, belong in data-matching with their source versions, matching units, uncertainty, and evaluation documented.</p></section>
+<section aria-labelledby="openalex-hub">
+  <h2 id="openalex-hub">OpenAlex provides a common reference</h2>
+  <p>The central node gives the network a shared way to refer to scholarly works and their relationships. Connecting source records to an OpenAlex work makes it possible to move between a paper’s bibliographic context, available text, arXiv history, and associated study plans.</p>
+  <p>The connections preserve the identity of each source. A CORE record keeps its CORE identifier; an arXiv observation keeps its paper ID and version evidence; a registration keeps its platform identifier. OpenAlex work IDs provide a common reference for joining these records in the research dataset.</p>
+  <p><a href="/openalex/">Explore the OpenAlex database</a> · <a href="/schema/">OpenAlex entities and relationships</a></p>
+</section>
+
+<section aria-labelledby="core-link">
+  <span id="routes"></span>
+  <h2 id="core-link">CORE brings more full text into reach</h2>
+  <p>The CORE branch extends the text available for works represented in OpenAlex. The <strong>CORE dump</strong> provides a substantial local collection of metadata and extracted full text. The <strong>CORE API</strong> complements that snapshot with targeted lookups and retrieval of additional text where available.</p>
+  <p>Matching a CORE record to an OpenAlex work connects its stored text to the work’s authors, topics, and citation context. DOI and other identifiers support this connection; titles, authors, and publication details provide additional evidence when identifiers are missing or inconsistent. Dump records and API responses retain their own provenance and retrieval dates.</p>
+  <p>This makes the CORE branch useful for reading and analysing papers beyond the bibliographic record: locating a registration identifier in a methods section, examining how a study is described, or recovering evidence needed to resolve a reference.</p>
+  <p><a href="/core/">CORE dump, API assessment, and stored full text</a></p>
+</section>
+
+<section aria-labelledby="arxiv-link">
+  <h2 id="arxiv-link">arXiv connects paper sources with their histories</h2>
+  <p>The arXiv branch combines curated bulk full text with the metadata distributed through Kaggle. Within the arXiv PostgreSQL database, source observations, TeX and BibTeX files, and rendered bibliography material are connected to paper metadata by arXiv ID.</p>
+  <p>Linking that arXiv identity to an OpenAlex work extends the connection into the wider literature. DOI and arXiv identifiers, repository locations, and bibliographic evidence help establish which records refer to the same work. Preprint and journal manifestations retain their version and source information.</p>
+  <p>The resulting connection lets a researcher move from an OpenAlex work to the arXiv text and bibliography behind it, or from an arXiv paper to its broader bibliographic context. Submission histories and source-version evidence remain available for studies of how papers and citations develop over time.</p>
+  <p><a href="/arxiv/">arXiv curation and the connected database structure</a></p>
+</section>
+
+<section aria-labelledby="preregistration-link">
+  <h2 id="preregistration-link">Pre-registrations connect plans to papers</h2>
+  <p>AEA RCT Registry, OSF Registries, and AsPredicted contribute an earlier stage of the research process: recorded hypotheses, study designs, and planned analyses. Connecting these records to papers represented in OpenAlex brings study plans into the same network as publication metadata and full text.</p>
+  <p>Registration identifiers and URLs mentioned in papers provide direct linkage evidence. Titles, investigator names, and study descriptions help identify further candidate papers. Text supplied through CORE or arXiv can provide the context needed to interpret a reference to a registration.</p>
+  <p>A registration–paper link represents a relationship between a plan and a publication. One plan may lead to several papers, and one paper may draw on several registrations. Preserving those relationships supports comparisons between what researchers planned and what they subsequently reported.</p>
+  <p><a href="/pre-registrations/">The registration collections and their fields</a></p>
+</section>
+
+<section aria-labelledby="methods">
+  <h2 id="methods">Keep the evidence behind each connection</h2>
+  <p>Matching starts with identifiers and source-specific metadata, then brings in bibliographic and textual evidence where needed. Each proposed connection retains the source records, the identifiers compared, the method used, and the evidence supporting the relationship. Ambiguous candidates and unresolved records remain distinguishable.</p>
+  <p>Paper identity, version relationships, and links from registrations to publications are recorded as different relationships. A citation to a registration needs enough context to establish how that plan relates to the paper. A missing match may reflect missing identifiers, unavailable text, or incomplete retrieval.</p>
+  <p id="achieved">These connections support a research path across the network: begin with a study plan, find a related OpenAlex work, retrieve text through CORE or arXiv, and inspect the reported study alongside its original plan. The value comes from bringing those complementary records into conversation while preserving their origins.</p>
+</section>
+
+<section aria-labelledby="ownership">
+  <h2 id="ownership">Tools and development</h2>
+  <p>Source projects curate their own data; <a href="https://github.com/science-as-data/data-matching">data-matching</a> develops the connections between them. The pre-registration workflow includes input adapters, publication searches, candidate linkage, and persistence. The CORE dump and API tools and the arXiv source database provide complementary assets for extending the network.</p>
+  <p>The diagram describes the integration model. General CORE–OpenAlex and arXiv–OpenAlex crosswalks remain integration work to develop and document. The existing OpenAlex date audit provides bounded arXiv linkage examples. Implementation details and historical experiments remain available in the repositories.</p>
+  <p><a href="https://github.com/science-as-data/data-matching/tree/main/preregistrations/matching">Pre-registration linkage tools</a> · <a href="https://github.com/science-as-data/data-matching/tree/main/preregistrations/EDA">Analyses of connected records</a> · <a href="https://github.com/science-as-data/openalex/tree/main/matching">Journal crosswalk work</a></p>
+</section>
 </article></div>
 ~~~

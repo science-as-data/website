@@ -1,0 +1,16 @@
+<section aria-labelledby="figures"><h2 id="figures">Key collection figures</h2>
+<p>Each platform uses its own identifiers and date fields. AsPredicted can retain several retrievals of one registration; distinct IDs count each registration once within that platform.</p>
+<div class="data-table-scroll"><table><thead><tr><th scope="col">Collection</th><th scope="col">Distinct IDs</th><th scope="col">Stored rows</th><th scope="col">Registration / creation dates</th><th scope="col">Latest stored retrieval (UTC)</th></tr></thead><tbody>
+<tr><th scope="row">AEA RCT Registry</th><td>11,743</td><td>11,743</td><td>2013-05-15 to 2026-03-30<br><code>first_registered_on</code></td><td>2026-05-15</td></tr>
+<tr><th scope="row">OSF Registries</th><td>267,960</td><td>267,960</td><td>2011-03-01 to 2026-05-16<br><code>date_registered</code></td><td>2026-05-17</td></tr>
+<tr><th scope="row">AsPredicted</th><td>25,378</td><td>25,436</td><td>2016-01-11 to 2026-02-16<br><code>created_date</code></td><td>2026-05-16</td></tr>
+</tbody></table></div>
+<h3>AEA RCT Registry</h3>
+<p>The documented April 2026 Dataverse snapshot contained 11,746 source records; loading resolved three repeated IDs to 11,743 trial records. This source count and deduplication result are documented in the <a href="https://github.com/science-as-data/study-preregistrations/blob/main/aea-rct/CHANGELOG.md">collection report</a>.</p>
+<p>Recorded trial status: In development: 4,996; On going: 3,340; Completed: 3,333; Withdrawn: 72; Abandoned: 2.</p>
+<h3>OSF Registries</h3>
+<p>15 named providers are represented. The OSF provider accounts for 263,266 registrations; EGAP accounts for 2,837. The headline count includes all loaded providers. 210,328 registrations have a nonblank description.</p>
+<h3>AsPredicted</h3>
+<p>25,436 stored observations represent 25,378 distinct registration IDs. The 58 additional rows preserve repeated retrieval observations. 25,378 IDs have a nonblank hypothesis; 25,376 have planned analyses; 25,374 have a sample-size field.</p>
+<p>Field presence means a nonblank value in at least one stored observation; it does not establish the plan’s completeness or quality. Registration and creation dates are kept distinct from retrieval dates and study start dates.</p>
+<p>Measured on 2026-09-17. <a href="/assets/preregistrations/summary.json" download>Download aggregate counts, date ranges, SQL, and provenance (JSON)</a>. The website uses this saved export and makes no database queries.</p></section>
